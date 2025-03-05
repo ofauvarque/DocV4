@@ -1,17 +1,14 @@
-# Assemblage µKOSMOS
+# Assemblage KOSMOS version 4
 <details open>
   <summary> Sommaire </summary>
   
-  1. [Assemblage du boitier électronique](assemblage_µkosmos.md#1-assemblage-du-boitier-électronique)
-  2. [Assemblage du caisson vidéo](assemblage_µkosmos.md#2-assemblage-du-caisson-vid%C3%A9o)
-  3. [Assemblage du trépried](assemblage_µkosmos.md#3-assemblage-du-tr%C3%A9pried)
-  4. [Assemblage du casque](assemblage_µkosmos.md#4-assemblage-du-casque)
-  5. [Assemblage du câble](assemblage_µkosmos.md#5-assemblage-du-câble)
-  6. [Assemblage de la paravane](assemblage_µkosmos.md#6-assemblage-de-la-paravane)
+  1. [Assemblage du caisson vidéo](assemblage_µkosmos.md#1-assemblage-du-boitier-électronique)
+  2. [Assemblage du caisson batterie](assemblage_µkosmos.md#2-assemblage-du-caisson-vid%C3%A9o)
+  3. [Assemblage du caisson moteur](assemblage_µkosmos.md#3-assemblage-du-tr%C3%A9pried)
       
 </details>
 
-## 1. Assemblage du boitier électronique
+## 1. Assemblage du caisson vidéo
 <details>
   <summary> Outils </summary>
   
@@ -29,11 +26,11 @@
 <details>
   <summary> Materiel </summary>
   
-  [Tableau matériel boitier électronique](/../µKOSMOS/hardware/02_materiel_boitier_electronique.md)
+  [Tableau matériel caisson vidéo](/../µKOSMOS/hardware/02_materiel_boitier_electronique.md)
     
 </details>
 
-### Etape 1 - Réalisation les raccordements entre les câbles et les connecteurs
+### Etape 1 - Modification du capteur Picam HQ
 
 ### Relier un câble USB à un câble micro USB en passant par le commutateur 
 
