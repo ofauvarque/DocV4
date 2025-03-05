@@ -30,7 +30,21 @@
     
 </details>
 
-### Etape 1 - Modification du capteur Picam HQ
+### Modification du capteur Picam HQ
+
+Pour un rendu de couleurs proche de celui de l'oeil humain, le capteur Picam HQ est équipé d'un filtre infra-rouge se matérialisant par une petite vitre bleue-verte devant le capteur. Ce filtre en plus de couper les infrarouges, atténue également une partie de la lumière rouge. Or celle-ci est déjà fortement atténuée par l'eau de mer. Afin d'éviter une telle perte inutile, le filtre IR du capteur Picam de KOSMOS doit être enlevé. Pour ce faire, un excellent tutoriel existe sur le site officiel de raspberry :  
+
+https://www.raspberrypi.com/documentation/accessories/camera.html#ir-filter
+
+A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qui n'aura plus d'utilité par la suite).
+
+<img src="pictures/V4_Video/9.jpeg" height=200>
+
+### Préparation de la vis de fixation de la caméra
+
+La vis de fixation de la caméra a initialement un arceau métallique facilitant son serrage. Cet arceau, trop encombrant dans le caisson doit être ôté à l'aide d'une pince coupante.  
+
+<img src="pictures/V4_Video/8.jpeg" height=200> <img src="pictures/V4_Video/7.jpeg" height=200>
 
 ### Relier un câble USB à un câble micro USB en passant par le commutateur 
 
