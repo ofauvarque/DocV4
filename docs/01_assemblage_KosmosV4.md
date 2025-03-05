@@ -30,6 +30,18 @@
     
 </details>
 
+### Vue générale
+
+<img src="pictures/V4_Video/VueGenerale.jpeg" height=400>
+
+### Pose des radiateurs sur la Raspberry Pi
+
+- Mettre les radiateurs sur les puces de la RPi.
+
+<img src="pictures/V4_Video/18.jpeg" height=400>
+
+- Connecter ensuite le RTC à la RPi via le port BAT. Fixer la pile du RTC au dessus du port Ethernet avec du Velcros. 
+
 ### Modification du capteur Picam HQ
 
 Pour un rendu de couleurs proche de celui de l'oeil humain, le capteur Picam HQ est équipé d'un filtre infra-rouge se matérialisant par une petite vitre bleue-verte devant le capteur. Ce filtre en plus de couper les infrarouges, atténue également une partie de la lumière rouge. Or celle-ci est déjà fortement atténuée par l'eau de mer. Afin d'éviter une telle perte inutile, le filtre IR du capteur Picam de KOSMOS doit être enlevé. Pour ce faire, un excellent tutoriel existe sur le site officiel de raspberry :  
@@ -46,6 +58,55 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 
 <img src="pictures/V4_Video/8.jpeg" height=200> <img src="pictures/V4_Video/7.jpeg" height=200>
 
+### Réalisation du cable d'alimentation
+
+- Avec une pince coupante, raccourcir le cable COB-123P1 pour qu'il mesure 40 cm. Garder les fils noir, blanc et rouge. La gaine ne sera plus utilisée.
+- Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
+- Couper le fil rouge à ras de la gaine pour ne conserver que le noir et le blanc. (On rappelle la convention : 5V Blanc et Noir. 12 V Rouge et Noir.)
+- Dénuder les fils blancs et noir sur 7 mm.
+- Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
+
+<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
+
+### Connectiques caisson
+
+- Sur deux connecteurs 3 pin Power Bulkhead COB-113P0-SS et raccourcir les cables pour qu'ils mesurent 10 cm.
+- Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
+- De la même façon, couper les cables du capteur Température Pression pour qu'ils mesurent 10 cm.
+- Dénuder les fils sur 3 mm puis y sertir les cosses. Les mords doivent prendre sur la gaine plastique des fils. 
+- Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.)
+- AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des trois éléments dans le bouchon à 7 trous.
+ 
+<img src="pictures/V4_Video/IMG_1567.jpg" height=400>
+
+- Insérer les cosses dans les connecteurs JST en suivant le plan de cablage. 
+
+### Réalisation de la carte électronique
+
+
+## Assemblage du caisson batterie
+
+### Cable de recharge 
+
+<img src="pictures/V4_Batterie/13.jpeg" height=400>
+
+
+### Vue générale
+
+<img src="pictures/V4_Batterie/VueGenerale.jpg" height=400>
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Relier un câble USB à un câble micro USB en passant par le commutateur 
 
 > [!NOTE]
@@ -58,6 +119,7 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 - répéter les mêmes étapes que pour le côté avec le câble micro USB et le commutateur
 
 <img src="https://github.com/Hclothilde/Documentation_KOSMOS/blob/ceec4b8716ca7170e905918eca46779770e4e37d/docs/pictures/assembly_guide/commutateur_cable.jpg" width="300"/> <img src="https://github.com/Hclothilde/Documentation_KOSMOS/blob/d7f3a26780ae5b1e7ddae37c8ff18bae6e9926e9/docs/pictures/assembly_guide/cosse.jpg" width="300"/>
+
 
 ### Relier un câble USB au ventillo
 
