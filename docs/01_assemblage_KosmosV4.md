@@ -68,8 +68,10 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 
 <img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
 
-https://www.youtube.com/watch?v=kMfx8oxSDpM&t=176s&ab_channel=BlueRobotics
 
+https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
+
+https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ### Connectiques caisson
 
@@ -85,6 +87,25 @@ https://www.youtube.com/watch?v=kMfx8oxSDpM&t=176s&ab_channel=BlueRobotics
 - Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
 
 ### Réalisation de la carte électronique
+
+<img src="pictures/V4_Video/20250225_141010.jpg" height=400>
+
+### Assemblage des éléments
+
+- Fixer la nappe et l'objectif à la caméra
+
+<img src="pictures/V4_Video/IMG20250122142122.jpg" height=400>
+
+- Fixer les entretoises à la Raspberry Pi dans les coins visibles sur la photo qui suit.
+- Fixer la carte Raspberry Pi à la structure interne du caisson imprimée en 3D dans les deux coins restants.
+
+<img src="pictures/V4_Video/IMG20250122142746.jpg" height=400> <img src="pictures/V4_Video/12.jpeg" height=400>
+
+- Fixer la caméra sur la structure 3D.
+- Relier la nappe à la Raspberry Pi.
+- Placer la carte électronique sur la Raspberry Pi et la fixer aux entretoises.
+
+ 
 
 
 ## Assemblage du caisson batterie
