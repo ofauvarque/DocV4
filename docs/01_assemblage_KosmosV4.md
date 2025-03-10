@@ -68,9 +68,12 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 
 <img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
 
+https://www.youtube.com/watch?v=kMfx8oxSDpM&t=176s&ab_channel=BlueRobotics
+
+
 ### Connectiques caisson
 
-- Sur deux connecteurs 3 pin Power Bulkhead COB-113P0-SS et raccourcir les cables pour qu'ils mesurent 10 cm.
+- Sur deux connecteurs 4 pin Power Bulkhead COB-1140-SS et raccourcir les cables pour qu'ils mesurent 10 cm.
 - Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
 - De la même façon, couper les cables du capteur Température Pression pour qu'ils mesurent 10 cm.
 - Dénuder les fils sur 3 mm puis y sertir les cosses. Les mords doivent prendre sur la gaine plastique des fils. 
@@ -87,6 +90,9 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 ## Assemblage du caisson batterie
 
 ### Cable de recharge 
+
+<img src="pictures/V4_Batterie/Chargeur.jpeg" height=400>
+
 
 - A l'aide de la petite clé fournie avec le chargeur, régler le transformateur sur 13.5 V
   
@@ -112,11 +118,55 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 <img src="pictures/V4_Batterie/13.jpeg" height=400>
 
 
-### Vue générale
+### Vue générale de l'étanchéité
 
 <img src="pictures/V4_Batterie/VueGenerale.jpg" height=400>
 
+<img src="pictures/V4_Batterie/Bouchon.jpg" height=200>
 
+
+### Vue générale de l'électronique interne
+
+<img src="pictures/V4_Batterie/CarteBatterie.jpeg" height=400> 
+
+- Couper les connectiques originales de l'interrupeur pour les remplacer par des cosses à sertir.
+- Tordre les pattes de l'interrupteur à 90° (pour des raisons de compacité)
+
+<img src="pictures/V4_Batterie/SwitchOrigine.jpeg" height=150> <img src="pictures/V4_Batterie/SwitchCoupe.jpeg" height=150> 
+
+- Sur deux connecteurs 3 pin Power Bulkhead COB-113P0-SS et raccourcir les cables pour qu'ils mesurent 10 cm.
+- Sur l'un d'eux couper à ras le fil blanc, sur l'autre couper à ras le fil rouge. Le premier fournira du 5V pour le caisson vidéo, le second du 12V pour le caisson moteur.
+- AVANT DE SOUDER LES CONNECTEURS XT30, visser ces deux connecteurs sur le bouchon à 4 trous.  
+
+<img src="pictures/V4_Batterie/ConnectiqueCaisson.jpeg" height=400>  
+
+- Sur les fils issus des connecteurs 3 pin Power Bulkhead, souder des XT30 mâle en respectant la polarité. Distinguer le 5V (Noir&Blanc) et le 12V (Noir&Rouge) avec des gaines thermoretractables de couleurs différentes.
+
+<img src="pictures/V4_Batterie/5.jpeg" height=200>  
+
+- Réaliser un raccord "XT30 femelle vers cosses à sertir" de 10 cm pour des fils noir et blanc. (Les récupérer du raccoucissement des cables COB-123P1 et COB-1241.)
+
+<img src="pictures/V4_Batterie/6.jpeg" height=150>
+
+- Réaliser un second raccord "XT30 femelle vers cosses à sertir" pour les fils noir et rouge mais repartir de ces cosses vers d'autres cosses. On choisira pour cela des cosses suffisamment larges pour y insérer deux cables à la fois. 
+
+<img src="pictures/V4_Batterie/7.jpg" height=300>  <img src="pictures/V4_Batterie/8.jpeg" height=300>  
+
+- Réaliser un raccord "XT60 mâle vers cosses à sertir" avec des cables noir et rouge. 
+
+<img src="pictures/V4_Batterie/IMG_156.jpg" height=150>  
+
+### Réalisation de la batterie
+
+
+
+<img src="pictures/V4_Batterie/ElectroniqueBatterie.jpeg" height=200>
+
+<img src="pictures/V4_Batterie/FilsBatterieOrigine.jpeg" height=100>
+
+<img src="pictures/V4_Batterie/FilsBatterieCoupe.jpeg" height=100>
+
+<img src="pictures/V4_Batterie/IMG_15.jpg" height=150>  
 
 
 
