@@ -193,10 +193,19 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 
 
+### Installation Soft Arduino Moteur
 
-
-
-
+- Installer le logiciel Arduino depuis le site https://www.arduino.cc/en/software
+- Télécharger control_motor.ino depuis le github [KonkArLAb/kosmos_software le mettre dans un dossier du même nom](https://github.com/KonkArLab/kosmos_software/tree/dev_stereo_merge_imt)
+- Placer ce fichier .ino dans un dossier nommé control_motor
+- Lancer l'IDE Arduino et ouvrir control_motor.ino
+- Brancher l'Arduino Nano à l'ordinateur via le port USB
+- Effectuer l'installation demandée par l'IDE Arduino
+- Dans l'onglet Tools, sélectionner le port COM auquel est branché l'Arduino Nano
+- Dans l'onglet Tools, sélectionner la board Arduino Nano
+- Dans l'onglet Tools, Manage Librairie. Taper "AccelStepper". Installer la librairie associée.
+- Vérifier le code.
+- Téléverser.
 
 
 ### Relier un câble USB à un câble micro USB en passant par le commutateur 
