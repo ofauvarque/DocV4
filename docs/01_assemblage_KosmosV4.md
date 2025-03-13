@@ -193,9 +193,11 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 
 
+### Installation Soft Arduino Moteur
 
+https://www.arduino.cc/en/software
 
-
+- télécharger control_motor.ino depuis le kosmos_software le mettre dans un dossier du même nom
 
 
 
