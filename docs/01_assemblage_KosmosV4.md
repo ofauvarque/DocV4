@@ -210,7 +210,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Batterie/IMG_5129.jpg" height=200> <img src="pictures/V4_Batterie/IMG_E1631.JPG" height=200> 
 
-
+ <img src="pictures/V4_Batterie/IMG_1740.jpg" height=200>
 
 
 
