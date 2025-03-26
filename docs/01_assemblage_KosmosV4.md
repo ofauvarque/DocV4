@@ -179,8 +179,6 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ### Réalisation de la batterie
 
-
-
 <img src="pictures/V4_Batterie/ElectroniqueBatterie.jpeg" height=200>
 
 <img src="pictures/V4_Batterie/FilsBatterieOrigine.jpeg" height=100>
@@ -198,6 +196,12 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 <img src="pictures/V4_Batterie/IMG_1709.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1710.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1711.jpg" height=200>  
 
 <img src="pictures/V4_Batterie/IMG_1716.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1718.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1720.jpg" height=200>
+
+
+<img src="pictures/V4_Batterie/IMG_1721.jpg" height=200> 
+
+### Réalisation de la carte électronique de la batterie
+
 
 
 
