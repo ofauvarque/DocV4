@@ -202,6 +202,16 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ### Réalisation de la carte électronique de la batterie
 
+<img src="pictures/V4_Batterie/IMG_1565.jpg" height=200> 
+
+<img src="pictures/V4_Batterie/IMG_1573.jpg" height=200> <img src="pictures/V4_Batterie/IMG_4648.jpg" height=200> 
+
+<img src="pictures/V4_Batterie/IMG_4653.jpg" height=200> <img src="pictures/V4_Batterie/IMG_5026.jpg" height=200>
+
+<img src="pictures/V4_Batterie/IMG_5129.jpg" height=200> <img src="pictures/V4_Batterie/IMG_E1631.JPG" height=200> 
+
+
+
 
 
 
