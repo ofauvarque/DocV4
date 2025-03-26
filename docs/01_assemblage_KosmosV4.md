@@ -189,7 +189,9 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Batterie/IMG_15.jpg" height=150>  
 
-
+<img src="pictures/V4_Batterie/IMG_1709.jpg" height=150>  
+<img src="pictures/V4_Batterie/IMG_1710.jpg" height=150>  
+<img src="pictures/V4_Batterie/IMG_1711.jpg" height=150>  
 
 
 
