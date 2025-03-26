@@ -75,20 +75,27 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ### Connectiques caisson
 
-- Sur deux connecteurs 4 pin Power Bulkhead COB-1140-SS et raccourcir les cables pour qu'ils mesurent 10 cm.
+- Sur le connecteur 4 pin Power Bulkhead COB-1140-SS, raccourcir les cables pour qu'ils mesurent 10 cm.
 - Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
 - De la même façon, couper les cables du capteur Température Pression pour qu'ils mesurent 10 cm.
 - Dénuder les fils sur 3 mm puis y sertir les cosses. Les mords doivent prendre sur la gaine plastique des fils. 
 - Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.)
-- AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des trois éléments dans le bouchon à 7 trous.
+- AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des deux éléments dans le bouchon à 7 trous.
  
-<img src="pictures/V4_Video/IMG_1567.jpg" height=400>
+<img src="pictures/V4_Video/IMG_E1626.JPG" height=400>
 
 - Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
 
+<img src="pictures/V4_Video/IMG_E1624.JPG" height=400>
+
+
 ### Réalisation de la carte électronique
 
-<img src="pictures/V4_Video/20250225_141010.jpg" height=400>
+<img src="pictures/V4_Video/20250225_141010.jpg" height=300> <img src="pictures/V4_Video/IMG_1571.jpg" height=300> <img src="pictures/V4_Video/IMG_1572.jpg" height=300>
+
+<img src="pictures/V4_Video/IMG_1610.JPG" height=200> <img src="pictures/V4_Video/IMG_1611.JPG" height=200>
+
+
 
 ### Assemblage des éléments
 
@@ -105,6 +112,8 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 - Relier la nappe à la Raspberry Pi.
 - Placer la carte électronique sur la Raspberry Pi et la fixer aux entretoises.
 
+
+<img src="pictures/V4_Video/IMG_1617.JPG" height=400> <img src="pictures/V4_Video/IMG_E1614.JPG" height=400>
  
 
 
