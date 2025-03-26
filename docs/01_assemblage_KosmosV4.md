@@ -68,7 +68,6 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 
 <img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
 
-
 https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
 
 https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
@@ -82,7 +81,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 - Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.)
 - AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des deux éléments dans le bouchon à 7 trous.
  
-<img src="pictures/V4_Video/IMG_E1626.JPG" height=400>
+<img src="pictures/V4_Video/1.jpeg" height=400> <img src="pictures/V4_Video/IMG_E1626.JPG" height=400>
 
 - Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
 
