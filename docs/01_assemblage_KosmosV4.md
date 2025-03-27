@@ -257,8 +257,6 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=300> <img src="pictures/V4_Moteur/6.jpeg" height=300> 
 
-
-
 https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
 
 https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
@@ -270,7 +268,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 ### Installation Soft Arduino Moteur
 
 - Installer le logiciel Arduino depuis le site https://www.arduino.cc/en/software
-- Télécharger control_motor.ino depuis le github [KonkArLAb/kosmos_software le mettre dans un dossier du même nom](https://github.com/KonkArLab/kosmos_software/tree/dev_stereo_merge_imt)
+- Télécharger control_motor.ino depuis le github [KonkArLAb/kosmos_software](https://github.com/KonkArLab/kosmos_software/tree/dev_stereo_merge_imt)
 - Placer ce fichier .ino dans un dossier nommé control_motor
 - Lancer l'IDE Arduino et ouvrir control_motor.ino
 - Brancher l'Arduino Nano à l'ordinateur via le port USB
