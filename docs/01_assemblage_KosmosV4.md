@@ -2,9 +2,9 @@
 <details open>
   <summary> Sommaire </summary>
   
-  1. [Assemblage du caisson vidéo](assemblage_µkosmos.md#1-assemblage-du-boitier-électronique)
-  2. [Assemblage du caisson batterie](assemblage_µkosmos.md#2-assemblage-du-caisson-vid%C3%A9o)
-  3. [Assemblage du caisson moteur](assemblage_µkosmos.md#3-assemblage-du-tr%C3%A9pried)
+  1. [Assemblage du caisson vidéo](01_assemblage_KosmosV4.md#1-assemblage-du-boitier-électronique)
+  2. [Assemblage du caisson batterie](01_assemblage_KosmosV4.md#2-assemblage-du-caisson-vid%C3%A9o)
+  3. [Assemblage du caisson moteur](01_assemblage_KosmosV4.md#3-assemblage-du-tr%C3%A9pried)
       
 </details>
 
@@ -44,6 +44,10 @@
 ### Vue générale
 
 <img src="pictures/V4_Video/VueGenerale.jpeg" height=400>
+
+### Impression de la structure 3D
+
+<img src="pictures/V4_Video/Structure.PNG" height=300>
 
 ### Pose des radiateurs sur la Raspberry Pi
 
@@ -206,7 +210,6 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Batterie/IMG_1712.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1713.jpg" height=200>  
 
-
 <img src="pictures/V4_Batterie/IMG_15.jpg" height=150>  
 
 <img src="pictures/V4_Batterie/IMG_1715.jpg" height=200>  
@@ -230,6 +233,14 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 <img src="pictures/V4_Batterie/IMG_5129.jpg" height=200> <img src="pictures/V4_Batterie/IMG_E1631.JPG" height=200> 
 
  <img src="pictures/V4_Batterie/IMG_1740.jpg" height=200>
+
+## Caisson Moteur
+
+### Réalisation de la carte électronique du moteur
+
+<img src="pictures/V4_Moteur/5.jpeg" height=400> <img src="pictures/V4_Moteur/4.jpeg" height=400>
+
+<img src="pictures/V4_Moteur/1.jpeg" height=200> <img src="pictures/V4_Moteur/2.jpeg" height=200>
 
 
 
