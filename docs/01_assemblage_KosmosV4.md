@@ -246,6 +246,27 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Moteur/1.jpeg" height=200> <img src="pictures/V4_Moteur/2.jpeg" height=200>
 
+
+### Réalisation du cable d'alimentation
+
+- Avec une pince coupante, raccourcir le cable COB-123P1 pour qu'il mesure 40 cm. Garder les fils noir, blanc et rouge. La gaine ne sera plus utilisée.
+- Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
+- Couper le fil blanc à ras de la gaine pour ne conserver que le noir et le rouge. (On rappelle la convention : 5V Blanc et Noir. 12 V Rouge et Noir.)
+- Dénuder les fils rouge et noir sur 7 mm.
+- Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
+
+<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=300> <img src="pictures/V4_Moteur/6.jpeg" height=300> 
+
+
+
+https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
+
+https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
+
+
+
+
+
 ### Installation Soft Arduino Moteur
 
 - Installer le logiciel Arduino depuis le site https://www.arduino.cc/en/software
@@ -262,7 +283,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ### Impression de la vis sans fin et de la roue dentée
 
-<img src="pictures/V4_Moteur/VisSansFin.PNG" height=400> <img src="pictures/V4_Moteur/RoueDentee.PNG" height=400>
+<img src="pictures/V4_Moteur/VisSansFin.PNG" height=300> <img src="pictures/V4_Moteur/RoueDentee.PNG" height=300>
 
 
 
