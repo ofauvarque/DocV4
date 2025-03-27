@@ -204,6 +204,12 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Batterie/ElectroniqueBatterie.jpeg" height=200>
 
+#### Soudure des accumulateurs
+
+<img src="pictures/V4_Batterie/IMG_1709.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1710.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1711.jpg" height=200>  
+
+#### Soudure du BMS
+
 <img src="pictures/V4_Batterie/FilsBatterieOrigine.jpeg" height=100>
 
 <img src="pictures/V4_Batterie/FilsBatterieCoupe.jpeg" height=100>
@@ -214,11 +220,11 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Batterie/IMG_1715.jpg" height=200>  
 
-
-<img src="pictures/V4_Batterie/IMG_1709.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1710.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1711.jpg" height=200>  
+#### Assemblage de la batterie
 
 <img src="pictures/V4_Batterie/IMG_1716.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1718.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1720.jpg" height=200>
 
+#### Insertion de la batterie
 
 <img src="pictures/V4_Batterie/IMG_1721.jpg" height=200> 
 
@@ -244,8 +250,13 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Moteur/5.jpeg" height=400> <img src="pictures/V4_Moteur/4.jpeg" height=400>
 
-<img src="pictures/V4_Moteur/1.jpeg" height=200> <img src="pictures/V4_Moteur/2.jpeg" height=200>
+### Cablage moteur
 
+- Raccourcir les cables du moteur pour qu'ils mesurent 10 cm.
+- Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
+- Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
+
+<img src="pictures/V4_Moteur/1.jpeg" height=200> <img src="pictures/V4_Moteur/2.jpeg" height=200>
 
 ### Réalisation du cable d'alimentation
 
