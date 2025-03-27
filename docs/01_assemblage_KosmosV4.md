@@ -1,4 +1,4 @@
-# Assemblage KOSMOS version 4
+
 <details open>
   <summary> Sommaire </summary>
   
@@ -7,6 +7,17 @@
   3. [Assemblage du caisson moteur](assemblage_µkosmos.md#3-assemblage-du-tr%C3%A9pried)
       
 </details>
+
+> [!NOTE]
+> Ces ouvertures permettront de placer les connecteurs.
+
+> [!TIP]
+> Réaliser une ouverture supplémentaire pour que l'air puisse circuler et refroidir le système
+>
+> Si votre boitier est différent réfléchisser à la meilleur manière de l'organiser à l'intérieur
+
+
+# Assemblage KOSMOS version 4
 
 ## 1. Assemblage du caisson vidéo
 <details>
@@ -219,18 +230,6 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 <img src="pictures/V4_Batterie/IMG_5129.jpg" height=200> <img src="pictures/V4_Batterie/IMG_E1631.JPG" height=200> 
 
  <img src="pictures/V4_Batterie/IMG_1740.jpg" height=200>
-
-
-
-> [!NOTE]
-> Ces ouvertures permettront de placer les connecteurs.
-
-> [!TIP]
-> Réaliser une ouverture supplémentaire pour que l'air puisse circuler et refroidir le système
->
-> Si votre boitier est différent réfléchisser à la meilleur manière de l'organiser à l'intérieur
-
-
 
 
 
