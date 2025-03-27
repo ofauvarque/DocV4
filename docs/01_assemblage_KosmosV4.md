@@ -236,13 +236,15 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ## Caisson Moteur
 
+### Vue générale
+
+<img src="pictures/V4_Moteur/VueGenerale.jpeg" height=400>
+
 ### Réalisation de la carte électronique du moteur
 
 <img src="pictures/V4_Moteur/5.jpeg" height=400> <img src="pictures/V4_Moteur/4.jpeg" height=400>
 
 <img src="pictures/V4_Moteur/1.jpeg" height=200> <img src="pictures/V4_Moteur/2.jpeg" height=200>
-
-
 
 ### Installation Soft Arduino Moteur
 
@@ -258,6 +260,9 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 - Vérifier le code.
 - Téléverser.
 
+### Impression de la vis sans fin et de la roue dentée
+
+<img src="pictures/V4_Moteur/VisSansFin.PNG" height=400> <img src="pictures/V4_Moteur/RoueDentee.PNG" height=400>
 
 
 
