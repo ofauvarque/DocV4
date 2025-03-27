@@ -3,8 +3,8 @@
   <summary> Sommaire </summary>
   
   1. [Assemblage du caisson vidéo](01_assemblage_KosmosV4.md#1-assemblage-du-caisson-vidéo)
-  2. [Assemblage du caisson batterie](01_assemblage_KosmosV4.md#2-assemblage-du-caisson-vid%C3%A9o)
-  3. [Assemblage du caisson moteur](01_assemblage_KosmosV4.md#3-assemblage-du-tr%C3%A9pried)
+  2. [Assemblage du caisson batterie](01_assemblage_KosmosV4.md#assemblage-du-caisson-batterie)
+  3. [Assemblage du caisson moteur](01_assemblage_KosmosV4.md#caisson-moteur)
       
 </details>
 
