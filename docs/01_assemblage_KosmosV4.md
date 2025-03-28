@@ -2,9 +2,9 @@
 <details open>
   <summary> Sommaire </summary>
   
-  1. [Assemblage du caisson vidéo](assemblage_µkosmos.md#1-assemblage-du-boitier-électronique)
-  2. [Assemblage du caisson batterie](assemblage_µkosmos.md#2-assemblage-du-caisson-vid%C3%A9o)
-  3. [Assemblage du caisson moteur](assemblage_µkosmos.md#3-assemblage-du-tr%C3%A9pried)
+  1. [Assemblage du caisson vidéo](01_assemblage_KosmosV4.md#1-assemblage-du-caisson-vidéo)
+  2. [Assemblage du caisson batterie](01_assemblage_KosmosV4.md#assemblage-du-caisson-batterie)
+  3. [Assemblage du caisson moteur](01_assemblage_KosmosV4.md#caisson-moteur)
       
 </details>
 
@@ -44,6 +44,10 @@
 ### Vue générale
 
 <img src="pictures/V4_Video/VueGenerale.jpeg" height=400>
+
+### Impression de la structure 3D
+
+<img src="pictures/V4_Video/Structure.PNG" height=300>
 
 ### Pose des radiateurs sur la Raspberry Pi
 
@@ -200,22 +204,27 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Batterie/ElectroniqueBatterie.jpeg" height=200>
 
+#### Soudure des accumulateurs
+
+<img src="pictures/V4_Batterie/IMG_1709.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1710.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1711.jpg" height=200>  
+
+#### Soudure du BMS
+
 <img src="pictures/V4_Batterie/FilsBatterieOrigine.jpeg" height=100>
 
 <img src="pictures/V4_Batterie/FilsBatterieCoupe.jpeg" height=100>
 
 <img src="pictures/V4_Batterie/IMG_1712.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1713.jpg" height=200>  
 
-
 <img src="pictures/V4_Batterie/IMG_15.jpg" height=150>  
 
 <img src="pictures/V4_Batterie/IMG_1715.jpg" height=200>  
 
-
-<img src="pictures/V4_Batterie/IMG_1709.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1710.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1711.jpg" height=200>  
+#### Assemblage de la batterie
 
 <img src="pictures/V4_Batterie/IMG_1716.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1718.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1720.jpg" height=200>
 
+#### Insertion de la batterie
 
 <img src="pictures/V4_Batterie/IMG_1721.jpg" height=200> 
 
@@ -231,12 +240,46 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
  <img src="pictures/V4_Batterie/IMG_1740.jpg" height=200>
 
+## Caisson Moteur
+
+### Vue générale
+
+<img src="pictures/V4_Moteur/VueGenerale.jpeg" height=400>
+
+### Réalisation de la carte électronique du moteur
+
+<img src="pictures/V4_Moteur/5.jpeg" height=400> <img src="pictures/V4_Moteur/4.jpeg" height=400>
+
+### Cablage moteur
+
+- Raccourcir les cables du moteur pour qu'ils mesurent 10 cm.
+- Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
+- Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
+
+<img src="pictures/V4_Moteur/1.jpeg" height=200> <img src="pictures/V4_Moteur/2.jpeg" height=200>
+
+### Réalisation du cable d'alimentation
+
+- Avec une pince coupante, raccourcir le cable COB-123P1 pour qu'il mesure 40 cm. Garder les fils noir, blanc et rouge. La gaine ne sera plus utilisée.
+- Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
+- Couper le fil blanc à ras de la gaine pour ne conserver que le noir et le rouge. (On rappelle la convention : 5V Blanc et Noir. 12 V Rouge et Noir.)
+- Dénuder les fils rouge et noir sur 7 mm.
+- Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
+
+<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=300> <img src="pictures/V4_Moteur/6.jpeg" height=300> 
+
+https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
+
+https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
+
+
+
 
 
 ### Installation Soft Arduino Moteur
 
 - Installer le logiciel Arduino depuis le site https://www.arduino.cc/en/software
-- Télécharger control_motor.ino depuis le github [KonkArLAb/kosmos_software le mettre dans un dossier du même nom](https://github.com/KonkArLab/kosmos_software/tree/dev_stereo_merge_imt)
+- Télécharger control_motor.ino depuis le github [KonkArLAb/kosmos_software](https://github.com/KonkArLab/kosmos_software/tree/dev_stereo_merge_imt)
 - Placer ce fichier .ino dans un dossier nommé control_motor
 - Lancer l'IDE Arduino et ouvrir control_motor.ino
 - Brancher l'Arduino Nano à l'ordinateur via le port USB
@@ -247,6 +290,9 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 - Vérifier le code.
 - Téléverser.
 
+### Impression de la vis sans fin et de la roue dentée
+
+<img src="pictures/V4_Moteur/VisSansFin.PNG" height=300> <img src="pictures/V4_Moteur/RoueDentee.PNG" height=300>
 
 
 
