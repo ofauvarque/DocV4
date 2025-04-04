@@ -87,6 +87,11 @@ https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
 
 https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
+<img src="pictures/V4_Video/IMG_1769.jpg" height=300> 
+
+<img src="pictures/V4_Video/IMG_1770.jpg" height=200>
+
+
 ### Connectiques caisson
 
 - Sur le connecteur 4 pin Power Bulkhead COB-1140-SS, raccourcir les cables pour qu'ils mesurent 10 cm.
@@ -272,8 +277,9 @@ https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
 
 https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
+<img src="pictures/V4_Moteur/IMG_1763.jpg" height=300> 
 
-
+<img src="pictures/V4_Moteur/IMG_1768.jpg" height=200> 
 
 
 ### Installation Soft Arduino Moteur
