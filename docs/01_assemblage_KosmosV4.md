@@ -107,13 +107,19 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Video/IMG_E1624.JPG" height=400>
 
+### Assemblage du bouchon avec les connectiques
+
+<img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
+
+### Assemblage du hublot
+
+<img src="pictures/V4_Video/IMG30.jpg" height=400> 
 
 ### Réalisation de la carte électronique
 
 <img src="pictures/V4_Video/20250225_141010.jpg" height=300> <img src="pictures/V4_Video/IMG_1571.jpg" height=300> <img src="pictures/V4_Video/IMG_1572.jpg" height=300>
 
 <img src="pictures/V4_Video/IMG_1610.JPG" height=200> <img src="pictures/V4_Video/IMG_1611.JPG" height=200>
-
 
 
 ### Assemblage des éléments
