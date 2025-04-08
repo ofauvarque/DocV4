@@ -301,6 +301,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 - Dans l'onglet Tools, Manage Librairie. Taper "AccelStepper". Installer la librairie associée.
 - Vérifier le code.
 - Téléverser.
+- (Si un message d'erreur apparaît, aller dans l'onglet `Tools` puis `Processor: ATmega328P` et choisir `ATmega328P (Old BootLoader)`. Téléverser à nouveau.)
 
 ### Impression de la vis sans fin et de la roue dentée
 
