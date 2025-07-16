@@ -2,20 +2,18 @@
 
 Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle est fabriquée à partir d'accumulateurs Li-ion standards (3.6V 3450mAh) soudés à l'aide d'une soudeuse par points. Nous présentons ici une batterie faite à partir de 9 accumulateurs : 3 blocs en parallèle de 3 accumulateurs en séries (on parle de batterie 3S3P). La tension déliverée par cette assemblage avoisinne les 13V à la pleine charge et représente une capacité d'environ 30 Ah.
 
-### **Éléments nécessaires**
+## **Éléments nécessaires**
 
-#### **Outils**
-
-##### - **Habituellement présents dans un Fablab**
+### - **Outils habituellement présents dans un Fablab**
 
 <img src="./pictures/01_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./pictures/01_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./pictures/01_Batterie/tin.jpg" alt="Bobine étain" height="300">
 
 - **Pince à dénuder :** Réglable, comme sur l'image, pour différents types de câbles.
 - **Fer à souder**
 - **Bobine d'étain**
-- **Source de chaleur pour gaine thermorétractable :** Un pistolet à air chaud, un chalumeau ou un fer à souder
-
-##### - **Pour la soudure des accumulateurs**
+- **Source de chaleur pour gaine thermorétractable :** un pistolet à air chaud est l'idéal, un briquet peut faire l'affaire.
+  
+### - **Outils nécessaires à la soudure des accumulateurs**
 
 <img src="./pictures/01_Batterie/lithium_acu_soldering_equipment.jpg" alt="Equipement Soudure Acu" width="400">
 
@@ -30,20 +28,19 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
 ||Amazon|1|[Soudeur par Points Réglable pour Batteries](https://www.amazon.fr/dp/B0DNQHWD2Q?ref_=pe_111711481_1111265561_t_fed_asin_title)||:red_circle:||
 
-
-#### **Composants pour 1 batterie 3S3P **
+### - **Composants pour 1 batterie 3S3P**
 
 <img src="./pictures/01_Batterie/components_overview.jpg" alt="Components Overview" width="600">
 
-- **Deux câbles d'alimentation :** Ces câbles servent à la charge et à la décharge de la batterie. Le courant en sortie de la batterie n'étant pas très élevé, quelques ampères, pas besoin d'une grande section de câbles. 
-- **Connecteurs XT30 femelle** pour la batterie
-- **Connecteurs XT30 mâle** pour le cable de charge
-- **Gaines thermorétractables**
+- **Deux câbles d'alimentation :** Ces câbles servent à la charge et à la décharge de la batterie. Les courants sollicités dans le projet KOSMOS n'étant pas élevés (au plus 5A), il n'y a pas besoin d'une grande section. On peut par exemple récupérer sur les chutes de cables étanches COBALT 3pin ou 4pin qui ont été raccourcis pour limiter l'encombrement dans les caissons.   
+- **Connecteur XT30 femelle**
 - **9 accumulateurs lithium-ion**
 - **BMS** (Battery Management System)
 - **4 câbles :** Reliant le BMS aux accumulateurs, de préférence de couleurs distinctes pour une identification facile.
 - **Plaque de nickel en ruban**
 - **Ruban adhésif kapton**
+- **Gaines thermorétractables**
+
   
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
@@ -53,6 +50,34 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 ||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
 ||Amazon|1|[Plaque Nickel Bande Ruban 0,15 x 8 mm](https://www.amazon.fr/Plaque-batterie-Soudure-Compatible-Soudeur/dp/B09TT4KMLB)||:red_circle:|Un ruban peut servir à faire plusieurs batteries.|
 ||Amazon|1|[MMOBIEL Ruban Adhésif (20mm x 30m) - Ruban Polyimide Résistant à la Chaleur ](https://www.amazon.fr/MMOBIEL-Polyimide-longueur-Antistatique-R%C3%A9sistant/dp/B07W4KWKKB)||:red_circle:|Un rouleau peut servir à faire plusieurs batteries.|
+||Amazon|1|[Gaine Thermorétractable Câble Électrique](https://www.amazon.fr/dp/B08XXGNJHG?ref_=pe_111711481_1111265561_t_fed_asin_title)|||Peut servir à la réalisation de nombreuses batteries.|
+
+### - **Composants pour les cables de charge**
+
+Trois éléments doivent être réalisés. Le premier est un adaptateur permettant de passer de XT30 à XT60. Il est utilisé pour recharger directement la batterie lorsqu'elle n'est pas à l'intérieur d'un caisson. Il nécessite :
+- **Connecteur XT30 mâle**
+- **Connecteur XT60 femelle**
+- **Deux bouts de cables noir et rouge**: environ 10cm, récupérérés sur des chutes de cable étanche COBALT 3pin ou 4pin
+- **Gaine thermorétractable**
+Le second élément assure la connexion entre le XT60 et l'alimentation stabilisée. Il nécessite :
+- **Connecteur XT60 mâle**
+- **Deux bouts de cables noir et rouge avec leur connecteur banane**: récupérés dans un laboratoire d'électronique
+- **Gaine thermorétractable**
+Le dernier élément permet de recharger la batterie quand elle est dans le caisson étanche.
+- **Connecteur XT60 femelle** 
+- **Cable Cobalt 3 pin**
+- **Bouchon cable cobalt**
+- **Gaine thermorétractable**
+  
+| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
+|-------|------------|----------|--------------------------|--------------------|-------------------------------|----------|
+||COB-1231|1|Single ended Cable 3 pin|Cable recharge batterie|:red_circle:||
+||COB-1003|1|Cobalt Series Dummy Cap|Bouchon pour cable recharge|:red_circle:||
+||Gotronic 48811|1|[Fiche mâle 15 A XT30U-M](https://www.gotronic.fr/art-fiche-male-15-a-xt30u-m.htm)||:red_circle:||
+||Gotronic 49285|2|[Fiche femelle 30 A XT60-F](https://www.gotronic.fr/art-fiche-alim--f-xt60-47680.htm)||:red_circle:||
+||Gotronic 49289|1|[Embase mâle 30 A XT60M](https://www.gotronic.fr/art-embase-male-30-a-xt60m-39057.htm)||:red_circle:||
+
+
 
 
 
