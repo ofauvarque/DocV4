@@ -2,7 +2,19 @@
 
 Le sourcing est la première étape du projet et souvent la plus fastidieuse. Sourcer désigne le fait de rassembler tout ce qui sera nécéssaire pour fabriquer un **MagPI**. Ce projet demande des composants que l'on trouvera chez un grand-nombre de fournisseurs différents. De plus, ces fournisseurs peuvent différer en fonction du lieu et du moment où l'on va construire un **MagPI**.
 
-**Attention :** Veiller à effectuer ce travail préparatoire bien avant la fabrication. En effet, certaines commandes peuvent avoir de long délais. Et cela sans compter le temps nécessaire pour le travail du sourcing lui-même. 
+**Attention :** Veiller à effectuer ces achats préparatoire bien avant la fabrication. En effet, certaines commandes peuvent avoir de long délais.
+
+
+<img src="pictures/01_Sourcing/Image1.PNG" height=400>
+
+## Caisson :
+| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
+|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
+|||||||
+
+
+
+
 
 ## **1. Présentation du fichier de sourcing**
 
