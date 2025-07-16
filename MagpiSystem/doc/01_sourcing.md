@@ -24,6 +24,7 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 ||Amazon|1|[Aissom Pince à Sertir](https://www.amazon.fr/dp/B0CZQKQK5L?ref_=pe_111711481_1111265561_t_fed_asin_title)||||
 
 
+
 ## Caisson :
 <img src="pictures/01_Sourcing/Image1.png" height=400>
 
@@ -63,7 +64,10 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 ||Gotronic 48918|1|[Cordon JST PH femelle 4 cts JST4](https://www.gotronic.fr/art-cordon-jst-ph-femelle-4-cts-jst4-22571.htm)||:orange_circle: Récupération possible mais respecter le code couleur||
 ||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
 ||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
-
+||||||||
+||Amazon|1|[Plaque Nickel Bande Ruban 0,15 x 8 mm](https://www.amazon.fr/Plaque-batterie-Soudure-Compatible-Soudeur/dp/B09TT4KMLB)||:red_circle:||
+||Amazon|1|[Soudeur par Points Réglable pour Batteries](https://www.amazon.fr/dp/B0DNQHWD2Q?ref_=pe_111711481_1111265561_t_fed_asin_title)||:red_circle:||
+||Amazon|1|[MMOBIEL Ruban Adhésif (20mm x 30m) - Ruban Polyimide Résistant à la Chaleur ](https://www.amazon.fr/MMOBIEL-Polyimide-longueur-Antistatique-R%C3%A9sistant/dp/B07W4KWKKB)||:red_circle:||
 
 ## **1. Présentation du fichier de sourcing**
 
@@ -86,63 +90,4 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
  - **Prix unitaire :** Coût d’un seul exemplaire du composant
  - **Prix / K :** Coût total de ce composant pour un MagPI, en tenant compte de la quantité utilisée
  - **Prix total :** Coût total de ce composant pour l’ensemble des MagPI à fabriquer
-
-## **2. Contribuer**
-
-Si vous avez adapté le tableur en utilisant d'autres fournisseurs, par exemple en raison de votre localisation ou pour toute autre raison, ces informations pourraient être utiles à d'autres utilisateurs.
-
-#Matériel général
-
->[!Note]
->Pour désigner les spécificités d'une vis on utilise des lettres. Ici la lettre M signifie que la vis à un filetage métrique (ISO). Le chiffre qui suit le M correspond au diamètre en mm. La valeur d'après correspond à la longueur du filetage de la vis.
-
-<details open>
-  <summary> Sommaire </summary>
-  
-  1. [Electronique](01_materiel_general.md#electronique-)
-  2. [Câble](01_materiel_general.md#câble-)
-  3. [Connecteur](01_materiel_general.md#connecteur-)
-  4. [Mécanique](01_materiel_general.md#mécanique-)
-  5. [Visserie](01_materiel_general.md#visserie-)
-  6. [Consommable](01_materiel_general.md#consommable-)
-  7. [Outils](01_materiel_general.md#outils-)
-      
-</details>
-
-## Electronique :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-## Câble :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-## Connecteur :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-## Mécanique :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-## Visserie :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-## Consommable :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-## Outils :
-| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
-
-
 
