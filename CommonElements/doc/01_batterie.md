@@ -2,6 +2,22 @@
 
 Nous avons choisi de concevoir nous-mêmes la batterie de notre système, ce qui nous permet d'obtenir une solution durable et économique.
 
+
+## Batterie :
+| Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
+|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
+||Conrad 1499572|9|[Pile rechargeable Li-Ion Samsung 18650](https://www.conrad.fr/fr/p/pile-rechargeable-speciale-18650-samsung-s9009316342928-resiste-aux-courants-eleves-flat-top-li-ion-3-6-v-3450-mah-1-pc-1499572.html)||:orange_circle: Récupération possible||
+||Gotronic 48918|1|[Cordon JST PH femelle 4 cts JST4](https://www.gotronic.fr/art-cordon-jst-ph-femelle-4-cts-jst4-22571.htm)||:orange_circle: Récupération possible mais respecter le code couleur||
+||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
+||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
+||||||||
+||Amazon|1|[Plaque Nickel Bande Ruban 0,15 x 8 mm](https://www.amazon.fr/Plaque-batterie-Soudure-Compatible-Soudeur/dp/B09TT4KMLB)||:red_circle:||
+||Amazon|1|[Soudeur par Points Réglable pour Batteries](https://www.amazon.fr/dp/B0DNQHWD2Q?ref_=pe_111711481_1111265561_t_fed_asin_title)||:red_circle:||
+||Amazon|1|[MMOBIEL Ruban Adhésif (20mm x 30m) - Ruban Polyimide Résistant à la Chaleur ](https://www.amazon.fr/MMOBIEL-Polyimide-longueur-Antistatique-R%C3%A9sistant/dp/B07W4KWKKB)||:red_circle:||
+
+
+
+
 ### **Éléments nécessaires**
 
 #### **Outils**
