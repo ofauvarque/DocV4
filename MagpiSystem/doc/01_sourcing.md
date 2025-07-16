@@ -16,42 +16,53 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 - :orange_circle: : certains paramètres du composant non modifiables
 - :green_circle: : composant modifiable
 
-## Caisson :
-
-<img src="pictures/01_Sourcing/Image1.png" height=400>
-
+## Outils & Consommables 
 
 | Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
 |-------|------------|----------|--------------------------|--------------------|-------------------------------|----------|
-||BR-100630|1|Clear Acrylic End Cap (3″ Series)|Hublot|:red_circle:|Demander un devis sur [ROVExpert](https://rov-expert.fr/)|
+||Amazon|1|[Gaine Thermorétractable Câble Électrique](https://www.amazon.fr/dp/B08XXGNJHG?ref_=pe_111711481_1111265561_t_fed_asin_title)||||
+||Amazon|1|[Aissom Pince à Sertir](https://www.amazon.fr/dp/B0CZQKQK5L?ref_=pe_111711481_1111265561_t_fed_asin_title)||||
+
+
+## Caisson :
+<img src="pictures/01_Sourcing/Image1.png" height=400>
+
+| Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
+|-------|------------|----------|--------------------------|--------------------|-------------------------------|----------|
+||BR-100630|1|Clear Acrylic End Cap (3″ Series)|Hublot|:red_circle:|Demander un devis pour ces éléments sur [ROVExpert](https://rov-expert.fr/)|
 ||BR-102649-240|1|Watertight Enclosure Tube: 3" Locking Series, Acrylic 240mm|Tube|:red_circle:||
 ||BR-100647|2|O-Ring Flange 3 inches (sealable)|Brides|:red_circle:||
 ||BR-100949-004|1|Aluminium End Cap with 4 Holes (3" series)|Bouchon 4 trous|:red_circle:||
 ||BR-100433|1|Switch|Interrupteur|:red_circle:||
-||BR-100783|1|M10 Enclosure Vent and Plug|Valve Pression|:red_circle:||
+||BR-100783|1|M10 Enclosure Vent and Plug|Valve pression|:red_circle:||
 ||BR-100434-010|1|WetLink Penetrator Blank (No Hole)|Bouchon M10|:red_circle:||
 ||COB-1130|1|Cobalt 3 pin Bulkhead Connector|Connecteur 3 Pin Batterie|:red_circle:||
-||COB-1001|1|Cobalt 3 pin Bulkhead Connector|Connecteur 3 Pin Batterie|:red_circle:||
-||COB-1002|1|Cobalt 3 pin Bulkhead Connector|Connecteur 3 Pin Batterie|:red_circle:||
-||COB-1003|1|Cobalt 3 pin Bulkhead Connector|Connecteur 3 Pin Batterie|:red_circle:||
+||COB-1001|1|Cobalt Series Dummy Plug|Bouchon pour connecteur 3 Pin (partie 1)|:red_circle:||
+||COB-1002|1|Cobalt Series Locking Sleeve|Bouchon pour connecteur 3 Pin (partie 2)|:red_circle:||
+||COB-1231|1|Single ended Cable 3 pin|Cable recharge batterie|:red_circle:||
+||COB-1003|1|Cobalt Series Dummy Cap|Bouchon pour cable recharge|:red_circle:||
 
-
-# Materiel Boitier Electronique
-
-
-## Electronique:
+## Electronique :
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
-|-------:|-----------|----------|--------------------------|--------------------|---------------------|----------|
-|![antenne](/../µKOSMOS/docs/pictures/equipments/boitier/antenne.PNG)        |[Raspberry  SC0480](https://www.kubii.com/fr/modules-de-reseaux/3087-kit-antenne-officielle-raspberry-pi-3272496303287.html)          |         1| Antenne           |Permet d'augmenter la portée du signal    |<blockquote> :red_circle: </blockquote><br>         |          |
-|![batterie](/../µKOSMOS/docs/pictures/equipments/boitier/batterie15Ah_.png)        |[Varta 57977 101 111](https://fr.rs-online.com/web/p/batteries-externes/2309825?gb=s)           |         1| batterie 15Ah            |Alimente la raspberry    |<blockquote> :green_circle: </blockquote><br>         |          |
-|![bp](/../µKOSMOS/docs/pictures/equipments/boitier/bp_vert_.png)        |[ITW SWITCHES 49-59113](https://fr.farnell.com/itw-switches/49-59113/commutateur-rond-vert/dp/734093?ost=734093)   |         1| bouton poussoir vert     |""            |<blockquote> :green_circle: </blockquote><br>         |          |
-|![carte_gps](/../µKOSMOS/docs/pictures/equipments/boitier/gps.PNG)        |[Raspberry RA168](https://www.kubii.com/fr/modules-de-reseaux/1922-module-gps-pour-raspberry-pi-kubii-3272496007888.html)            |         1| carte gps          |""                                         |<blockquote> :red_circle: </blockquote><br>         |          |
-|![commutateur](/../µKOSMOS/docs/pictures/equipments/boitier/commutateur_.png)        |[ARCOLECTRIC (BULGIN LIMITED) C6050ALAAC](https://fr.farnell.com/arcolectric/c6050alaac/commutateur-a-bascule-dpst-noir/dp/7674155)|         1| commutateur + cache étanche             |Permet d'allumer et d'éteindre le système     |<blockquote> :orange_circle: intérupteur avec auto maintient </blockquote><br>         |         |
-|![kit_ethernet](/../µKOSMOS/docs/pictures/equipments/boitier/kit_ethernet_.png)        |[THine Solutions, Inc. THSER101](https://fr.rs-online.com/web/p/hat-et-complements-raspberry-pi/2206246?redirect-relevancy-data=7365617263685F636173636164655F6F726465723D31267365617263685F696E746572666163655F6E616D653D4931384E53656172636847656E65726963267365617263685F6D617463685F6D6F64653D6D61746368616C6C7061727469616C267365617263685F7061747465726E5F6D6174636865643D5E2E2A24267365617263685F747970653D43415443485F414C4C5F44454641554C54267365617263685F7370656C6C5F636F72726563745F6170706C6965643D59267365617263685F77696C645F63617264696E675F6D6F64653D4E4F4E45267365617263685F6B6579776F72643D5448696E6520536F6C7574696F6E732C20496E632E204361626C6520457874656E73696F6E204B697420666F72205261737062657272792050692043616D267365617263685F6B6579776F72645F6170703D5448696E6520536F6C7574696F6E732C20496E632E204361626C6520457874656E73696F6E204B697420666F72205261737062657272792050692043616D26)           |         1| kit d'extension ethernet |"Permettra à la camera et à la Raspberry de communiquer ensemble"              |<blockquote> :red_circle: </blockquote><br>         |           |
-|![manette_Xbox](/../µKOSMOS/docs/pictures/equipments/boitier/manette_xbox__gaming_receiver.PNG)        |[gaming_receiver](https://www.amazon.fr/Dhaose-Contr%C3%B4leur-Vibration-Bluetooth-Ergonomique/dp/B08JGMFRGC/ref=sr_1_5?adgrpid=572275035&hvadid=80607978251784&hvbmt=be&hvdev=c&hvlocphy=127027&hvnetw=s&hvqmt=e&hvtargid=kwd-9285639436%3Aloc-66&keywords=manette+xbox+360+sans+fil&)          |         1| Manette Xbox + Wireless gaming receiver     |Permet de controller kosmos (mouement, camera)  Permet de faire le lien avec la manète de Xbox et la crte raspberry                |<blockquote> :red_circle: </blockquote><br>         |          |
-|![raspberry](/../µKOSMOS/docs/pictures/equipments/boitier/raspberry_.png)        |[RASPBERRY-PI RPI4-MODBP-4GB](https://fr.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887?st=rpi4) |         1| raspberry PI4 4GB        |Contient le programme de fonctionnement du µkosmos     |<blockquote> :red_circle: </blockquote><br>         |          |
-|![ventilateur](/../µKOSMOS/docs/pictures/equipments/boitier/ventilateur_.png)        |[MULTICOMP MC002684](https://fr.farnell.com/multicomp/mc002684/ventilateur-40x40x10mm-5vdc/dp/3050784) |         1| ventilateur 5V          |Permet de refroidir le système      |<blockquote> :orange_circle: _5V_ </blockquote><br>         |          |
+|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
+||Gotronic 38575|1|[Carte Raspberry Pi 5 - 4 GB](https://www.gotronic.fr/art-carte-raspberry-pi-5-4-gb-38176.htm)|Ordinateur embarqué|:orange_circle: Une RPi4 peut aussi faire l'affaire||
+||Gotronic 37327|1|[Caméra HQ 12 Mpx C/CS SC0261 pour Raspberry Pi](https://www.gotronic.fr/art-camera-hq-12-mpx-c-cs-sc0261-33781.htm)|Caméra embarquée|:orange_circle: Une RPi4 peut aussi faire l'affaire||
+||Gotronic 48810|2|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
+||Gotronic 48811|3|[Fiche mâle 15 A XT30U-M](https://www.gotronic.fr/art-fiche-male-15-a-xt30u-m.htm)|Connecteurs pour la pieuvre alimentation|:red_circle:||
+||Amazon|1|[SUPERNIGHT Convertisseurs Power Supply Transformer DC DC](https://www.amazon.fr/Supernight-Convertisseurs-Transformer-Adjustable-Electricity/dp/B079M9CHV9)|Convertisseur 12V vers 5V 5 A |:red_circle:||
 
+## Optique :
+| Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
+|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
+||Amazon|1|[X3 1/4" Vis de Fixation 1/4 pour Appareil Photo](https://www.amazon.fr/dp/B074X453CY?ref_=pe_111711481_1111265561_t_fed_asin_title)|Vis de fixation pour la caméra Picam HQ|:red_circle:||
+
+## Batterie :
+| Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
+|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
+||Conrad 1499572|9|[Pile rechargeable Li-Ion Samsung 18650](https://www.conrad.fr/fr/p/pile-rechargeable-speciale-18650-samsung-s9009316342928-resiste-aux-courants-eleves-flat-top-li-ion-3-6-v-3450-mah-1-pc-1499572.html)||:orange_circle: Récupération possible||
+||Gotronic 48918|1|[Cordon JST PH femelle 4 cts JST4](https://www.gotronic.fr/art-cordon-jst-ph-femelle-4-cts-jst4-22571.htm)||:orange_circle: Récupération possible mais respecter le code couleur||
+||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
+||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
 
 
 ## **1. Présentation du fichier de sourcing**
