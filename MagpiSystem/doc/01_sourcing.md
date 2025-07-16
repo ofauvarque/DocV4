@@ -5,12 +5,12 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 **Attention :** Veiller à effectuer ces achats préparatoire bien avant la fabrication. En effet, certaines commandes peuvent avoir de long délais.
 
 
-<img src="pictures/01_Sourcing/Image1.PNG" height=400>
+<img src="pictures/01_Sourcing/Image1.png" height=400>
 
 ## Caisson :
 | Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
 |-------|-----------|----------|--------------------------|--------------------|-------------------------------|----------|
-|||||||
+||BR-100630|1|End Cap 3'' Acrylic|Hublot||
 
 
 
