@@ -1,28 +1,12 @@
 # **Assemblage de la batterie**
 
-Nous avons choisi de concevoir nous-mêmes la batterie de notre système, ce qui nous permet d'obtenir une solution durable et économique.
-
-
-## Batterie :
-| Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
-|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
-||Conrad 1499572|9|[Pile rechargeable Li-Ion Samsung 18650](https://www.conrad.fr/fr/p/pile-rechargeable-speciale-18650-samsung-s9009316342928-resiste-aux-courants-eleves-flat-top-li-ion-3-6-v-3450-mah-1-pc-1499572.html)||:orange_circle: Récupération possible||
-||Gotronic 48918|1|[Cordon JST PH femelle 4 cts JST4](https://www.gotronic.fr/art-cordon-jst-ph-femelle-4-cts-jst4-22571.htm)||:orange_circle: Récupération possible mais respecter le code couleur||
-||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
-||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
-||||||||
-||Amazon|1|[Plaque Nickel Bande Ruban 0,15 x 8 mm](https://www.amazon.fr/Plaque-batterie-Soudure-Compatible-Soudeur/dp/B09TT4KMLB)||:red_circle:||
-||Amazon|1|[Soudeur par Points Réglable pour Batteries](https://www.amazon.fr/dp/B0DNQHWD2Q?ref_=pe_111711481_1111265561_t_fed_asin_title)||:red_circle:||
-||Amazon|1|[MMOBIEL Ruban Adhésif (20mm x 30m) - Ruban Polyimide Résistant à la Chaleur ](https://www.amazon.fr/MMOBIEL-Polyimide-longueur-Antistatique-R%C3%A9sistant/dp/B07W4KWKKB)||:red_circle:||
-
-
-
+Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle est fabriquée à partir d'accumulateurs Li-ion standards (3.6V 3450mAh) soudés à l'aide d'une soudeuse par points. Nous présentons ici une batterie faite à partir de 9 accumulateurs : 3 blocs en parallèle de 3 accumulateurs en séries (on parle de batterie 3S3P). La tension déliverée par cette assemblage avoisinne les 13V à la pleine charge et représente une capacité d'environ 30 Ah.
 
 ### **Éléments nécessaires**
 
 #### **Outils**
 
-##### - **En général**
+##### - **Habituellement présents dans un Fablab**
 
 <img src="./pictures/01_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./pictures/01_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./pictures/01_Batterie/tin.jpg" alt="Bobine étain" height="300">
 
@@ -39,31 +23,52 @@ Nous avons choisi de concevoir nous-mêmes la batterie de notre système, ce qui
 - **Lunettes de protection**
 - **Pince à couper :** Pour découper les bandes de nickel.
 - **Ruban adhésif :** Utilisé temporairement pour maintenir en place différents composants.
-- **Soudeuse par points**
 - **Seau de sable :** Pour étouffer un éventuel début de flamme des accumulateurs.
+- **Soudeuse par points**
 
-#### **Composants**
+| Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
+|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
+||Amazon|1|[Soudeur par Points Réglable pour Batteries](https://www.amazon.fr/dp/B0DNQHWD2Q?ref_=pe_111711481_1111265561_t_fed_asin_title)||:red_circle:||
+
+
+#### **Composants pour 1 batterie 3S3P **
 
 <img src="./pictures/01_Batterie/components_overview.jpg" alt="Components Overview" width="600">
 
-- **Deux câbles d'alimentation :** Ces câbles servent à la charge et à la décharge de la batterie. Le courant en sortie de la batterie n'étant pas très élevé, quelques ampères, pas besoin d'une grande section de câbles.
-- **Connecteurs XT30 mâle et femelle**
+- **Deux câbles d'alimentation :** Ces câbles servent à la charge et à la décharge de la batterie. Le courant en sortie de la batterie n'étant pas très élevé, quelques ampères, pas besoin d'une grande section de câbles. 
+- **Connecteurs XT30 femelle** pour la batterie
+- **Connecteurs XT30 mâle** pour le cable de charge
 - **Gaines thermorétractables**
 - **9 accumulateurs lithium-ion**
-- **BMS**
+- **BMS** (Battery Management System)
 - **4 câbles :** Reliant le BMS aux accumulateurs, de préférence de couleurs distinctes pour une identification facile.
 - **Plaque de nickel en ruban**
 - **Ruban adhésif kapton**
+  
+| Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
+|-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
+||Conrad 1499572|9|[Pile rechargeable Li-Ion Samsung 18650](https://www.conrad.fr/fr/p/pile-rechargeable-speciale-18650-samsung-s9009316342928-resiste-aux-courants-eleves-flat-top-li-ion-3-6-v-3450-mah-1-pc-1499572.html)||:orange_circle: Récupération possible||
+||Gotronic 48918|1|[Cordon JST PH femelle 4 cts JST4](https://www.gotronic.fr/art-cordon-jst-ph-femelle-4-cts-jst4-22571.htm)||:orange_circle: Récupération possible mais respecter le code couleur||
+||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
+||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
+||Amazon|1|[Plaque Nickel Bande Ruban 0,15 x 8 mm](https://www.amazon.fr/Plaque-batterie-Soudure-Compatible-Soudeur/dp/B09TT4KMLB)||:red_circle:|Un ruban peut servir à faire plusieurs batteries.|
+||Amazon|1|[MMOBIEL Ruban Adhésif (20mm x 30m) - Ruban Polyimide Résistant à la Chaleur ](https://www.amazon.fr/MMOBIEL-Polyimide-longueur-Antistatique-R%C3%A9sistant/dp/B07W4KWKKB)||:red_circle:|Un rouleau peut servir à faire plusieurs batteries.|
+
+
 
 ### **⚠️ Attention:**
 
 **À cette étape de la conception de notre système, certaines parties présentent des risques. Il est donc essentiel de rester vigilant et de respecter scrupuleusement les mesures de protection recommandées.**
 
+
+
+
+
 ## **1. Vue d'ensemble de la partie batterie**
 
 La batterie se compose des 9 accumulateurs connectés au module BMS selon un schéma spécifique. Le seul connecteur externe est un XT30, utilisé à la fois pour la charge et la décharge.
 
-|<img src="../../pictures/02_Batterie/schema_bms.png" alt="Acus Soudés par 3 avec 4 bandes" width="330">|
+|<img src="./pictures/01_Batterie/schema_bms.png" alt="Acus Soudés par 3 avec 4 bandes" width="330">|
 |:--:|
 |*Schéma de branchement*|
 
@@ -71,7 +76,7 @@ La batterie se compose des 9 accumulateurs connectés au module BMS selon un sch
 
 ---
 
-<img src="../../pictures/02_Batterie/xt30_soldered.jpg" alt="Deux Câbles avec XT30" width="250">
+<img src="./pictures/01_Batterie/xt30_soldered.jpg" alt="Deux Câbles avec XT30" width="250">
 
 Les deux câbles d'alimentation doivent être légerement étamés puis soudés sur le connecteur XT30 femelle, en respectant les couleurs et les signes, le rouge sur le **+** et le noir sur le **-**. Ne pas oublier les gaines thermorétractables, à chauffer avec un décapeur thermique, briquet ou fer à souder, attention cependant à ne pas l'abîmer en chauffant trop.
 
@@ -83,7 +88,7 @@ Commencez par dénuder légèrement les extrémités des câbles.
 
 **⚠️ Attention à ne pas trop dénuder : une trop grande longueur de fil nu augmente le risque de contact entre les deux pôles, ce qui pourrait provoquer un court-circuit.**
 
-<img src="../../pictures/02_Batterie/bms_power_cables.jpg" alt="Deux Câbles Prêts à être Soudés sur BMS" width="250">
+<img src="./pictures/01_Batterie/bms_power_cables.jpg" alt="Deux Câbles Prêts à être Soudés sur BMS" width="250">
 
 Comme pour le connecteur XT30, attention à bien respecter le signe pour chaque câble.
 
@@ -93,7 +98,7 @@ Comme pour le connecteur XT30, attention à bien respecter le signe pour chaque 
 
 Avant de commencer, assurez-vous que la soudeuse par points est bien chargée et opérationnelle.
 
-|<img src="../../pictures/02_Batterie/bms_on_battery.jpg" alt="Vue de la Batterie Finie" width="300">|
+|<img src="./pictures/01_Batterie/bms_on_battery.jpg" alt="Vue de la Batterie Finie" width="300">|
 |:--:|
 | *Résultat à la fin de l'assemblage (avec un autre type de câbles)* |
 
@@ -117,12 +122,12 @@ Avant toute opération, sécurisez l'environnement :
 - Chaque groupe est constitué de trois accumulateurs alignés dans le même sens : le pôle positif (bombé) d'un côté, et le pôle négatif (plat) de l'autre.
 - Disposez chaque groupe en quinconce, comme montré sur l'image ci-dessous.
 
-<img src="../../pictures/02_Batterie/lithium_acu_before_soldering.jpg" alt="Acus Prêts à être soudés par 3" width="400">
+<img src="./pictures/01_Batterie/lithium_acu_before_soldering.jpg" alt="Acus Prêts à être soudés par 3" width="400">
 
 - Utilisez du ruban adhésif pour maintenir temporairement chaque groupe en place. Cela facilite la soudure et évite les mouvements indésirables.
 - Découpez une bande de nickel pour chaque groupe afin de relier les trois pôles entre eux.
 
-<img src="../../pictures/02_Batterie/lithium_acu_nickel_plate.jpg" alt="Acus Prêts à être soudés par 3" width="300">
+<img src="./pictures/0_Batterie/lithium_acu_nickel_plate.jpg" alt="Acus Prêts à être soudés par 3" width="300">
 
 ---
 
@@ -130,7 +135,7 @@ Avant toute opération, sécurisez l'environnement :
 
 - Soudez les bandes de nickel en appliquant quatre points de soudure par pôle, en formant un motif en diagonale pour une bonne répartition.
 
-<img src="../../pictures/02_Batterie/lithium_acu_nickel_plate_soldered_colored.jpg" alt="Acus Soudés par 3" width="300">
+<img src="./pictures/01_Batterie/lithium_acu_nickel_plate_soldered_colored.jpg" alt="Acus Soudés par 3" width="300">
 
 - Répétez cette opération jusqu'à ce que chaque pôle de chaque groupe soit correctement connecté à sa bande de nickel. Cela nécessite 6 bandes en tout (3 groupes avec 2 côtés).
 
@@ -142,13 +147,13 @@ Vous avez maintenant trois blocs de trois accumulateurs chacun. Avant de les ass
 
 - Découpez 4 bandes supplémentaires de nickel pour relier les blocs entre eux, selon le schéma.
 
-<img src="../../pictures/02_Batterie/schema_bms.png" alt="Acus Soudés par 3 avec 4 bandes" width="400">
+<img src="./pictures/01_Batterie/schema_bms.png" alt="Acus Soudés par 3 avec 4 bandes" width="400">
 
 - Rappel : le pôle positif est le côté bombé, et le pôle négatif est le côté plat.
 
 Enfin, vous obtiendrez un ensemble de blocs soudés comme ci-dessous. Les couleurs correspondent aux futures connexions du BMS.
 
-<img src="../../pictures/02_Batterie/lithium_acu_nickel_plates_soldered_colored.jpg" alt="Acus Soudés Face 1" width="300">
+<img src="./pictures/01_Batterie/lithium_acu_nickel_plates_soldered_colored.jpg" alt="Acus Soudés Face 1" width="300">
 
 ---
 
@@ -161,11 +166,11 @@ Pour cela, vous aurez besoin de :
 - 4 câbles (de couleurs différentes, comme sur le schéma)
 - 4 petits carrés de plaque de nickel
 
-<img src="../../pictures/02_Batterie/four_cables_and_four_squares_of_nickel.jpg" alt="4 câbles avec plaques de nickel" width="300">
+<img src="./pictures/01_Batterie/four_cables_and_four_squares_of_nickel.jpg" alt="4 câbles avec plaques de nickel" width="300">
 
 Commencez par souder chaque câble sur un carré de nickel, à l'étain.
 
-<img src="../../pictures/02_Batterie/four_cables_soldered_on_nickel.jpg" alt="4 câbles soudés sur plaques de nickel" width="300">
+<img src="./pictures/01_Batterie/four_cables_soldered_on_nickel.jpg" alt="4 câbles soudés sur plaques de nickel" width="300">
 
 ---
 
@@ -180,7 +185,7 @@ Ensuite :
 - Dénudez-les légèrement.
 - Soudez-les sur les bornes du BMS, en respectant les couleurs et l'ordre indiqués dans le schéma de câblage.
 
-<img src="../../pictures/02_Batterie/four_cables_soldered_on_nickel_right_length.jpg" alt="4 câbles soudés et coupés à la bonne longueur" height="250"> <img src="../../pictures/02_Batterie/four_cables_soldered_on_bms.jpg" alt="4 câbles soudés sur BMS" height="250">
+<img src="./pictures/01_Batterie/four_cables_soldered_on_nickel_right_length.jpg" alt="4 câbles soudés et coupés à la bonne longueur" height="250"> <img src="./pictures/01_Batterie/four_cables_soldered_on_bms.jpg" alt="4 câbles soudés sur BMS" height="250">
 
 ---
 
@@ -188,7 +193,7 @@ Ensuite :
 
 Il est temps de souder les extrémités libres des câbles sur les zones correspondantes des accumulateurs. Encore une fois, vous pouvez fixer temporairement le BMS avec du ruban pour faciliter le positionnement.
 
-<img src="../../pictures/02_Batterie/red_blue_soldered_on_battery.jpg" alt="câble rouge et bleu sur BMS" height="300"> <img src="../../pictures/02_Batterie/yellow_black_soldered_on_battery.jpg" alt="câble jaune et noir sur BMS" height="300">
+<img src="./pictures/01_Batterie/red_blue_soldered_on_battery.jpg" alt="câble rouge et bleu sur BMS" height="300"> <img src="./pictures/01_Batterie/yellow_black_soldered_on_battery.jpg" alt="câble jaune et noir sur BMS" height="300">
 
 ---
 
@@ -202,4 +207,4 @@ Avant de finaliser, prenez un multimètre et mesurez la tension entre les bornes
 
 Retirez le ruban temporaire et enveloppez l'ensemble de la batterie avec du ruban adhésif kapton pour la protéger et maintenir l'assemblage.
 
-<img src="../../pictures/02_Batterie/battery_covered.jpg" alt="batterie couverte kapton" height="350">
+<img src="./pictures/01_Batterie/battery_covered.jpg" alt="batterie couverte kapton" height="350">
