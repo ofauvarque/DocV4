@@ -47,7 +47,6 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
 ||Gotronic 38575|1|[Carte Raspberry Pi 5 - 4 GB](https://www.gotronic.fr/art-carte-raspberry-pi-5-4-gb-38176.htm)|Ordinateur embarqué|:orange_circle: Une RPi4 peut aussi faire l'affaire||
-||Gotronic 37327|1|[Caméra HQ 12 Mpx C/CS SC0261 pour Raspberry Pi](https://www.gotronic.fr/art-camera-hq-12-mpx-c-cs-sc0261-33781.htm)|Caméra embarquée|:orange_circle: Une RPi4 peut aussi faire l'affaire||
 ||Gotronic 48810|2|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
 ||Gotronic 48811|3|[Fiche mâle 15 A XT30U-M](https://www.gotronic.fr/art-fiche-male-15-a-xt30u-m.htm)|Connecteurs pour la pieuvre alimentation|:red_circle:||
 ||Amazon|1|[SUPERNIGHT Convertisseurs Power Supply Transformer DC DC](https://www.amazon.fr/Supernight-Convertisseurs-Transformer-Adjustable-Electricity/dp/B079M9CHV9)|Convertisseur 12V vers 5V 5 A |:red_circle:||
@@ -56,6 +55,11 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
 ||Amazon|1|[X3 1/4" Vis de Fixation 1/4 pour Appareil Photo](https://www.amazon.fr/dp/B074X453CY?ref_=pe_111711481_1111265561_t_fed_asin_title)|Vis de fixation pour la caméra Picam HQ|:red_circle:||
+||IDS|1|[Objectif, Edmund, TECHSPEC UC series, 4 mm, 1/2"](https://fr.ids-imaging.com/store/lens-edmund-techspec-uc-series-4-mm-1-2.html)|Objectif 4 mm|:red_circle:||
+||Gotronic 37327|1|[Caméra HQ 12 Mpx C/CS SC0261 pour Raspberry Pi](https://www.gotronic.fr/art-camera-hq-12-mpx-c-cs-sc0261-33781.htm)|Caméra embarquée|||
+||||||||
+||Kubii|1|[Module Caméra 5Mp Fisheye](https://www.kubii.com/fr/cameras-capteurs/2207-module-camera-5mp-grand-angle-kubii-3272496011205.html)||||
+
 
 ## Batterie :
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
