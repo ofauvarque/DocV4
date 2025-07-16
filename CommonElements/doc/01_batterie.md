@@ -24,7 +24,7 @@ Nous avons choisi de concevoir nous-mêmes la batterie de notre système, ce qui
 
 ##### - **En général**
 
-<img src="../../pictures/02_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="../../pictures/02_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="../../pictures/02_Batterie/tin.jpg" alt="Bobine étain" height="300">
+<img src="./pictures/01_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./pictures/01_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./pictures/01_Batterie/tin.jpg" alt="Bobine étain" height="300">
 
 - **Pince à dénuder :** Réglable, comme sur l'image, pour différents types de câbles.
 - **Fer à souder**
@@ -33,7 +33,7 @@ Nous avons choisi de concevoir nous-mêmes la batterie de notre système, ce qui
 
 ##### - **Pour la soudure des accumulateurs**
 
-<img src="../../pictures/02_Batterie/lithium_acu_soldering_equipment.jpg" alt="Equipement Soudure Acu" width="400">
+<img src="./pictures/01_Batterie/lithium_acu_soldering_equipment.jpg" alt="Equipement Soudure Acu" width="400">
 
 - **Gants de protection**
 - **Lunettes de protection**
@@ -44,7 +44,7 @@ Nous avons choisi de concevoir nous-mêmes la batterie de notre système, ce qui
 
 #### **Composants**
 
-<img src="../../pictures/02_Batterie/components_overview.jpg" alt="Components Overview" width="600">
+<img src="./pictures/01_Batterie/components_overview.jpg" alt="Components Overview" width="600">
 
 - **Deux câbles d'alimentation :** Ces câbles servent à la charge et à la décharge de la batterie. Le courant en sortie de la batterie n'étant pas très élevé, quelques ampères, pas besoin d'une grande section de câbles.
 - **Connecteurs XT30 mâle et femelle**
