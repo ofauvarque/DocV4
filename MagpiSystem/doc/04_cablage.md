@@ -8,7 +8,7 @@ Le câblage consiste principalement à souder des connecteurs et des fils qui se
 
 #### **Outils**
 
-<img src="./pictures/02_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="../../pictures/02_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="../../pictures/02_Batterie/tin.jpg" alt="Bobine étain" height="300"> <img src="../../pictures/04_Câblage/pince_sertir.jpg" alt="Pince à sertir" height="300">
+<img src="./../../CommonElements/doc/pictures/01_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./../../CommonElements/doc/pictures/01_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./../../CommonElements/doc/pictures/01_Batterie/tin.jpg" alt="Bobine étain" height="300">
 
 - **Pince à dénuder :** Réglable, comme sur l'image, pour différents types de câbles.
 - **Fer à souder**
