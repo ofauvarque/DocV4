@@ -60,7 +60,7 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
 ||||||||
 ||Kubii|1|[Module Caméra 5Mp Fisheye](https://www.kubii.com/fr/cameras-capteurs/2207-module-camera-5mp-grand-angle-kubii-3272496011205.html)||||
 
-
+<!---
 ## Batterie :
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
@@ -95,3 +95,4 @@ Le sourcing est la première étape du projet et souvent la plus fastidieuse. So
  - **Prix / K :** Coût total de ce composant pour un MagPI, en tenant compte de la quantité utilisée
  - **Prix total :** Coût total de ce composant pour l’ensemble des MagPI à fabriquer
 
+-->
