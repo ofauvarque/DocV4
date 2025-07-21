@@ -1,10 +1,8 @@
-# **Assemblage de la batterie**
+Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle est fabriquée à partir d'accumulateurs Li-ion standards (3.6V 3450mAh) soudés à l'aide d'une soudeuse par points. Nous présentons ici une batterie faite à partir de 9 accumulateurs : 3 blocs série de 3 accumulateurs en parallèle (on parle de batterie 3S3P). La tension déliverée par cette assemblage avoisinne les 13V à pleine charge et représente une capacité d'environ 30 Ah.
 
-Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle est fabriquée à partir d'accumulateurs Li-ion standards (3.6V 3450mAh) soudés à l'aide d'une soudeuse par points. Nous présentons ici une batterie faite à partir de 9 accumulateurs : 3 blocs en parallèle de 3 accumulateurs en séries (on parle de batterie 3S3P). La tension déliverée par cette assemblage avoisinne les 13V à la pleine charge et représente une capacité d'environ 30 Ah.
+# **1. Outils et consommables**
 
-## **Éléments nécessaires**
-
-### - **Outils habituellement présents dans un Fablab**
+## **1.1 Outils habituellement présents dans un Fablab**
 
 <img src="./pictures/01_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./pictures/01_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./pictures/01_Batterie/tin.jpg" alt="Bobine étain" height="300">
 
@@ -13,7 +11,7 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 - **Bobine d'étain**
 - **Source de chaleur pour gaine thermorétractable :** un pistolet à air chaud est l'idéal, un briquet peut faire l'affaire.
   
-### - **Outils nécessaires à la soudure des accumulateurs**
+## **1.2 Outils nécessaires à la soudure des accumulateurs**
 
 <img src="./pictures/01_Batterie/lithium_acu_soldering_equipment.jpg" alt="Equipement Soudure Acu" width="400">
 
@@ -28,7 +26,7 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
 ||Amazon|1|[Soudeur par Points Réglable pour Batteries](https://www.amazon.fr/dp/B0DNQHWD2Q?ref_=pe_111711481_1111265561_t_fed_asin_title)||:red_circle:||
 
-### - **Composants pour 1 batterie 3S3P**
+## **1.3 Composants pour 1 batterie 3S3P**
 
 <img src="./pictures/01_Batterie/components_overview.jpg" alt="Components Overview" width="600">
 
@@ -36,33 +34,34 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 - **Connecteur XT30 femelle**
 - **9 accumulateurs lithium-ion**
 - **BMS** (Battery Management System)
-- **4 câbles :** Reliant le BMS aux accumulateurs, de préférence de couleurs distinctes pour une identification facile.
+- **4 câbles :** Reliant le BMS aux accumulateurs (respecter le code couleur)
 - **Plaque de nickel en ruban**
 - **Ruban adhésif kapton**
-- **Gaines thermorétractables**
+- **Gaine thermorétractable**
 
   
 | Visuel | Référence | Quantité | Dénomination | Usage |Substituabilité | Tips/Conseil |
 |-------|-----------|----------|--------------------------|--------------------|---------------------|----------|
 ||Conrad 1499572|9|[Pile rechargeable Li-Ion Samsung 18650](https://www.conrad.fr/fr/p/pile-rechargeable-speciale-18650-samsung-s9009316342928-resiste-aux-courants-eleves-flat-top-li-ion-3-6-v-3450-mah-1-pc-1499572.html)||:orange_circle: Récupération possible||
 ||Gotronic 48918|1|[Cordon JST PH femelle 4 cts JST4](https://www.gotronic.fr/art-cordon-jst-ph-femelle-4-cts-jst4-22571.htm)||:orange_circle: Récupération possible mais respecter le code couleur||
-||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)|Connecteurs pour la pieuvre d'alimentation|:red_circle:||
+||Gotronic 48810|1|[Fiche femelle 15 A XT30U-F](https://www.gotronic.fr/art-fiche-femelle-15-a-xt30u-f.htm)||:red_circle:||
 ||Otronic|1|[Circuit de protection BMS 3S avec fonction d'équilibrage (OT3568)](https://www.otronic.nl/fr/circuit-de-protection-bms-3s-avec-fonction-dequili.html)||:red_circle:||
 ||Amazon|1|[Plaque Nickel Bande Ruban 0,15 x 8 mm](https://www.amazon.fr/Plaque-batterie-Soudure-Compatible-Soudeur/dp/B09TT4KMLB)||:red_circle:|Un ruban peut servir à faire plusieurs batteries.|
 ||Amazon|1|[MMOBIEL Ruban Adhésif (20mm x 30m) - Ruban Polyimide Résistant à la Chaleur ](https://www.amazon.fr/MMOBIEL-Polyimide-longueur-Antistatique-R%C3%A9sistant/dp/B07W4KWKKB)||:red_circle:|Un rouleau peut servir à faire plusieurs batteries.|
-||Amazon|1|[Gaine Thermorétractable Câble Électrique](https://www.amazon.fr/dp/B08XXGNJHG?ref_=pe_111711481_1111265561_t_fed_asin_title)|||Peut servir à la réalisation de nombreuses batteries.|
 
-### - **Composants pour les cables de charge**
+## **1.4 Composants pour les cables de recharge**
 
 Trois éléments doivent être réalisés. Le premier est un adaptateur permettant de passer de XT30 à XT60. Il est utilisé pour recharger directement la batterie lorsqu'elle n'est pas à l'intérieur d'un caisson. Il nécessite :
 - **Connecteur XT30 mâle**
 - **Connecteur XT60 femelle**
 - **Deux bouts de cables noir et rouge**: environ 10cm, récupérérés sur des chutes de cable étanche COBALT 3pin ou 4pin
 - **Gaine thermorétractable**
+  
 Le second élément assure la connexion entre le XT60 et l'alimentation stabilisée. Il nécessite :
 - **Connecteur XT60 mâle**
 - **Deux bouts de cables noir et rouge avec leur connecteur banane**: récupérés dans un laboratoire d'électronique
 - **Gaine thermorétractable**
+  
 Le dernier élément permet de recharger la batterie quand elle est dans le caisson étanche.
 - **Connecteur XT60 femelle** 
 - **Cable Cobalt 3 pin**
@@ -71,35 +70,29 @@ Le dernier élément permet de recharger la batterie quand elle est dans le cais
   
 | Visuel | Référence | Quantité | Dénomination | Usage | Substituabilité | Tips/Conseil |
 |-------|------------|----------|--------------------------|--------------------|-------------------------------|----------|
-||COB-1231|1|Single ended Cable 3 pin|Cable recharge batterie|:red_circle:||
-||COB-1003|1|Cobalt Series Dummy Cap|Bouchon pour cable recharge|:red_circle:||
+||COB-1231|1|Single ended Cable 3 pin|Cable Cobalt pour la recharge de la batterie quand elle est dans la caisson étanche|:red_circle:||
+||COB-1003|1|Cobalt Series Dummy Cap|Bouchon pour ce cable de recharge|:red_circle:||
 ||Gotronic 48811|1|[Fiche mâle 15 A XT30U-M](https://www.gotronic.fr/art-fiche-male-15-a-xt30u-m.htm)||:red_circle:||
 ||Gotronic 49285|2|[Fiche femelle 30 A XT60-F](https://www.gotronic.fr/art-fiche-alim--f-xt60-47680.htm)||:red_circle:||
 ||Gotronic 49289|1|[Embase mâle 30 A XT60M](https://www.gotronic.fr/art-embase-male-30-a-xt60m-39057.htm)||:red_circle:||
 
 
+# **2. Assemblage de la batterie**
 
 
-
-### **⚠️ Attention:**
+## **⚠️ Attention:**
 
 **À cette étape de la conception de notre système, certaines parties présentent des risques. Il est donc essentiel de rester vigilant et de respecter scrupuleusement les mesures de protection recommandées.**
 
+## **2.1 Vue d'ensemble de la partie batterie**
 
-
-
-
-## **1. Vue d'ensemble de la partie batterie**
-
-La batterie se compose des 9 accumulateurs connectés au module BMS selon un schéma spécifique. Le seul connecteur externe est un XT30, utilisé à la fois pour la charge et la décharge.
+La batterie se compose des 9 accumulateurs connectés au module BMS selon un schéma spécifique. Le seul connecteur externe est un XT30, utilisé à la fois pour la charge et la décharge. À noter que la couleur des fils doit être respectée.
 
 |<img src="./pictures/01_Batterie/schema_bms.png" alt="Acus Soudés par 3 avec 4 bandes" width="330">|
 |:--:|
 |*Schéma de branchement*|
 
-### **1.1 Connecteur XT30**
-
----
+### **Connecteur XT30**
 
 <img src="./pictures/01_Batterie/xt30_soldered.jpg" alt="Deux Câbles avec XT30" width="250">
 
@@ -117,9 +110,7 @@ Commencez par dénuder légèrement les extrémités des câbles.
 
 Comme pour le connecteur XT30, attention à bien respecter le signe pour chaque câble.
 
-### **1.2 Assemblage des Accumulateurs et BMS**
-
----
+### **Assemblage des Accumulateurs et BMS**
 
 Avant de commencer, assurez-vous que la soudeuse par points est bien chargée et opérationnelle.
 
@@ -152,7 +143,7 @@ Avant toute opération, sécurisez l'environnement :
 - Utilisez du ruban adhésif pour maintenir temporairement chaque groupe en place. Cela facilite la soudure et évite les mouvements indésirables.
 - Découpez une bande de nickel pour chaque groupe afin de relier les trois pôles entre eux.
 
-<img src="./pictures/0_Batterie/lithium_acu_nickel_plate.jpg" alt="Acus Prêts à être soudés par 3" width="300">
+<img src="./pictures/01_Batterie/lithium_acu_nickel_plate.jpg" alt="Acus Prêts à être soudés par 3" width="300">
 
 ---
 
