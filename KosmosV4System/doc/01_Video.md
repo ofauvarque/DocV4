@@ -1,3 +1,4 @@
+
 # Caisson vidéo
 <details>
   <summary> Outils </summary>
@@ -20,13 +21,64 @@
     
 </details>
 
-### Vue générale
+## Caisson étanche
+
+<img src="pictures/V4_Video/VueGenerale.PNG" height=400>
 
 <img src="pictures/V4_Video/VueGenerale.jpeg" height=400>
 
-### Impression de la structure 3D
+### Réalisation du cable d'alimentation
+
+- Avec une pince coupante, raccourcir le cable COB-1231 pour qu'il mesure 40 cm. Garder les fils noir, jaune et rouge. 
+- Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
+- Couper le fil rouge à ras de la gaine pour ne conserver que le noir et le blanc. (On rappelle la convention : 5V Jaune et Noir. 12 V Rouge et Noir.)
+- Dénuder les fils blancs et noir sur 7 mm.
+- Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
+
+<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
+
+- Suivre ensuite le tutoriel dont le lien est ci-dessous pour installer le presse étoupe
+
+https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
+
+https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
+
+<img src="pictures/V4_Video/IMG_1769.jpg" height=300> <img src="pictures/V4_Video/IMG_1770.jpg" height=200>
+
+### Connectiques caisson
+
+- Sur le connecteur 4 pin Power Bulkhead COB-1140-SS, raccourcir les cables pour qu'ils mesurent 10 cm.
+- Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
+
+<img src="pictures/V4_Video/1.jpeg" height=400> 
+ 
+- De la même façon, couper les cables du capteur Température Pression pour qu'ils mesurent 10 cm.
+- Dénuder les fils sur 3 mm puis y sertir les cosses. Les mords doivent prendre sur la gaine plastique des fils. 
+- Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.)
+- AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des deux éléments dans le bouchon à 7 trous.
+ 
+- Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
+
+<img src="pictures/V4_Video/IMG_E1626.JPG" height=300> <img src="pictures/V4_Video/IMG_E1624.JPG" height=300>
+
+- Sur le connecteur 8 pin Power Bulkhead COB-1180-SS, raccourcir les cables pour qu'ils mesurent 7cm et sertir un connecteur ethernet
+
+### Assemblage de la tape connectique
+
+- Graisser les joints de chaque éléments sur la bouchon 7 trous
+- Serrer les éléments M10 sur le bouchon
+    
+<img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
+
+### Assemblage du hublot
+
+<img src="pictures/V4_Video/IMG30.jpg" height=400> 
+
+## Impression de la structure 3D
 
 <img src="pictures/V4_Video/Structure.PNG" height=300>
+
+## Carte électronique
 
 ### Pose des radiateurs sur la Raspberry Pi
 
@@ -52,47 +104,7 @@ La vis de fixation de la caméra a initialement un arceau métallique facilitant
 
 <img src="pictures/V4_Video/8.jpeg" height=200> <img src="pictures/V4_Video/7.jpeg" height=200>
 
-### Réalisation du cable d'alimentation
 
-- Avec une pince coupante, raccourcir le cable COB-123P1 pour qu'il mesure 40 cm. Garder les fils noir, blanc et rouge. La gaine ne sera plus utilisée.
-- Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
-- Couper le fil rouge à ras de la gaine pour ne conserver que le noir et le blanc. (On rappelle la convention : 5V Blanc et Noir. 12 V Rouge et Noir.)
-- Dénuder les fils blancs et noir sur 7 mm.
-- Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
-
-<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
-
-https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
-
-https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
-
-<img src="pictures/V4_Video/IMG_1769.jpg" height=300> 
-
-<img src="pictures/V4_Video/IMG_1770.jpg" height=200>
-
-
-### Connectiques caisson
-
-- Sur le connecteur 4 pin Power Bulkhead COB-1140-SS, raccourcir les cables pour qu'ils mesurent 10 cm.
-- Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
-- De la même façon, couper les cables du capteur Température Pression pour qu'ils mesurent 10 cm.
-- Dénuder les fils sur 3 mm puis y sertir les cosses. Les mords doivent prendre sur la gaine plastique des fils. 
-- Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.)
-- AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des deux éléments dans le bouchon à 7 trous.
- 
-<img src="pictures/V4_Video/1.jpeg" height=400> <img src="pictures/V4_Video/IMG_E1626.JPG" height=400>
-
-- Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
-
-<img src="pictures/V4_Video/IMG_E1624.JPG" height=400>
-
-### Assemblage du bouchon avec les connectiques
-
-<img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
-
-### Assemblage du hublot
-
-<img src="pictures/V4_Video/IMG30.jpg" height=400> 
 
 ### Réalisation de la carte électronique
 
