@@ -1,5 +1,3 @@
-Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle est fabriquée à partir d'accumulateurs Li-ion standards (3.6V 3450mAh) soudés à l'aide d'une soudeuse par points. Nous présentons ici une batterie faite à partir de 9 accumulateurs : 3 blocs série de 3 accumulateurs en parallèle (on parle de batterie 3S3P). La tension déliverée par cette assemblage avoisinne les 13V à pleine charge et représente une capacité d'environ 30 Ah.
-
 # **Outils**
 
 <img src="./pictures/00_Outils/Outils.JPG" height="300">
@@ -33,4 +31,5 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 <img src="./pictures/02_Flanges/IMG_0806.JPG" height="300"> <img src="./pictures/02_Flanges/IMG_0808.JPG" height="300">
 
 <img src="./pictures/02_Flanges/IMG_0818.JPG" height="300"> <img src="./pictures/02_Flanges/IMG_0823.JPG" height="300">
+
 
