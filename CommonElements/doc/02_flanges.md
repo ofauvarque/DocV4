@@ -2,7 +2,7 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 
 # **Outils**
 
-<img src="./pictures/02_Flanges/Outils.JPG" height="300">
+<img src="./pictures/00_Outils/Outils.JPG" height="300">
 
 - **Paire de ciseaux**
 - **Clés Allen** 1.25 et 2.5 mm
@@ -31,4 +31,6 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 <img src="./pictures/02_Flanges/IMG_0803.JPG" height="300"> <img src="./pictures/02_Flanges/IMG_0805.JPG" height="300">
 
 <img src="./pictures/02_Flanges/IMG_0806.JPG" height="300"> <img src="./pictures/02_Flanges/IMG_0808.JPG" height="300">
+
+<img src="./pictures/02_Flanges/IMG_0818.JPG" height="300"> <img src="./pictures/02_Flanges/IMG_0823.JPG" height="300">
 
