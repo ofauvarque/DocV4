@@ -108,12 +108,13 @@ Pour la version 4 :
 
 ## Mode d'emploi
 
-### Prise en main de l'Interface web
 Une IHM (Interface Homme Machine) a été développée pour commander Kosmos depuis un téléphone ou un ordinateur portable. Elle remplace les étapes à réaliser avec les aimants dans le guide de mise en service. (À noter que le pilotage avec les aimants reste opérationnel sur les systèmes où sont installés les ILS.)
+
+### Accès à l'Interface web
 
 Sur un téléphone ou un ordinateur portable:
  - Se connecter au réseau  WiFi de la raspberry qui a été créé dans les étapes précédentes typiquement `KosmosWeb`.  
- - Dans un navigateur web, créer une fenêtre de navigation privée et entrer l'adresse `10.42.0.1` pour accéder à l'interface de commande du KOSMOS. 
+ - Dans un navigateur web, générer une fenêtre de navigation privée et entrer l'adresse `10.42.0.1` pour accéder à l'interface de commande du KOSMOS. 
 La fenêtre suivante apparaît :
 
 <img src="./pictures/04_Software/Capture3.PNG" width="300">
@@ -125,30 +126,30 @@ La fenêtre suivante apparaît :
  - `Camera` qui permet de lancer l'enregistrement des vidéos, de tester si la caméra fonctionne correctement et d'éteindre le système
  - `Records` qui permet de voir les vidéos enregistrées et leur lieu de stockage
    
-A noter que l'adresse `10.42.0.1` renvoie directement vers l'onglet `Camera`.
+A noter que l'adresse `10.42.0.1` renvoie directement vers la page `Camera`.
 
 #### Page `Camera`
 
-Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image précédente, on lit en effet `K4v2 state is STANDBY`. Il existe 5 états possible du KOSMOS :
- - STARTING : kosmos est en train de démarrer 
- - STANDBY : kosmos est en attente d'instructions 
- - WORKING : kosmos entame l'enregistrement
- - STOPPING : kosmos termine l'enregistrement 
- - SHUTDOWN : kosmos passe à l'arrêt total
+Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image précédente, on lit en effet **`K4v2 state is STANDBY`**. (K4v2 est le nom du système et **STANDBY** son état.)  Il existe 5 états possible du KOSMOS :
+ - **STARTING** : kosmos est en train de démarrer 
+ - **STANDBY** : kosmos est en attente d'instructions 
+ - **WORKING** : kosmos entame l'enregistrement
+ - **STOPPING** : kosmos termine l'enregistrement 
+ - **SHUTDOWN** : kosmos passe à l'arrêt total
 
-Seuls les états STANDBY et WORKING permettent d'interagir avec le systèmes. Les boutons autorisés sont alors en noir. (Gris, ils sont désactivés.)
-Dans l'état STANDBY, le système est en attente. Il est donc possible :
+Seuls les états **STANDBY** et **WORKING** permettent d'interagir avec le systèmes. Les boutons autorisés sont alors en noir. (Gris, ils sont désactivés.)
+Dans l'état **STANDBY**, le système est en attente. Il est donc possible :
 - de lancer un enregistrement (via le bouton `Start` de la section `Buttons to record`)
 - d'éteindre le système (via le bouton `Shutdown`)
 - de faire un test caméra avec le live vidéo (via le bouton `Start` de la section `Live video`)
 
-Dans l'état WORKING, le système est en train d'enregistrer une vidéo. Le seul bouton autorisé est celui d'arrêt de la prise de vue (`Stop` de la section `Buttons to record`)
+Dans l'état **WORKING**, le système est en train d'enregistrer une vidéo. Le seul bouton autorisé est celui d'arrêt de la prise de vue (`Stop` de la section `Buttons to record`).
 
 <img src="./pictures/04_Software/Capture4.PNG" width="300">
 
 A noter que le `Live video` n'est possible que dans l'état STANDBY. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.) . Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
 
-Enfin on notera la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain (via une application de positionnement ou un GPS portable).
+Enfin on notera la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain.
 
 #### Page `Campaign`
 
