@@ -29,6 +29,10 @@ Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stér
 
 <img src="./pictures/04_Software/Capture55.PNG" width="400">
 
+### Video Continue
+
+### Time Lapse
+
 
 ## Mode d'emploi de l'interface web
 
@@ -213,6 +217,17 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 - Prise de vue continue
 - Mode MICADO
 - Prise de rafales
+
+| Paramètres | STAVIRO | Vidéo Continue | MICADO | Time LAPSE | 
+|-------|------------|------------|------------|------------|
+|`00_staviro_micado`|**`1`**|**`1`**|**`2`**||
+|`01_cam_timelapse`|**`1`** |**`1`**|**`1`**||
+|`02_tps_enregistrement`|**`1500`**|**`600`** |**`600`**||
+|`03_tps_fonctionnement`|**`1800`**|**`64800`**|`?`||
+|`04_tps_veille`|`?`|`?`|**`3600`**||
+
+
+
 
 ## Procédure de mise au point de la caméra
 - Nettoyer toutes les surfaces avec un chiffon microfibre puis on remontera l'objectif Edmund sur le capteur. Ré-assembler enfin ce module optique sur le système.
