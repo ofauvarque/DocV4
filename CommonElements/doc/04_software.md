@@ -213,18 +213,37 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 
 ## Quelques configurations typiques
 
-- Protocole STAVIRO
-- Prise de vue continue
-- Mode MICADO
-- Prise de rafales
+### Protocole STAVIRO
+Ce mode de déploiement correspond à la configuration historique du KOSMOS. L'objectif est de réaliser plusieurs stations durant une campagne journalière. Le système est démarré en début de mission et est éteint en fin de sortie. Entretemps, des enregistrements d'une quinzaine de minutes s'enchainent à diverses endroits de la zone étudiées. 
 
-| Paramètres | STAVIRO | Vidéo Continue | MICADO | Time LAPSE | 
-|-------|------------|------------|------------|------------|
-|`00_staviro_micado`|**`1`**|**`1`**|**`2`**||
-|`01_cam_timelapse`|**`1`** |**`1`**|**`1`**||
-|`02_tps_enregistrement`|**`1500`**|**`600`** |**`600`**||
-|`03_tps_fonctionnement`|**`1800`**|**`64800`**|`?`||
-|`04_tps_veille`|`?`|`?`|**`3600`**||
+Dans cette configuration, c'est l'opérateur qui déclenche la prise de vue (via le bouton `Start` de la section `Buttons to record` de la page `Camera`) ainsi que son arrêt (via le bouton `Stop`). La durée d'une vidéo dépend donc théoriquement de ces deux actions `Start` puis `Stop`. Néanmoins, afin de sécuriser les données et d'éviter un déchargement inutile de la batterie, deux paramètres temporels sont disponibles au cas où un système resterait en immersion durant une durée bien plus longue que prévue :
+- `02_tps_enregistrement` qui définit la durée maximale d'une vidéo avant de la convertir en `.mp4` (et ainsi de la sécuriser) et de recommencer à filmer.    
+- `03_tps_fonctionnement` qui définit la durée maximale de fonctionnement du système avant qu'il ne s'éteigne (pour ne pas vider la batterie).
+
+Dans le protocole STAVIRO, une vidéo *normale* dure en général 15 minutes. On a donc fixé :
+- `02_tps_enregistrement` à `1500` secondes, c'est-à-dire 25 minutes
+- `03_tps_fonctionnement` à `1800` secondes, c'est-à-dire 30 minutes
+Autrement dit, si un système reste plus de 25 minutes dans l'eau, l'enregistrement vidéo va stopper momentanément pour que la vidéo `.h264` soit convertie en `.mp4` puis reprendre. Il sera soit stoppé par l'opérateur soit s'achever 5 minutes plus tard. La nouvelle vidéo sera convertie puis le système s'arrêtera. Lors de sa récupération, il sera impossible de se connecter au Wifi la Raspberry étant éteinte. Il faudra donc dévisser le switch puis le revisser pour rédémarrer le système. c
+
+
+### Vidéo continue
+Dans cette configuration, on pose le système sur une station fixe et on filme en continu le plus longtemps possible ou jusqu'à la récupération du système. On utilise encore les paramètres `02_tps_enregistrement` et `03_tps_fonctionnement` pour limiter la perte de données et éviter un déchargement complet des batteries. On fixe typiquement :
+- `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes (la vidéo sera découpée en morceaux de 10 minutes)
+- `03_tps_fonctionnement` à `64800` secondes, c'est-à-dire 18 heures (c'est l'autonomie estimée du système en mode Vidéo continue) 
+
+### Mode MICADO
+Une fois de plus, le système est installé à une station fixe. Cependant, au lieu de filmer en continu, le système alterne des phases d'enregistrement et de veilles profondes, et ce, en vue d'augmenter au maximum son autonomie. Pour utiliser ce mode MICADO, il faut changer le paramètre `00_staviro_micado` en lui donnant la valeur `2` (il valait `1` en mode STAVIRO). Les paramètres temporels sont :
+- `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes (la vidéo sera découpée en morceaux de 10 minutes)
+- `03_tps_fonctionnement` à `` secondes, c'est-à-dire 18 heures (c'est l'autonomie estimée du système en mode Vidéo continue) 
+- `04_tps_veille`
+
+| Paramètres |Valeurs permises| STAVIRO | Vidéo Continue | MICADO | Time LAPSE | 
+|-------|-------|------------|------------|------------|------------|
+|`00_staviro_micado`|`1` ou `2`|**`1`**|**`1`**|**`2`**|**`2`**|
+|`01_cam_timelapse`|`1` ou `2`|**`1`** |**`1`**|**`1`**||
+|`02_tps_enregistrement`|Temps en secondes|**`1500`**|**`600`** |**`600`**||
+|`03_tps_fonctionnement`|Temps en secondes|**`1800`**|**`64800`**|`?`||
+|`04_tps_veille`|Temps en secondes|`?`|`?`||**`3600`**||
 
 
 
