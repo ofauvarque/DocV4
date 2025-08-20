@@ -1,4 +1,4 @@
-# Kosmos Software
+ # Kosmos Software
 
 ## Stockage des données
 
@@ -59,7 +59,7 @@ A noter que l'adresse `10.42.0.1` renvoie directement vers la page `Camera`.
 Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image précédente, on lit en effet **`K4v2 state is STANDBY`**. (K4v2 est le nom du système et **STANDBY** son état.)  Il existe 5 états possible du KOSMOS :
  - **STARTING** : kosmos est en train de démarrer 
  - **STANDBY** : kosmos est en attente d'instructions 
- - **WORKING** : kosmos entame l'enregistrement
+ - **WORKING** : kosmos enregistre
  - **STOPPING** : kosmos termine l'enregistrement 
  - **SHUTDOWN** : kosmos passe à l'arrêt total
 
@@ -69,11 +69,11 @@ Dans l'état **STANDBY**, le système est en attente. Il est donc possible :
 - d'éteindre le système (via le bouton `Shutdown`)
 - de faire un test caméra avec le live vidéo (via le bouton `Start` de la section `Live video`)
 
-Dans l'état **WORKING**, le système est en train d'enregistrer une vidéo. Le seul bouton autorisé est celui d'arrêt de la prise de vue (`Stop` de la section `Buttons to record`).
+Dans l'état **WORKING**, le système est en train d'enregistrer une vidéo. Le seul bouton autorisé est celui d'arrêt de la prise de vue (via le bouton `Stop` de la section `Buttons to record`).
 
 <img src="./pictures/04_Software/Capture4.PNG" width="300">
 
-A noter que le `Live video` n'est possible que dans l'état STANDBY. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.) . Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
+À noter que le `Live video` n'est possible que dans l'état **STANDBY**. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.). Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
 
 <img src="./pictures/04_Software/Capture11.PNG" width="300">
 
