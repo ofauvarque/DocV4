@@ -207,6 +207,13 @@ Autre point : lorsque l'on démarre un enregistrement, la vidéo a pour extensio
 
 Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issue d'une station a une taille inférieure...  
 
+## Quelques configurations typiques
+
+- Protocole STAVIRO
+- Prise de vue continue
+- Mode MICADO
+- Prise de rafales
+
 ## Procédure de mise au point de la caméra
 - Nettoyer toutes les surfaces avec un chiffon microfibre puis on remontera l'objectif Edmund sur le capteur. Ré-assembler enfin ce module optique sur le système.
 - Pour faire la mise au point de la caméra, le système ne sera pas placé dans le caisson. On branchera par ailleurs un écran à la Raspberry pour visualiser ce que filme la caméra.
@@ -215,7 +222,4 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 - Dans le terminal, taper `rpicam-hello --timeout 0` Cette instruction permet d'afficher le preview. Pour le quitter il suffira de taper ```Ctrl + C ```
 - Viser un objet à l'infini (par exemple le feuillage d'arbres au loin). Ouvrir à fond l'objectif (le petit point blanc devant 1.8) pour avoir une profondeur de champ minimale. Réaliser le focus sur l'objet avec la bague puis la bloquer solidement. Fermer enfin l'objectif à moitié (le petit point blanc sur 2.8) pour récupérer une meilleure profondeur de champ. Bloquer la bague d'ouverture dans cette position. Vérifier que le focus est toujours bon (le fait de serrer les bagues peut parfois les faire bouger.)
 - Sortir du preview puis redémarrer la Raspberry Pi. Le soft kosmos va se remettre en route. Dans l'interface web, remettre le paramètre  `06_shutdown` sur 1. Effectuer un `Reboot` puis éteindre le système avec un `Shutdown`.
-
-## Processus de mise à l'eau
-Pour déployer KOSMOS en mer suivre le [guide de mise en service](https://kosmos.fish/index.php/deployer/).
 
