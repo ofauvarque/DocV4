@@ -149,13 +149,51 @@ Dans l'état **WORKING**, le système est en train d'enregistrer une vidéo. Le 
 
 A noter que le `Live video` n'est possible que dans l'état STANDBY. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.) . Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
 
+<img src="./pictures/04_Software/Capture11.PNG" width="300">
+
 Enfin on notera la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain.
 
 #### Page `Campaign`
 
-Lors de la première tentative pour lancer un enregistrement avec le bouton `Start` de la section `Buttons to record` de la page `Camera`, un message d'erreur apparaît. Il signale qu'il faut au préalable renseigner les informations de la campagne. Cette précaution évite la perte de métadonnées. Il faut donc cliquer sur l'onglet `Campaign` en haut de la page. On arrive sur la page suivante :
+Lors de la première tentative pour lancer un enregistrement avec le bouton `Start` de la section `Buttons to record` de la page `Camera`, un message d'erreur apparaît. 
+
+<img src="./pictures/04_Software/Capture232.PNG" width="300">
+
+Il signale qu'il faut au préalable renseigner les informations de la campagne. Cette précaution évite la perte de métadonnées. Il faut donc cliquer sur l'onglet `Campaign` en haut de la page. On arrive sur la page suivante :
 
 <img src="./pictures/04_Software/Capture1.PNG" width="300">
+
+Remplir chacune des lignes du tableau :
+- `Date`: Date de la campagne journalière
+- `Campaign`: Grand zone maritime dans laquelle s'effectue la campagne. Typiquement `ATL` pour Océan Atlantique, `MED` pour mer Méditerrannée, etc.
+- `Zone`: Précision sur la zone de déploiement. Typiquement `BR` pour Brest, `CC`pour Concarneau, etc.
+- `Location`: Lieudit du déploiement
+- `Protection`: Statut de protection de la zone de déploiement. Mettre `Aucune` si il n'en existe pas.
+- `Boat`: Moyen de déploiement.
+- `Pilot`: Nom du pilote
+- `Crew`: Noms des membres de l'équipage
+- `Partners`: Noms des entreprises/laboratoires/associations participant au déploiement
+Cliquer enfin sur le bouton `Save`. À noter que tous les champs sont obligatoires.
+
+<img src="./pictures/04_Software/Capture23.PNG" width="300">
+
+Tel que l'interface Web est construite, ces informations Campagne seront enregistrées tant que la fenêtre de navigation privée du navigateur ne sera pas fermée. Il faudra donc la laisser ouverte tout le long de la journée de déploiement. On pourra la fermer dès la dernière station réalisée. 
+
+Une fois les données Campagne complétées, on peut revenir sur la page `Camera` pour lancer un enregistrement. Cependant, il peut arriver que l'on veuille auparavant configurer le système. Pour cela, il faut aller dans la page `Configuration`.
+
+#### Page `Configuration`
+
+<img src="./pictures/04_Software/Capture2.PNG" width="300"> <img src="./pictures/04_Software/Capture33.PNG" width="300"> 
+
+
+La page `Configuration` permet de régler les paramètres du KOSMOS. Pour effectuer la modification d'un paramètre, il faut
+- cliquer sur le bouton `Modify` (qui devient alors un bouton `Save`),
+- taper la nouvelle valeur du paramètre
+- cliquer sur le bouton `Save`
+- (éventuellement refaire cette opération pour un autre paramètre)
+- cliquer sur le bouton `Reboot`
+- attendre que l'état du système redevienne  
+
 
 ##### Camera
 ###### State
