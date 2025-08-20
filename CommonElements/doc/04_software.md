@@ -11,9 +11,13 @@ Il peut arriver que la clé USB (si ce système de stockage est choisi), contien
   
 Lorsque l'on démarre le système avec une clé vierge, un dossier et un ficher texte vont s'y créer. Si aucune clé n'est branchée, ces éléments seront dans `/home/kosmos/kosmos_local_sd`.
 
-1. Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
+<img src="./pictures/04_Software/Capture88.PNG" width="300">
 
-2. Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_system`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0054`.
+Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
+
+Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_system`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0091`.
+
+<img src="./pictures/04_Software/Capture99.PNG" width="200">
 
 Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stéréo) et ses métadonnées. 
 - Le fichier vidéo `increment.mp4` (et éventuellement increment_STEREO.mp4 si la stéréo est activée)
@@ -23,12 +27,12 @@ Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stér
 - Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
 - Un fichier `increment.mp3` qui stocke l'enregistrement audio si l'hydrophone est activé.
 
+<img src="./pictures/04_Software/Capture55.PNG" width="400">
 
-## Mode d'emploi
+
+## Mode d'emploi de l'interface web
 
 Une IHM (Interface Homme Machine) a été développée pour commander Kosmos depuis un téléphone ou un ordinateur portable. Elle remplace les étapes à réaliser avec les aimants dans le guide de mise en service. (À noter que le pilotage avec les aimants reste opérationnel sur les systèmes où sont installés les ILS.)
-
-### Accès à l'Interface web
 
 Sur un téléphone ou un ordinateur portable:
  - Se connecter au réseau  WiFi de la raspberry qui a été créé dans les étapes précédentes typiquement `KosmosWeb`.  
@@ -46,7 +50,7 @@ La fenêtre suivante apparaît :
    
 A noter que l'adresse `10.42.0.1` renvoie directement vers la page `Camera`.
 
-#### Page `Camera`
+### Page `Camera`
 
 Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image précédente, on lit en effet **`K4v2 state is STANDBY`**. (K4v2 est le nom du système et **STANDBY** son état.)  Il existe 5 états possible du KOSMOS :
  - **STARTING** : kosmos est en train de démarrer 
@@ -71,7 +75,7 @@ A noter que le `Live video` n'est possible que dans l'état STANDBY. Lorsqu'il e
 
 Enfin on notera la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain.
 
-#### Page `Campaign`
+### Page `Campaign`
 
 Lors de la première tentative pour lancer un enregistrement avec le bouton `Start` de la section `Buttons to record` de la page `Camera`, un message d'erreur apparaît. 
 
@@ -99,7 +103,7 @@ Tel que l'interface Web est construite, ces informations Campagne seront enregis
 
 Une fois les données Campagne complétées, on peut revenir sur la page `Camera` pour lancer un enregistrement. Cependant, il peut arriver que l'on veuille auparavant configurer le système. Pour cela, il faut aller dans la page `Configuration`.
 
-#### Page `Configuration`
+### Page `Configuration`
 
 <img src="./pictures/04_Software/Capture2.PNG" width="300"> <img src="./pictures/04_Software/Capture33.PNG" width="298"> 
 
@@ -115,7 +119,7 @@ Le système est alors prêt pour l'enregistrement
 Quelques précisions quant à la configuration du KOSMOS. Les paramètres visibles dans l'interface Web sont stockés dans un fichier de configuration nommé `kosmos_config.ini`. Il est contenu soit dans la clé USB, soit dans `/home/kosmos/kosmos_local_sd` suivant qu'on choisisse l'un ou l'autre de ces solutions de stockage. 
 Ce fichier `kosmos_config.ini`est découpé en deux sections permettant de distinguer des paramètres que l'on peut changer durant la campagne soit lors d'un débug. Les premiers paramètres sont modifiables via l'interface web, tandis que les seconds doivent être modifiés directement dans le fichier `.ini`.
 
-##### Paramètres modifiables sur le terrain via l'interface Web
+#### Paramètres modifiables sur le terrain via l'interface Web
 
  - `00_STAVIRO_MICADO = 1` permet de permuter entre les modes de fonctionnement du KOSMOS.
    * `1` permet d'opter pour le mode STAVIRO, c'est-à-dire un fonctionnement de pose puis relevé rapide du système.
@@ -155,7 +159,7 @@ Pour le **KOSMOS V4**, ces paramètres sont différents :
 - `14_motor_step_mode = 4`
 - `15_motor_i2c_communication_period = 1`
 
-##### Paramètres non modifiables sur le terrain
+#### Paramètres non modifiables sur le terrain
 
 Pour jouer sur ces paramètres, il faut donc ouvrir le fichier `kosmos_config.ini` et les modifier directement. Ceci dit, ces paramètres n'ont pas à être changés sauf modification hardware du système.
 Des paramètres sont communs aux version 3 et 4 :
@@ -188,7 +192,7 @@ Pour la **version 4** :
 - `08_system_buzzer = 5` adresse gpio du buzzer
 - `09_system_wake_up_motor = 4` adresse gpio du moteur
 
-#### Page `Records`
+### Page `Records`
 
 Quand une station a été réalisée, il est possible de voir si la vidéo a bel et bien été enregistrée. Pour cela il faut aller sur la page `Records`.
 
@@ -201,36 +205,17 @@ Le tableau n'affiche que les fichiers vidéo (c'est-à-dire les extensions `.h26
 
 Autre point : lorsque l'on démarre un enregistrement, la vidéo a pour extension `.h264`. Ce fichier voit sa taille augmenter à mesure que le temps passe ; on s'en aperçoit en rafraichissant la page `Records`. Lorsque l'on arrête la vidéo avec le bouton `Stop` de la section `Buttons to record` de la page `Camera`, le fichier `.h264` est converti en `.mp4`. Cette conversion prend un peu de temps si bien que l'on voit pendant quelques instants un fichier `.h264` et un autre`.mp4` avec le même nom sur la page `Records`. Quand la conversion est finie, le `.h264` est supprimé. Il ne reste alors que le `.mp4`. En général, le temps de navigation entre deux stations permet largement à la conversion de se réaliser, il est toutefois conseillé de vérifier qu'elle est terminée (c'est-à-dire qu'il n'y a plus de `h264`) avant de relancer une nouvelle vidéo.
 
-Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issu d'une station a une taille inférieure...  
+Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issue d'une station a une taille inférieure...  
 
-
-
-
-
-
-##### Configuration, à mettre à jour....
-Permet de modifier des paramètres du système  
-Un fichier javascript vient lire le fichier kosmos_config.ini.  
-Puis il va créer une liste avec les différents noms des paramètres écrits dans le fichier kosmos_config.ini. Les noms des paramètres seront associés à un label et les valeurs des paramètres seront associées à un input. Par défaut l'input est en "readonly" c'est à dire qu'il n'est pas modifiable. Pour pouvoir le modifier il faut appuyer sur le bouton `Modify` entrer la nouvelle valeur puis la sauvegarder avec `Save`. Une fois la valeur sauvegardée le fichier kosmos_config.ini se mettra à jour.  
-Il est également possible de modifier les paramètres directement dans le fichier kosmos_config.ini.
-
-
-
-
-D'autres paramètres sont réglables mais non accessibles via l'interface web. Il faut aller directement aller les changer dans le fichier kosmos_config.ini
- 
-
-
-
-### Procédure de mise au point de la caméra
+## Procédure de mise au point de la caméra
 - Nettoyer toutes les surfaces avec un chiffon microfibre puis on remontera l'objectif Edmund sur le capteur. Ré-assembler enfin ce module optique sur le système.
 - Pour faire la mise au point de la caméra, le système ne sera pas placé dans le caisson. On branchera par ailleurs un écran à la Raspberry pour visualiser ce que filme la caméra.
 - Une fois l'écran branché, on allumera le système et on attendra que le système KOSMOS soit en STAND BY.
-- Dans l'interface WEB, modifier le paramètre `05_SYSTEM_shutdown` pour le mettre à 0 et effectuer un `Reboot`. Aller ensuite dans l'onglet `Camera` et éteindre arrêter le système KOSMOS en appuyant sur `Shutdown`. (Cette manipulation permet d'arrêter le script KOSMOS sans éteindre la Rpi. La caméra peut ainsi être utilisée.)
-- Dans le terminal, taper ```rpicam-hello --timeout 0 ``` Cette instruction permet d'afficher le preview. Pour le quitter il suffira de taper ```Ctrl + C ```
+- Dans l'interface WEB, modifier le paramètre `06_shutdown` pour le mettre à `0` et effectuer un `Reboot`. Aller ensuite dans la page `Camera` et arrêter le système KOSMOS en appuyant sur `Shutdown`. (Cette manipulation permet d'arrêter le script KOSMOS sans éteindre la Rpi. La caméra peut ainsi être utilisée.)
+- Dans le terminal, taper `rpicam-hello --timeout 0` Cette instruction permet d'afficher le preview. Pour le quitter il suffira de taper ```Ctrl + C ```
 - Viser un objet à l'infini (par exemple le feuillage d'arbres au loin). Ouvrir à fond l'objectif (le petit point blanc devant 1.8) pour avoir une profondeur de champ minimale. Réaliser le focus sur l'objet avec la bague puis la bloquer solidement. Fermer enfin l'objectif à moitié (le petit point blanc sur 2.8) pour récupérer une meilleure profondeur de champ. Bloquer la bague d'ouverture dans cette position. Vérifier que le focus est toujours bon (le fait de serrer les bagues peut parfois les faire bouger.)
-- Sortir du preview puis redémarrer la Raspberry Pi. Le soft kosmos va se remettre en route. Dans l'interface web, remettre le paramètre  `05_SYSTEM_shutdown` sur 1. Effectuer un `Reboot` puis éteindre le système avec un `Shutdown`.
+- Sortir du preview puis redémarrer la Raspberry Pi. Le soft kosmos va se remettre en route. Dans l'interface web, remettre le paramètre  `06_shutdown` sur 1. Effectuer un `Reboot` puis éteindre le système avec un `Shutdown`.
 
-### Processus de mise à l'eau
+## Processus de mise à l'eau
 Pour déployer KOSMOS en mer suivre le [guide de mise en service](https://kosmos.fish/index.php/deployer/).
 
