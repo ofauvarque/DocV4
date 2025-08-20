@@ -25,7 +25,7 @@ Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stér
 - Un fichier `increment.csv` qui stocke des paramètres de la caméra ainsi que les données T,P, position et autres données fournies par les capteurs du système pendant la prise de vue.
 - Un fichier `increment.json` qui stocke les métadonnées de la prise de vue.
 - Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
-- Un fichier `increment.mp3` qui stocke l'enregistrement audio si l'hydrophone est activé.
+- Un fichier `increment.wav` qui stocke l'enregistrement audio si l'hydrophone est activé.
 
 <img src="./pictures/04_Software/Capture55.PNG" width="400">
 
