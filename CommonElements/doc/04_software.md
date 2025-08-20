@@ -211,7 +211,15 @@ Autre point : lorsque l'on démarre un enregistrement, la vidéo a pour extensio
 
 Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issue d'une station a une taille inférieure...  
 
-## Quelques configurations typiques
+
+
+
+## Fonctionnement général
+
+**STANDBY**
+
+
+
 
 ### Protocole STAVIRO
 Ce mode de déploiement correspond à la configuration historique du KOSMOS. L'objectif est de réaliser plusieurs stations durant une campagne journalière. Le système est démarré en début de mission et est éteint en fin de sortie. Entretemps, des enregistrements d'une quinzaine de minutes s'enchainent à diverses endroits de la zone étudiées. 
