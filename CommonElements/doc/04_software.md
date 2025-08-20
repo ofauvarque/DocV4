@@ -216,7 +216,12 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 
 ## Fonctionnement général
 
-**STANDBY**
+### Mode STAVIRO et mode MICADO
+
+<img src="./pictures/04_Software/ModeStaviro.png" height="500"> <img src="./pictures/04_Software/ModeMicado.png" height="500"> <img src="./pictures/04_Software/Instruction.png" height="200"> 
+
+
+
 
 
 
