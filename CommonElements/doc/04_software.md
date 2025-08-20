@@ -1,14 +1,17 @@
 # Kosmos Software
 
-### Stockage des données
+## Stockage des données
 
- - Deux choix s'ouvrent à vous : un stockage sur la carte SD ou sur une clé USB. Si une clé USB est branchée, elle sera prioritaire. Si aucune clé usb n'est branchée, les fichiers seront stockées dans `/home/kosmos/kosmos_local_sd`.
+Deux méthodes de stockage sont possibles : 
+- en local sur la carte SD
+- sur une clé USB.
+Si une clé USB est branchée, elle sera prioritaire. Si aucune clé usb n'est branchée, les fichiers seront stockées dans `/home/kosmos/kosmos_local_sd`. Il faudra dans ce cas veiller à ce que la carte SD ait une capacité appropriée (on préconise au moins 64 Go).
 
- - Il peut arriver que la clé USB (si ce système de stockage est choisi), contienne déjà des vidéos ainsi qu'un fichier de configuration kosmos_config.ini. Nous recommandons de renommer ce dernier fichier (en kosmos_config_old.ini) pour éviter des bugs de compatibilité entre les versions du soft. Par ailleurs, il faudra veiller à ce que la clé propose assez de places pour accueillir les nouvelles vidéos. Typiquement prévoir 10Go par journée de campagne. 
+Il peut arriver que la clé USB (si ce système de stockage est choisi), contienne déjà des vidéos ainsi qu'un fichier de configuration `kosmos_config.ini`. Nous recommandons de renommer ce dernier fichier (en `kosmos_config_old.ini`) pour éviter des bugs de compatibilité entre les versions du soft. Par ailleurs, il faudra veiller à ce que la clé propose assez de places pour accueillir les nouvelles vidéos. Typiquement prévoir 10Go par journée de campagne. 
   
- - Redémarrer maintenant la RPi. Si au démarrage, la led verte de la carte électronique clignote c'est que le système est opérationnel (cela peut prendre une trentaine de secondes). Si la clé était vierge, elle doit maintenant contenir un dossier et un ficher texte (si aucune clé n'est branché, ces éléments sont dans `/home/kosmos/kosmos_local_sd`) :
+Lorsque l'on démarre le système avec une clé vierge, un dossier et un ficher texte vont s'y créer. Si aucune clé n'est branchée, ces éléments seront dans `/home/kosmos/kosmos_local_sd`.
 
-1. Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles depuis l'interface web grâce à un ficher Javascript.
+1. Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
 
 2. Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_system`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0054`.
 
@@ -19,7 +22,6 @@ Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stér
 - Un fichier `increment.json` qui stocke les métadonnées de la prise de vue.
 - Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
 - Un fichier `increment.mp3` qui stocke l'enregistrement audio si l'hydrophone est activé.
-
 
 
 ## Mode d'emploi
@@ -205,29 +207,6 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 
 
 
-
-##### Camera
-###### State
-Affiche l'état dans lequel se trouve la caméra  
-
- - UNKNOW : état inconnu (signe d'un mauvais fonctionnement)
-
-
-###### Buttons
- - `Start` démarre un enregistrement vidéo
- - `Stop` arrête l'enregistrement vidéo en cours
-
-###### Live video
- - `Start Live` affiche ce qu'observe la caméra. (Ce live vidéo ne fonctionne que dans l'état STANDBY.)
- - `Stop Live` arrête l'affichage de ce qu'observe la caméra
-
-###### ShutDown KOSMOS
- - `Shutdown` éteint kosmos
-<br>
-
-##### Records
-Affiche le nom, la taille et l'heure de fin d'enregistrement des derniers fichiers vidéos.
-<br>
 
 ##### Configuration, à mettre à jour....
 Permet de modifier des paramètres du système  
