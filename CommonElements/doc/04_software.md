@@ -1,38 +1,4 @@
- # Kosmos Software
-
-## Stockage des données
-
-Deux méthodes de stockage sont possibles : 
-- en local sur la carte SD
-- sur une clé USB.
-Si une clé USB est branchée, elle sera prioritaire. Si aucune clé usb n'est branchée, les fichiers seront stockées dans `/home/kosmos/kosmos_local_sd`. Il faudra dans ce cas veiller à ce que la carte SD ait une capacité appropriée (on préconise au moins 64 Go).
-
-Il peut arriver que la clé USB (si ce système de stockage est choisi), contienne déjà des vidéos ainsi qu'un fichier de configuration `kosmos_config.ini`. Nous recommandons de renommer ce dernier fichier (en `kosmos_config_old.ini`) pour éviter des bugs de compatibilité entre les versions du soft. Par ailleurs, il faudra veiller à ce que la clé propose assez de places pour accueillir les nouvelles vidéos. Typiquement prévoir 10Go par journée de campagne. 
-  
-Lorsque l'on démarre le système avec une clé vierge, un dossier et un ficher texte vont s'y créer. Si aucune clé n'est branchée, ces éléments seront dans `/home/kosmos/kosmos_local_sd`.
-
-<img src="./pictures/04_Software/Capture88.PNG" width="300">
-
-Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
-
-Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_system`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0091`.
-
-<img src="./pictures/04_Software/Capture99.PNG" width="200">
-
-Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stéréo) et ses métadonnées. 
-- Le fichier vidéo `increment.mp4` (et éventuellement increment_STEREO.mp4 si la stéréo est activée)
-- Un fichier `increment.txt` qui stocke l'instant (ou timestamp en anglais) de chaque frame de la video.
-- Un fichier `increment.csv` qui stocke des paramètres de la caméra ainsi que les données T,P, position et autres données fournies par les capteurs du système pendant la prise de vue.
-- Un fichier `increment.json` qui stocke les métadonnées de la prise de vue.
-- Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
-- Un fichier `increment.wav` qui stocke l'enregistrement audio si l'hydrophone est activé.
-
-<img src="./pictures/04_Software/Capture55.PNG" width="400">
-
-### Video Continue
-
-### Time Lapse
-
+# Kosmos Software
 
 ## Fonctionnement général du KOSMOS
 
@@ -46,21 +12,25 @@ Seuls les états **STANDBY** et **WORKING** permettent d'interagir avec le syst�
 
 ### Mode STAVIRO et mode MICADO
 
-Il existe deux modes de fonctionnement du système suivant les objectifs d'observation. Le mode **STAVIRO** (pour STAtion VIdeo ROtative) vise à réaliser de nombreuses stations à des emplacements différents durant une journée de campagne. Il faudra donc pouvoir mettre en route puis stopper l'enregistrement à chaque pose/dépose du système. L'opérateur *pilote* donc l'instrument dans ce mode **STAVIRO**. Le second mode **MICADO** correspond à un besoin d'observation longue durée en point fixe. Autrement dit, la caméra est fixée au fond pour une longue durée et réalise de façon autonome des vidéos à intervalles réguliers. Dans ce mode, l'opérateur n'a pas besoin d'intervenir pour que les états du KOSMOS s'enchainent. Les deux graphiques qui suivent résument ces deux modes de fonctionnement. 
+Il existe deux modes de fonctionnement du système suivant les objectifs d'observation. Le mode **STAVIRO** (pour STAtion VIdeo ROtative) vise à réaliser de nombreuses stations à des emplacements différents durant une journée de campagne. Il faudra donc pouvoir mettre en route puis stopper l'enregistrement à chaque pose/dépose du système. L'opérateur *pilote* donc l'instrument dans ce mode **STAVIRO**. 
+
+Le second mode **MICADO** correspond à un besoin d'observation longue durée en point fixe. Autrement dit, la caméra est fixée sur le fond de l'eau pour une longue durée et réalise de façon autonome des vidéos à intervalles réguliers. Dans ce mode, l'opérateur ne peut intervenir pour que les états du KOSMOS s'enchainent. 
+
+Les deux graphiques qui suivent résument ces deux modes de fonctionnement. 
 
 <img src="./pictures/04_Software/ModeStaviro.png" height="500"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="./pictures/04_Software/ModeMicado.png" height="500"> 
 
 - Les flèches noires en ligne continue correspondent à un processus automatique (soit immédiat, soit avec un temporisation via les paramètres `03_tps_fonctionnement` ou `04_tps_veille`), aucune action de l'opérateur n'est nécessaire pour que le système *avance* d'un état à l'autre.
-- Les flèches noires en pointillés nécessitent l'intervention d'un opérateur via un *bouton* de l'interface Web (dont on reparlera plus bas).
+- Les flèches noires en pointillés nécessitent l'intervention d'un opérateur via un *bouton* (`Start` `Stop` ou `Shutdown`) de l'interface Web (dont on reparlera plus bas).
 - À l'intérieur d'un état, plusieurs issues sont parfois possibles suivant l'action de l'opérateur ou le passé des opérations du système. Les flèches grises témoignent de ces possibilités : 
 
 <img src="./pictures/04_Software/Instruction.png" height="200"> 
 
-À noter que dans le mode **MICADO**, un état supplémentaire existe : celui de **VEILLE**. Dans cet état, la Raspberry Pi est quasiment éteinte à ceci près qu'elle a été programmée pour se redémarrer à un instant donné pour reprendre une vidéo. Dans l'état de **VEILLE**, la communication avec la RPi est impossible car elle ne génère aucun WiFi. La seule façon pour recommuniquer avec le système consiste à couper le courant avec le Switch pour à le remettre.  
+À noter que dans le mode **MICADO**, un état supplémentaire existe : celui de **VEILLE**. Dans cet état, la Raspberry Pi est quasiment éteinte à ceci près qu'elle a été programmée pour se redémarrer à un instant donné pour reprendre une vidéo. Dans l'état de **VEILLE**, la communication avec la RPi est impossible car elle ne génère aucun WiFi. La seule façon pour recommuniquer avec le système consiste à couper le courant avec le Switch puis à le remettre pour redémarrer la RPi.  
 
 ## Mode d'emploi de l'interface web
 
-Une IHM (Interface Homme Machine) a été développée pour commander Kosmos depuis un téléphone ou un ordinateur portable. Elle remplace les étapes à réaliser avec les aimants dans le guide de mise en service. (À noter que le pilotage avec les aimants reste opérationnel sur les systèmes où sont installés les ILS.)
+Une IHM (Interface Homme Machine) a été développée pour commander Kosmos depuis un téléphone ou un ordinateur portable. Elle complète les commandes historiques à réaliser avec des aimants sur les contacteurs magnétiques. (À noter que le pilotage avec les aimants reste opérationnel sur les systèmes où il y a des ILS.)
 
 Sur un téléphone ou un ordinateur portable:
  - Se connecter au réseau  WiFi de la raspberry qui a été créé dans les étapes précédentes typiquement `KosmosWeb`.  
@@ -80,28 +50,23 @@ A noter que l'adresse `10.42.0.1` renvoie directement vers la page `Camera`.
 
 ### Page `Camera`
 
-Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image précédente, on lit en effet **`K4v2 state is STANDBY`**. (K4v2 est le nom du système et **STANDBY** son état.)  Il existe 5 états possible du KOSMOS :
- - **STARTING** : kosmos est en train de démarrer 
- - **STANDBY** : kosmos est en attente d'instructions 
- - **WORKING** : kosmos enregistre
- - **STOPPING** : kosmos termine l'enregistrement 
- - **SHUTDOWN** : kosmos passe à l'arrêt total
+Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image précédente, on lit en effet **`K4v2 state is STANDBY`**. (K4v2 est le nom du système et **STANDBY** son état.)  
 
 Seuls les états **STANDBY** et **WORKING** permettent d'interagir avec le systèmes. Les boutons autorisés sont alors en noir. (Gris, ils sont désactivés.)
 
 #### Etat **STANDBY**
-Dans l'état , le système est en attente. Il est donc possible :
+Dans cet état , le système est en attente. Il est donc possible :
 - de lancer un enregistrement (via le bouton `Start` de la section `Buttons to record`)
 - d'éteindre le système (via le bouton `Shutdown`)
 - de faire un test caméra avec le live vidéo (via le bouton `Start` de la section `Live video`)
 
-Le `Live video` n'est possible que dans l'état **STANDBY**. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.). Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
+Lorsque `Live video` est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.). Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
 
 <img src="./pictures/04_Software/Capture11.PNG" width="300">
 
 On note aussi la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain.
 
-Quelques précisions quant au bouton `SHUTDOWN`. Tout d'abord, il ne peut être activé que dans l'état **STANDBY**. Ceci dit, il ne doit pas être activé trop tôt après l'arrêt d'une prise de vue car un petit temps est nécessaire pour convertir la vidéo `.h264` (format natif de la Picam) en `.mp4` (format standard pouvant être lu facilement). C'est la raison pour laquelle une ligne précise juste au dessus du bouton `SHUTDOWN` si une conversion est en cours. Quand `Conversion en cours` est présent, il ne faut pas éteindre le système. Si par hasard, le bouton est tout de même pressé, un message d'erreur apparaîtra demandant d'attendre la fin de la conversion.
+Quelques précisions quant au bouton `Shutdown`. Tout d'abord, il ne peut être activé que dans l'état **STANDBY**. Ceci dit, il ne doit pas être activé trop tôt après l'arrêt d'une prise de vue car un petit temps est nécessaire pour convertir la vidéo `.h264` (format natif de la Picam) en `.mp4` (format standard pouvant être lu facilementsur VLC par exemple). C'est la raison pour laquelle une ligne précise juste au dessus du bouton `SHUTDOWN` si une conversion est en cours. Quand `Conversion en cours` est présent, il ne faut pas éteindre le système. Si par hasard, le bouton est tout de même pressé, un message d'erreur apparaîtra demandant d'attendre la fin de la conversion.
 
 <img src="./pictures/04_Software/Capture5554.PNG" width="300"> <img src="./pictures/04_Software/Capture654654.PNG" width="300">
 
@@ -109,10 +74,6 @@ Quelques précisions quant au bouton `SHUTDOWN`. Tout d'abord, il ne peut être 
 Dans l'état **WORKING**, le système est en train d'enregistrer une vidéo. Le seul bouton autorisé est celui d'arrêt de la prise de vue (via le bouton `Stop` de la section `Buttons to record`).
 
 <img src="./pictures/04_Software/Capture4.PNG" width="300">
-
-
-
-
 
 ### Page `Campaign`
 
@@ -130,17 +91,20 @@ Remplir chacune des lignes du tableau :
 - `Zone`: Précision sur la zone de déploiement. Typiquement `BR` pour Brest, `CC`pour Concarneau, etc.
 - `Location`: Lieudit du déploiement
 - `Protection`: Statut de protection de la zone de déploiement. Mettre `Aucune` si il n'en existe pas.
-- `Boat`: Moyen de déploiement.
+- `Boat`: Moyen de déploiement
 - `Pilot`: Nom du pilote
 - `Crew`: Noms des membres de l'équipage
 - `Partners`: Noms des entreprises/laboratoires/associations participant au déploiement
+- 
 Cliquer enfin sur le bouton `Save`. À noter que tous les champs sont obligatoires.
 
 <img src="./pictures/04_Software/Capture23.PNG" width="300">
 
-Tel que l'interface Web est construite, ces informations Campagne seront enregistrées tant que la fenêtre de navigation privée du navigateur ne sera pas fermée. Il faudra donc la laisser ouverte tout le long de la journée de déploiement. On pourra la fermer dès la dernière station réalisée. 
+Tel que l'interface Web est construite, ces informations Campagne sont enregistrées dans la mémoire local du smartphone/ordinateur portable tant que la fenêtre de navigation privée du navigateur n'est pas fermée. Il faut donc la laisser ouverte tout le long de la journée de déploiement. On pourra la fermer dès la dernière station réalisée. 
 
-Une fois les données Campagne complétées, on peut revenir sur la page `Camera` pour lancer un enregistrement. Cependant, il peut arriver que l'on veuille auparavant configurer le système. Pour cela, il faut aller dans la page `Configuration`.
+Une fois les données Campagne complétées, on peut revenir sur la page `Camera` pour lancer un enregistrement. 
+
+Cependant, il peut arriver que l'on veuille auparavant configurer le système. Pour cela, il faut aller dans la page `Configuration`.
 
 ### Page `Configuration`
 
@@ -152,11 +116,29 @@ La page `Configuration` permet de régler les paramètres du KOSMOS. Pour effect
 - cliquer sur le bouton `Save`
 - (éventuellement refaire cette opération pour un autre paramètre)
 - cliquer sur le bouton `Reboot`
-- attendre que l'état du système redevienne **STANDBY**  
-Le système est alors prêt pour l'enregistrement
+- attendre que l'état du système redevienne **STANDBY**
+-  
+Le système est alors prêt pour l'enregistrement.
 
-Quelques précisions quant à la configuration du KOSMOS. Les paramètres visibles dans l'interface Web sont stockés dans un fichier de configuration nommé `kosmos_config.ini`. Il est contenu soit dans la clé USB, soit dans `/home/kosmos/kosmos_local_sd` suivant qu'on choisisse l'un ou l'autre de ces solutions de stockage. 
-Ce fichier `kosmos_config.ini`est découpé en deux sections permettant de distinguer des paramètres que l'on peut changer durant la campagne soit lors d'un débug. Les premiers paramètres sont modifiables via l'interface web, tandis que les seconds doivent être modifiés directement dans le fichier `.ini`.
+Quelques précisions quant à la configuration du KOSMOS. Les paramètres visibles dans l'interface Web sont stockés dans un fichier de configuration nommé `kosmos_config.ini`. Il est contenu soit dans la clé USB, soit dans `/home/kosmos/kosmos_local_sd` suivant que l'on choisisse l'un ou l'autre de ces solutions de stockage. 
+Ce fichier `kosmos_config.ini`est découpé en deux sections permettant de distinguer des paramètres que l'on peut changer durant la campagne soit lors d'un débug. Les premiers paramètres sont modifiables via l'interface web, tandis que les seconds doivent être modifiés directement dans le fichier `.ini`. On reparlera du sens de ces paramètres dans la section **Paramètres de configuration**.
+
+### Page `Records`
+
+Quand une station a été réalisée, il est possible de voir si la vidéo a bel et bien été enregistrée. Pour cela il faut aller sur la page `Records`.
+
+<img src="./pictures/04_Software/Capture5.PNG" width="300"> 
+
+Cette page précise d'abord où sont stockées les enregistrements, c'est-à-dire en local ou sur la clé USB. (Sur la figure précédente, on peut voir qu'elles sont sur la clé USB).
+Le tableau référence ensuite les vidéos présentes en précisant leur nom `increment.mp4`, leur taille ainsi que la date et l'heure de leur création dans l'horloge de la Rpi (qui peut être différente de l'heure vraie sur la v3 car cette version du KOSMOS n'a pas de Real Time Clock).
+
+Le tableau n'affiche que les fichiers vidéo (c'est-à-dire les extensions `.h264` et `.mp4`). Il ne faut donc pas s'inquiéter si les fichiers de métadonnées n'apparaissent pas. 
+
+Autre point : lorsque l'on démarre un enregistrement, la vidéo a pour extension `.h264`. Ce fichier voit sa taille augmenter à mesure que le temps passe ; on s'en aperçoit en rafraichissant la page `Records`. Lorsque l'on arrête la vidéo avec le bouton `Stop` de la section `Buttons to record` de la page `Camera`, le fichier `.h264` est converti en `.mp4`. Cette conversion prend un peu de temps si bien que l'on voit pendant quelques instants un fichier `.h264` et un autre`.mp4` avec le même nom sur la page `Records`. Quand la conversion est finie, le `.h264` est supprimé. Il ne reste alors que le `.mp4`. En général, le temps de navigation entre deux stations permet largement à la conversion de se réaliser, il est toutefois conseillé de vérifier qu'elle est terminée (c'est-à-dire qu'il n'y a plus de `.h264`) avant de relancer une nouvelle vidéo.
+
+Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issue d'une station a une taille inférieure...  
+
+## Paramètres de configuration du KOSMOS
 
 #### Paramètres modifiables sur le terrain via l'interface Web
 
@@ -231,20 +213,40 @@ Pour la **version 4** :
 - `08_system_buzzer = 5` adresse gpio du buzzer
 - `09_system_wake_up_motor = 4` adresse gpio du moteur
 
-### Page `Records`
 
-Quand une station a été réalisée, il est possible de voir si la vidéo a bel et bien été enregistrée. Pour cela il faut aller sur la page `Records`.
 
-<img src="./pictures/04_Software/Capture5.PNG" width="300"> 
+## Stockage des données
 
-Il est d'abord précisé où sont stockées les enregistrements, c'est-à-dire en local ou sur la clé USB. (Sur la figure précédente, on peut voir qu'elles sont sur la clé USB).
-Le tableau référence ensuite les vidéos présentes en précisant leur nom `increment.mp4`, leur taille ainsi que la date et l'heure de leur création dans l'horloge de la Rpi (qui peut être différente de l'heure vraie sur la v3).
+Deux méthodes de stockage sont possibles : 
+- en local sur la carte SD
+- sur une clé USB.
+Si une clé USB est branchée, elle sera prioritaire. Si aucune clé usb n'est branchée, les fichiers seront stockées dans `/home/kosmos/kosmos_local_sd`. Il faudra dans ce cas veiller à ce que la carte SD ait une capacité appropriée (on préconise au moins 64 Go).
 
-Le tableau n'affiche que les fichiers vidéo (c'est-à-dire les extensions `.h264` et `.mp4`). Il ne faut donc pas s'inquiéter si les fichiers de métadonnées n'apparaissent pas. 
+Il peut arriver que la clé USB (si ce système de stockage est choisi), contienne déjà des vidéos ainsi qu'un fichier de configuration `kosmos_config.ini`. Nous recommandons de renommer ce dernier fichier (en `kosmos_config_old.ini`) pour éviter des bugs de compatibilité entre les versions du soft. Par ailleurs, il faudra veiller à ce que la clé propose assez de places pour accueillir les nouvelles vidéos. Typiquement prévoir 10Go par journée de campagne. 
+  
+Lorsque l'on démarre le système avec une clé vierge, un dossier et un ficher texte vont s'y créer. Si aucune clé n'est branchée, ces éléments seront dans `/home/kosmos/kosmos_local_sd`.
 
-Autre point : lorsque l'on démarre un enregistrement, la vidéo a pour extension `.h264`. Ce fichier voit sa taille augmenter à mesure que le temps passe ; on s'en aperçoit en rafraichissant la page `Records`. Lorsque l'on arrête la vidéo avec le bouton `Stop` de la section `Buttons to record` de la page `Camera`, le fichier `.h264` est converti en `.mp4`. Cette conversion prend un peu de temps si bien que l'on voit pendant quelques instants un fichier `.h264` et un autre`.mp4` avec le même nom sur la page `Records`. Quand la conversion est finie, le `.h264` est supprimé. Il ne reste alors que le `.mp4`. En général, le temps de navigation entre deux stations permet largement à la conversion de se réaliser, il est toutefois conseillé de vérifier qu'elle est terminée (c'est-à-dire qu'il n'y a plus de `h264`) avant de relancer une nouvelle vidéo.
+<img src="./pictures/04_Software/Capture88.PNG" width="300">
 
-Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issue d'une station a une taille inférieure...  
+Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
+
+Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_system`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0091`.
+
+<img src="./pictures/04_Software/Capture99.PNG" width="200">
+
+Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stéréo) et ses métadonnées. 
+- Le fichier vidéo `increment.mp4` (et éventuellement increment_STEREO.mp4 si la stéréo est activée)
+- Un fichier `increment.txt` qui stocke l'instant (ou timestamp en anglais) de chaque frame de la video.
+- Un fichier `increment.csv` qui stocke des paramètres de la caméra ainsi que les données T,P, position et autres données fournies par les capteurs du système pendant la prise de vue.
+- Un fichier `increment.json` qui stocke les métadonnées de la prise de vue.
+- Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
+- Un fichier `increment.wav` qui stocke l'enregistrement audio si l'hydrophone est activé.
+
+<img src="./pictures/04_Software/Capture55.PNG" width="400">
+
+### Video Continue
+
+### Time Lapse
 
 
 
