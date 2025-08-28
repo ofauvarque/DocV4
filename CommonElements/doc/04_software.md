@@ -34,6 +34,30 @@ Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stér
 ### Time Lapse
 
 
+## Fonctionnement général du KOSMOS
+
+On présente dans cette section, la façon dont fonctionne le système KOSMOS d'un point de vue de son logiciel embarqué. Il est basé sur une succession d'*états* s'enchainant automatiquement ou suivant l'intervention de l'opérateur et correspondant à des opérations différentes. 5 états du KOSMOS existent :
+ - **STARTING** : kosmos est en train de démarrer, c'est un temps d'initialisation des différents modules 
+ - **STANDBY** : kosmos est en attente d'instructions 
+ - **WORKING** : kosmos enregistre
+ - **STOPPING** : kosmos termine l'enregistrement 
+ - **SHUTDOWN** : kosmos passe à l'arrêt total
+Seuls les états **STANDBY** et **WORKING** permettent d'interagir avec le système.
+
+### Mode STAVIRO et mode MICADO
+
+Il existe deux modes de fonctionnement du système suivant les objectifs d'observation. Le mode **STAVIRO** (pour STAtion VIdeo ROtative) vise à réaliser de nombreuses stations à des emplacements différents durant une journée de campagne. Il faudra donc pouvoir mettre en route puis stopper l'enregistrement à chaque pose/dépose du système. L'opérateur *pilote* donc l'instrument dans ce mode **STAVIRO**. Le second mode **MICADO** correspond à un besoin d'observation longue durée en point fixe. Autrement dit, la caméra est fixée au fond pour une longue durée et réalise de façon autonome des vidéos à intervalles réguliers. Dans ce mode, l'opérateur n'a pas besoin d'intervenir pour que les états du KOSMOS s'enchainent. Les deux graphiques qui suivent résument ces deux modes de fonctionnement. 
+
+<img src="./pictures/04_Software/ModeStaviro.png" height="500"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="./pictures/04_Software/ModeMicado.png" height="500"> 
+
+- Les flèches noires en ligne continue correspondent à un processus automatique (soit immédiat, soit avec un temporisation via les paramètres `03_tps_fonctionnement` ou `04_tps_veille`), aucune action de l'opérateur n'est nécessaire pour que le système *avance* d'un état à l'autre.
+- Les flèches noires en pointillés nécessitent l'intervention d'un opérateur via un *bouton* de l'interface Web (dont on reparlera plus bas).
+- À l'intérieur d'un état, plusieurs issues sont parfois possibles suivant l'action de l'opérateur ou le passé des opérations du système. Les flèches grises témoignent de ces possibilités : 
+
+<img src="./pictures/04_Software/Instruction.png" height="200"> 
+
+À noter que dans le mode **MICADO**, un état supplémentaire existe : celui de **VEILLE**. Dans cet état, la Raspberry Pi est quasiment éteinte à ceci près qu'elle a été programmée pour se redémarrer à un instant donné pour reprendre une vidéo. Dans l'état de **VEILLE**, la communication avec la RPi est impossible car elle ne génère aucun WiFi. La seule façon pour recommuniquer avec le système consiste à couper le courant avec le Switch pour à le remettre.  
+
 ## Mode d'emploi de l'interface web
 
 Une IHM (Interface Homme Machine) a été développée pour commander Kosmos depuis un téléphone ou un ordinateur portable. Elle remplace les étapes à réaliser avec les aimants dans le guide de mise en service. (À noter que le pilotage avec les aimants reste opérationnel sur les systèmes où sont installés les ILS.)
@@ -64,20 +88,31 @@ Sur la page `Camera`, on peut tout d'abord lire l'état du KOSMOS. Sur l'image p
  - **SHUTDOWN** : kosmos passe à l'arrêt total
 
 Seuls les états **STANDBY** et **WORKING** permettent d'interagir avec le systèmes. Les boutons autorisés sont alors en noir. (Gris, ils sont désactivés.)
-Dans l'état **STANDBY**, le système est en attente. Il est donc possible :
+
+#### Etat **STANDBY**
+Dans l'état , le système est en attente. Il est donc possible :
 - de lancer un enregistrement (via le bouton `Start` de la section `Buttons to record`)
 - d'éteindre le système (via le bouton `Shutdown`)
 - de faire un test caméra avec le live vidéo (via le bouton `Start` de la section `Live video`)
 
+Le `Live video` n'est possible que dans l'état **STANDBY**. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.). Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
+
+<img src="./pictures/04_Software/Capture11.PNG" width="300">
+
+On note aussi la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain.
+
+Quelques précisions quant au bouton `SHUTDOWN`. Tout d'abord, il ne peut être activé que dans l'état **STANDBY**. Ceci dit, il ne doit pas être activé trop tôt après l'arrêt d'une prise de vue car un petit temps est nécessaire pour convertir la vidéo `.h264` (format natif de la Picam) en `.mp4` (format standard pouvant être lu facilement). C'est la raison pour laquelle une ligne précise juste au dessus du bouton `SHUTDOWN` si une conversion est en cours. Quand `Conversion en cours` est présent, il ne faut pas éteindre le système. Si par hasard, le bouton est tout de même pressé, un message d'erreur apparaîtra demandant d'attendre la fin de la conversion.
+
+<img src="./pictures/04_Software/Capture5554.PNG" width="300"> <img src="./pictures/04_Software/Capture654654.PNG" width="300">
+
+#### Etat **WORKING**
 Dans l'état **WORKING**, le système est en train d'enregistrer une vidéo. Le seul bouton autorisé est celui d'arrêt de la prise de vue (via le bouton `Stop` de la section `Buttons to record`).
 
 <img src="./pictures/04_Software/Capture4.PNG" width="300">
 
-À noter que le `Live video` n'est possible que dans l'état **STANDBY**. Lorsqu'il est activé, des images basse résolution de la caméra sont visibles. Elles permettent de vérifier que tout est ok d'un point de vue optique (netteté, horizontalité du champ de vue, etc.). Il faut nécessairement stopper le live pour pouvoir lancer un enregistrement ou éteindre la caméra.  
 
-<img src="./pictures/04_Software/Capture11.PNG" width="300">
 
-Enfin on notera la présence d'une ligne `GPS position`. Elle permet de vérifier que le système capte bien le GPS. Auquel cas, il n'est pas nécessaire de prendre cette information via un autre instrument (application de positionnement, GPS de poche). Ces positions seront en effet directement enregistrées dans les métadonnées. Si la ligne `GPS position` indique `ERR ERR`, c'est qu'il y a un problème avec le GPS. Il faut donc noter à la main la position GPS sur la feuille terrain.
+
 
 ### Page `Campaign`
 
@@ -210,18 +245,6 @@ Le tableau n'affiche que les fichiers vidéo (c'est-à-dire les extensions `.h26
 Autre point : lorsque l'on démarre un enregistrement, la vidéo a pour extension `.h264`. Ce fichier voit sa taille augmenter à mesure que le temps passe ; on s'en aperçoit en rafraichissant la page `Records`. Lorsque l'on arrête la vidéo avec le bouton `Stop` de la section `Buttons to record` de la page `Camera`, le fichier `.h264` est converti en `.mp4`. Cette conversion prend un peu de temps si bien que l'on voit pendant quelques instants un fichier `.h264` et un autre`.mp4` avec le même nom sur la page `Records`. Quand la conversion est finie, le `.h264` est supprimé. Il ne reste alors que le `.mp4`. En général, le temps de navigation entre deux stations permet largement à la conversion de se réaliser, il est toutefois conseillé de vérifier qu'elle est terminée (c'est-à-dire qu'il n'y a plus de `h264`) avant de relancer une nouvelle vidéo.
 
 Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fait entre 300 Mo et 1 Go suivant les conditions d'observations. Il faut s'inquièter si la vidéo issue d'une station a une taille inférieure...  
-
-
-
-
-## Fonctionnement général
-
-### Mode STAVIRO et mode MICADO
-
-<img src="./pictures/04_Software/ModeStaviro.png" height="500"> <img src="./pictures/04_Software/ModeMicado.png" height="500"> <img src="./pictures/04_Software/Instruction.png" height="200"> 
-
-
-
 
 
 
