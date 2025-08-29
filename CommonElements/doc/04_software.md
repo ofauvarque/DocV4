@@ -95,12 +95,12 @@ Remplir chacune des lignes du tableau :
 - `Pilot`: Nom du pilote
 - `Crew`: Noms des membres de l'équipage
 - `Partners`: Noms des entreprises/laboratoires/associations participant au déploiement
-- 
+  
 Cliquer enfin sur le bouton `Save`. À noter que tous les champs sont obligatoires.
 
 <img src="./pictures/04_Software/Capture23.PNG" width="300">
 
-Tel que l'interface Web est construite, ces informations Campagne sont enregistrées dans la mémoire local du smartphone/ordinateur portable tant que la fenêtre de navigation privée du navigateur n'est pas fermée. Il faut donc la laisser ouverte tout le long de la journée de déploiement. On pourra la fermer dès la dernière station réalisée. 
+Telle que l'interface Web est construite, ces informations Campagne sont enregistrées dans la mémoire locale du smartphone/ordinateur portable tant que la fenêtre de navigation privée du navigateur n'est pas fermée. Il faut donc la laisser ouverte tout le long de la journée de déploiement. On pourra la fermer dès la dernière station réalisée. 
 
 Une fois les données Campagne complétées, on peut revenir sur la page `Camera` pour lancer un enregistrement. 
 
@@ -117,10 +117,11 @@ La page `Configuration` permet de régler les paramètres du KOSMOS. Pour effect
 - (éventuellement refaire cette opération pour un autre paramètre)
 - cliquer sur le bouton `Reboot`
 - attendre que l'état du système redevienne **STANDBY**
--  
+   
 Le système est alors prêt pour l'enregistrement.
 
 Quelques précisions quant à la configuration du KOSMOS. Les paramètres visibles dans l'interface Web sont stockés dans un fichier de configuration nommé `kosmos_config.ini`. Il est contenu soit dans la clé USB, soit dans `/home/kosmos/kosmos_local_sd` suivant que l'on choisisse l'un ou l'autre de ces solutions de stockage. 
+
 Ce fichier `kosmos_config.ini`est découpé en deux sections permettant de distinguer des paramètres que l'on peut changer durant la campagne soit lors d'un débug. Les premiers paramètres sont modifiables via l'interface web, tandis que les seconds doivent être modifiés directement dans le fichier `.ini`. On reparlera du sens de ces paramètres dans la section **Paramètres de configuration**.
 
 ### Page `Records`
@@ -140,15 +141,15 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 
 ## Paramètres de configuration du KOSMOS
 
-#### Paramètres modifiables sur le terrain via l'interface Web
+### Paramètres modifiables sur le terrain via l'interface Web
 
  - `00_STAVIRO_MICADO = 1` permet de permuter entre les modes de fonctionnement du KOSMOS.
    * `1` permet d'opter pour le mode STAVIRO, c'est-à-dire un fonctionnement de pose puis relevé rapide du système.
-   * `2` correspond au mode MICADO qui correspond à une version pose longue du système.
+   * `2` correspond au mode MICADO qui correspond à une version pose longue autonome du système.
  - `01_CAM_TIMELAPSE = 1` permet de permuter entre les modes vidéo ou photo.
    * `1` génére des vidéos
    * `2` génère des photos prises en rafale.
- - `02_TEMPS_ENRGISTREMENT = 1600` correspond au temps d'enregistement en secondes des séquences vidéos/rafale de photos. Si le système doit filmer plus longtemps que ce temps d'enregistrement, la vidéo sera découpée en plusieurs séquences. Ceci permet d'éviter la perte de données si un arrêt brutal se produit. 
+ - `02_TEMPS_ENRGISTREMENT = 1600` correspond au temps d'enregistement en secondes des séquences vidéos ou rafale de photos. Si le système doit filmer plus longtemps que ce temps d'enregistrement, la vidéo sera découpée en plusieurs séquences. Ceci permet d'éviter la perte de données si un arrêt brutal se produit. 
  - `03_TPS_FONCTIONNEMENT = 1800` règle le temps en secondes avant l'extinction automatique (mode STAVIRO) ou de la mise en veille (mode MICADO) du système.
  - `04_TPS_VEILLE = 600` règle le temps de veille en mode MICADO. 
  - `05_MOTEUR = 1` déclenche `1` ou non `0` le fonctionnement du moteur et donc de la rotation.
@@ -161,7 +162,7 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
  - `38_picam_timestamp = 0` incruste ou non une horloge dans l'image
     * si `0` pas d'incrustation
     * si `1` incrustation
-    *   
+      
 Pour le **Kosmos V3**, il est possible de régler les paramètres du moteur : 
 
  - `13_MOTOR_vitesse_min = 1000` vitesse minimale du moteur utilisée lors de son armement (peut-être inutile...)
@@ -172,7 +173,7 @@ Pour le **Kosmos V3**, il est possible de régler les paramètres du moteur :
  - `18_motor_pressORrelease = 1`
  - `19_motor_shift_time = 2000`
 
-Pour le **KOSMOS V4**, ces paramètres sont différents :
+Pour le **Kosmos V4**, ces paramètres sont différents :
 - `10_motor_revolutions = 5`
 - `11_motor_vitesse = 50`
 - `12_motor_acceleration = 100`
@@ -180,21 +181,21 @@ Pour le **KOSMOS V4**, ces paramètres sont différents :
 - `14_motor_step_mode = 4`
 - `15_motor_i2c_communication_period = 1`
 
-#### Paramètres non modifiables sur le terrain
+### Paramètres non modifiables sur le terrain
 
-Pour jouer sur ces paramètres, il faut donc ouvrir le fichier `kosmos_config.ini` et les modifier directement. Ceci dit, ces paramètres n'ont pas à être changés sauf modification hardware du système.
+Pour jouer sur ces paramètres, il faut ouvrir le fichier `kosmos_config.ini` et les modifier directement. Ceci dit, ces paramètres n'ont pas à être changés sauf modifications hardware du système.
 Des paramètres sont communs aux version 3 et 4 :
  - `33_PICAM_preview = 0` Affiche ce que voit la caméra pendant qu'elle enregistre
     * si `0` pas d'aperçu (CHOISIR IMPERATIVEMENT CE MODE SUR LE TERRAIN)
     * si `1` affiche un aperçu de ce qu'observe la caméra sur l'écran (utile pour le développement et le débug car ne fonctionne qu'avec un lancement de kosmos_main.py via la terminal)
  - `34_PICAM_framerate = 24` nombre d'images enregistrées par seconde (typiquement 24)
  - `36_PICAM_conversion_mp4 = 1`  
-    * si `0` ne convertit pas les fichiers vidéos en mp4 et les laisse en h264.
-    * si `1` convertit les fichiers vidéos en mp4 et supprime les h264
+    * si `0` ne convertit pas les fichiers vidéos en `.mp4` et les laisse en `.h264`.
+    * si `1` convertit les fichiers vidéos en `.mp4` et supprime le `.h264` dans la foulée.
  - `37_PICAM_awb = 2` permet de définir le mode de fonctionnement de l'Automatic White Balance (le mode `2` est préconisé)
- - `20_CSV_step_time = 5` Temps d'échantillonnage en secondes des données CSV (heure, pression, T°, postion GPS, etc.)
+ - `20_CSV_step_time = 5` temps d'échantillonnage en secondes des données CSV (heure, pression, T°, postion GPS, etc.)
 
-D'autres dépendent de la version du système. Pour la **version 3**, ces paramètres sont :
+D'autres dépendent de la version du système. Pour le **Kosmos V3**, ces paramètres sont :
  
  - `01_SYSTEM_record_button_gpio = 17` adresse gpio du bouton début/arrêt de l'enregistrement 
  - `02_SYSTEM_stop_button_gpio = 23` adresse gpio du bouton d'arrêt du système
@@ -204,7 +205,7 @@ D'autres dépendent de la version du système. Pour la **version 3**, ces param�
  - `11_MOTOR_power_gpio = 27` adresse gpio du relai qui alimente le moteur
  - `12_MOTOR_button_gpio = 21` adresse gpio de l'ILS qui permet d'asservir la croix de Malte
 
-Pour la **version 4** :
+Pour la **Kosmos V4** :
 
 - `01_system_record_button_gpio = 27` adresse gpio du bouton début/arrêt de l'enregistrement 
 - `02_system_stop_button_gpio = 13` adresse gpio du bouton d'arrêt du système
@@ -213,45 +214,9 @@ Pour la **version 4** :
 - `08_system_buzzer = 5` adresse gpio du buzzer
 - `09_system_wake_up_motor = 4` adresse gpio du moteur
 
+### Exemples de configuration
 
-
-## Stockage des données
-
-Deux méthodes de stockage sont possibles : 
-- en local sur la carte SD
-- sur une clé USB.
-Si une clé USB est branchée, elle sera prioritaire. Si aucune clé usb n'est branchée, les fichiers seront stockées dans `/home/kosmos/kosmos_local_sd`. Il faudra dans ce cas veiller à ce que la carte SD ait une capacité appropriée (on préconise au moins 64 Go).
-
-Il peut arriver que la clé USB (si ce système de stockage est choisi), contienne déjà des vidéos ainsi qu'un fichier de configuration `kosmos_config.ini`. Nous recommandons de renommer ce dernier fichier (en `kosmos_config_old.ini`) pour éviter des bugs de compatibilité entre les versions du soft. Par ailleurs, il faudra veiller à ce que la clé propose assez de places pour accueillir les nouvelles vidéos. Typiquement prévoir 10Go par journée de campagne. 
-  
-Lorsque l'on démarre le système avec une clé vierge, un dossier et un ficher texte vont s'y créer. Si aucune clé n'est branchée, ces éléments seront dans `/home/kosmos/kosmos_local_sd`.
-
-<img src="./pictures/04_Software/Capture88.PNG" width="300">
-
-Le fichier kosmos_config.ini contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
-
-Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_system`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0091`.
-
-<img src="./pictures/04_Software/Capture99.PNG" width="200">
-
-Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stéréo) et ses métadonnées. 
-- Le fichier vidéo `increment.mp4` (et éventuellement increment_STEREO.mp4 si la stéréo est activée)
-- Un fichier `increment.txt` qui stocke l'instant (ou timestamp en anglais) de chaque frame de la video.
-- Un fichier `increment.csv` qui stocke des paramètres de la caméra ainsi que les données T,P, position et autres données fournies par les capteurs du système pendant la prise de vue.
-- Un fichier `increment.json` qui stocke les métadonnées de la prise de vue.
-- Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
-- Un fichier `increment.wav` qui stocke l'enregistrement audio si l'hydrophone est activé.
-
-<img src="./pictures/04_Software/Capture55.PNG" width="400">
-
-### Video Continue
-
-### Time Lapse
-
-
-
-
-### Protocole STAVIRO
+#### Protocole historique STAVIRO
 Ce mode de déploiement correspond à la configuration historique du KOSMOS. L'objectif est de réaliser plusieurs stations durant une campagne journalière. Le système est démarré en début de mission et est éteint en fin de sortie. Entretemps, des enregistrements d'une quinzaine de minutes s'enchainent à diverses endroits de la zone étudiées. 
 
 Dans cette configuration, c'est l'opérateur qui déclenche la prise de vue (via le bouton `Start` de la section `Buttons to record` de la page `Camera`) ainsi que son arrêt (via le bouton `Stop`). La durée d'une vidéo dépend donc théoriquement de ces deux actions `Start` puis `Stop`. Néanmoins, afin de sécuriser les données et d'éviter un déchargement inutile de la batterie, deux paramètres temporels sont disponibles au cas où un système resterait en immersion durant une durée bien plus longue que prévue :
@@ -264,12 +229,12 @@ Dans le protocole STAVIRO, une vidéo *normale* dure en général 15 minutes. On
 Autrement dit, si un système reste plus de 25 minutes dans l'eau, l'enregistrement vidéo va stopper momentanément pour que la vidéo `.h264` soit convertie en `.mp4` puis reprendre. Il sera soit stoppé par l'opérateur soit s'achever 5 minutes plus tard. La nouvelle vidéo sera convertie puis le système s'arrêtera. Lors de sa récupération, il sera impossible de se connecter au Wifi la Raspberry étant éteinte. Il faudra donc dévisser le switch puis le revisser pour rédémarrer le système. c
 
 
-### Vidéo continue
+#### Vidéo continue
 Dans cette configuration, on pose le système sur une station fixe et on filme en continu le plus longtemps possible ou jusqu'à la récupération du système. On utilise encore les paramètres `02_tps_enregistrement` et `03_tps_fonctionnement` pour limiter la perte de données et éviter un déchargement complet des batteries. On fixe typiquement :
 - `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes (la vidéo sera découpée en morceaux de 10 minutes)
 - `03_tps_fonctionnement` à `64800` secondes, c'est-à-dire 18 heures (c'est l'autonomie estimée du système en mode Vidéo continue) 
 
-### Mode MICADO
+#### Mode MICADO
 Une fois de plus, le système est installé à une station fixe. Cependant, au lieu de filmer en continu, le système alterne des phases d'enregistrement et de veilles profondes, et ce, en vue d'augmenter au maximum son autonomie. Pour utiliser ce mode MICADO, il faut changer le paramètre `00_staviro_micado` en lui donnant la valeur `2` (il valait `1` en mode STAVIRO). Les paramètres temporels sont :
 - `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes (la vidéo sera découpée en morceaux de 10 minutes)
 - `03_tps_fonctionnement` à `` secondes, c'est-à-dire 18 heures (c'est l'autonomie estimée du système en mode Vidéo continue) 
@@ -283,7 +248,56 @@ Une fois de plus, le système est installé à une station fixe. Cependant, au l
 |`03_tps_fonctionnement`|Temps en secondes|**`1800`**|**`64800`**|`?`||
 |`04_tps_veille`|Temps en secondes|`?`|`?`||**`3600`**||
 
+## Structuration des données
 
+### Lieu de stockage
+
+Deux méthodes de stockage sont possibles : 
+- en local sur la carte SD
+- sur une clé USB.
+Si une clé USB est branchée, elle sera prioritaire. Si aucune clé usb n'est branchée, les fichiers seront stockées dans `/home/kosmos/kosmos_local_sd` (qui se créera automatiquement au besoin). Il faudra dans ce cas veiller à ce que la carte SD ait une capacité appropriée (on préconise au moins 64 Go).
+
+Il peut arriver que la clé USB (si ce système de stockage est choisi), contienne déjà des vidéos ainsi qu'un fichier de configuration `kosmos_config.ini`. Nous recommandons de renommer ce dernier fichier (en `kosmos_config_old.ini`) pour éviter des bugs de compatibilité entre les versions du soft. Par ailleurs, il faudra veiller à ce que la clé propose assez de places pour accueillir les nouvelles vidéos. Typiquement prévoir 10Go par journée de campagne. 
+  
+Lorsque l'on démarre le système avec une clé vierge, un dossier et un ficher texte vont s'y créer. Si aucune clé n'est branchée, ces éléments seront dans `/home/kosmos/kosmos_local_sd`.
+
+<img src="./pictures/04_Software/Capture88.PNG" width="300">
+
+### Données
+
+Le fichier `kosmos_config.ini` contient les paramètres de configuration du système. Ces paramètres seront visibles et modifiables depuis l'interface web.
+
+Le dossier contenant les données associées à une journée de campagne s'appelle normalement `date_nomdusystem`, typiquement `250403_KIMT`. Dans ce dossier, seront présents d'autres dossiers correspondant à chaque enregistrement. Ils auront pour nom l'`increment`, typiquement `0091`.
+
+<img src="./pictures/04_Software/Capture99.PNG" width="200">
+
+Chacun de ces dossiers contiennent une vidéo (voire deux si l'on filme en stéréo) et ses métadonnées. 
+- Le fichier vidéo `increment.mp4` (et éventuellement increment_STEREO.mp4 si la stéréo est activée)
+- Un fichier `increment.txt` qui stocke l'instant (ou timestamp en anglais) de chaque frame de la video.
+- Un fichier `increment.csv` qui stocke des paramètres de la caméra ainsi que les données T,P, position et autres données fournies par les capteurs du système pendant la prise de vue.
+- Un fichier `increment.json` qui stocke les métadonnées de la prise de vue.
+- Un fichier `systemEvent.csv` qui stocke les évènements du sytème comme la rotation du moteur ou la mise à jour des gains de couleur AWB
+- Un fichier `increment.wav` qui stocke l'enregistrement audio si l'hydrophone est activé.
+
+<img src="./pictures/04_Software/Capture55.PNG" width="400">
+
+#### Vidéo continue
+
+Dans le cas d'une prise vidéo de longue durée (c'est-à-dire une vidéo qui ne serait pas stoppée avant le temps limite `02_tps_enregistrement`), les données auront une structure un peu différentes. En effet,  la vidéo et ses métadonnées seront découpées en plusieurs parties afin d'éviter des pertes de données éventuelles. Un increment supplémentaire apparaîtra pour signifier ce découpage. La première partie de vidéo enregistrée (et ses métadonnées) resteront :
+- `increment.mp4` `increment.txt` `increment.csv` `increment.json`
+  
+La seconde partie se nommera :
+- `increment_0001.mp4` `increment_0001.txt` `increment_0001.csv` `increment_0001.json`
+  
+et ainsi de suite :
+- `increment_0002.mp4` `increment_0002.txt` `increment_0002.csv` `increment_0002.json`
+- `increment_0003.mp4` `increment_0003.txt` `increment_0003.csv` `increment_0003.json`
+
+Le fichier `systemEvent.csv` contiendra les heures de démarrage et d'arrêt de chacune de ses parties de vidéo. 
+
+#### Rafale de photos
+
+Dans le cas d'une rafale de photos, au lieu de générer une vidéo `.mp4`, un dossier nommé `increment` est créé. Il contiendra la rafale de photos.  
 
 
 ## Procédure de mise au point de la caméra
