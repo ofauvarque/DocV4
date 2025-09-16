@@ -8,13 +8,14 @@ On présente dans cette section, la façon dont fonctionne le système KOSMOS d'
  - **WORKING** : kosmos enregistre
  - **STOPPING** : kosmos termine l'enregistrement 
  - **SHUTDOWN** : kosmos passe à l'arrêt total
+   
 Seuls les états **STANDBY** et **WORKING** permettent d'interagir avec le système.
 
 ### Mode STAVIRO et mode MICADO
 
 Il existe deux modes de fonctionnement du système suivant les objectifs d'observation. Le mode **STAVIRO** (pour STAtion VIdeo ROtative) vise à réaliser de nombreuses stations à des emplacements différents durant une journée de campagne. Il faudra donc pouvoir mettre en route puis stopper l'enregistrement à chaque pose/dépose du système. L'opérateur *pilote* donc l'instrument dans ce mode **STAVIRO**. 
 
-Le second mode **MICADO** correspond à un besoin d'observation longue durée en point fixe. Autrement dit, la caméra est fixée sur le fond de l'eau pour une longue durée et réalise de façon autonome des vidéos à intervalles réguliers. Dans ce mode, l'opérateur ne peut intervenir pour que les états du KOSMOS s'enchainent. 
+Le second mode **MICADO** correspond à un besoin d'observation longue durée en point fixe. Autrement dit, la caméra est fixée sur le fond de l'eau pour une longue durée et réalise de façon autonome des vidéos à intervalles réguliers. Dans ce mode, les états du KOSMOS s'enchainent, l'opérateur n'a pas à intervenir pour lancer la vidéo. 
 
 Les deux graphiques qui suivent résument ces deux modes de fonctionnement. 
 
