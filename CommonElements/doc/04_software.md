@@ -144,25 +144,25 @@ Enfin, il est bon de noter qu'un fichier d'une quinzaine de minutes à 24 fps fa
 
 ### Paramètres modifiables sur le terrain via l'interface Web
 
- - `00_STAVIRO_MICADO = 1` permet de permuter entre les modes de fonctionnement du KOSMOS.
-   * `1` permet d'opter pour le mode STAVIRO, c'est-à-dire un fonctionnement de pose puis relevé rapide du système.
-   * `2` correspond au mode MICADO qui correspond à une version pose longue autonome du système.
- - `01_CAM_TIMELAPSE = 1` permet de permuter entre les modes vidéo ou photo.
-   * `1` génére des vidéos
-   * `2` génère des photos prises en rafale.
- - `02_TEMPS_ENRGISTREMENT = 1600` correspond au temps d'enregistement en secondes des séquences vidéos ou rafale de photos. Si le système doit filmer plus longtemps que ce temps d'enregistrement, la vidéo sera découpée en plusieurs séquences. Ceci permet d'éviter la perte de données si un arrêt brutal se produit. 
- - `03_TPS_FONCTIONNEMENT = 1800` règle le temps en secondes avant l'extinction automatique (mode STAVIRO) ou de la mise en veille (mode MICADO) du système.
- - `04_TPS_VEILLE = 600` règle le temps de veille en mode MICADO. 
- - `05_MOTEUR = 1` déclenche `1` ou non `0` le fonctionnement du moteur et donc de la rotation.
- - `06_SHUTDOWN = 1`  permet d'éteindre ou non la Rpi lorsque le bouton arrêt est pressé. 
-    * si `0`, le `shutdown` provoque l'arrêt du programme mais la Rpi reste allumée. On peut utiliser ce réglage pour le debug ou le développement software.
-    * si `1`, le `shutdown` provoque l'arrêt du programme et de la Rpi. Privilégier ce mode sur le terrain.
- - `07_HYDROPHONE = 0` déclenche `1` ou non `0` le fonctionnement de l'hydrophone. (Attention, l'hydrophone perturbe la prise de vidéos... Ce bug reste à corriger.)
- - `08_STEREO = 0`  déclenche `1` ou non `0` la capture STEREO. A noter que le mode `1` n'est opérationnel que si deux caméras identiques sont détectées.
- - `09_BUZZER = 0` déclenche `1` ou non `0` le buzzer (disponible seulement pour la v4).
- - `38_picam_timestamp = 0` incruste ou non une horloge dans l'image
-    * si `0` pas d'incrustation
-    * si `1` incrustation
+ - **`00_STAVIRO_MICADO`** permet de permuter entre les modes de fonctionnement du KOSMOS.
+   * **`1`** permet d'opter pour le mode STAVIRO, c'est-à-dire un fonctionnement de pose puis relevé rapide du système.
+   * **`2`** correspond au mode MICADO qui correspond à une version pose longue autonome du système.
+ - **`01_CAM_TIMELAPSE`** permet de permuter entre les modes vidéo ou photo.
+   * **`1`** génére des vidéos
+   * **`2`** génère des photos prises en rafale.
+ - **`02_TEMPS_ENRGISTREMENT` (en secondes)** correspond au temps d'enregistement en secondes des séquences vidéos ou rafale de photos. Si le système doit filmer plus longtemps que ce temps d'enregistrement, la vidéo sera découpée en plusieurs séquences. Ceci permet d'éviter la perte de données si un arrêt brutal se produit. 
+ - **`03_TPS_FONCTIONNEMENT` (en secondes)** règle le temps en secondes avant l'extinction automatique (mode STAVIRO) ou de la mise en veille (mode MICADO) du système.
+ - **`04_TPS_VEILLE` (en secondes)** règle le temps de veille en mode MICADO. 
+ - **`05_MOTEUR`** déclenche **`1`** ou non **`0`** le fonctionnement du moteur et donc de la rotation.
+ - **`06_SHUTDOWN`**  permet d'éteindre ou non la Rpi lorsque le bouton arrêt est pressé. 
+    * si **`0`**, le `shutdown` provoque l'arrêt du programme mais la Rpi reste allumée. On peut utiliser ce réglage pour le debug ou le développement software.
+    * si **`1`**, le `shutdown` provoque l'arrêt du programme et de la Rpi. Privilégier ce mode sur le terrain.
+ - **`07_HYDROPHONE`** déclenche **`1`** ou non **`0`** le fonctionnement de l'hydrophone. (Attention, l'hydrophone perturbe la prise de vidéos... Ce bug reste à corriger.)
+ - **`08_STEREO`**  déclenche **`1`** ou non **`0`** la capture STEREO. A noter que le mode `1` n'est opérationnel que si deux caméras identiques sont détectées.
+ - **`09_BUZZER`** déclenche **`1`** ou non **`0`** le buzzer (disponible seulement pour la v4).
+ - **`38_picam_timestamp`** incruste ou non une horloge dans l'image
+    * si **`0`** pas d'incrustation
+    * si **`1`** incrustation
       
 Pour le **Kosmos V3**, il est possible de régler les paramètres du moteur : 
 
@@ -217,6 +217,8 @@ Pour la **Kosmos V4** :
 
 ### Exemples de configuration
 
+Voici quelques exemples de configuration du système KOSMOS en commençant par le mode **vidéo**, c'est-à-dire `01_CAM_TIMELAPSE = 1`.
+
 #### Protocole historique STAVIRO
 Ce mode de déploiement correspond à la configuration historique du KOSMOS. L'objectif est de réaliser plusieurs stations durant une campagne journalière. Le système est démarré en début de mission et est éteint en fin de sortie. Entretemps, des enregistrements d'une quinzaine de minutes s'enchainent à diverses endroits de la zone étudiées. 
 
@@ -225,29 +227,38 @@ Dans cette configuration, c'est l'opérateur qui déclenche la prise de vue (via
 - `03_tps_fonctionnement` qui définit la durée maximale de fonctionnement du système avant qu'il ne s'éteigne (pour ne pas vider la batterie).
 
 Dans le protocole STAVIRO, une vidéo *normale* dure en général 15 minutes. On a donc fixé :
-- `02_tps_enregistrement` à `1500` secondes, c'est-à-dire 25 minutes
+- `02_tps_enregistrement` à `1200` secondes, c'est-à-dire 20 minutes
 - `03_tps_fonctionnement` à `1800` secondes, c'est-à-dire 30 minutes
-Autrement dit, si un système reste plus de 25 minutes dans l'eau, l'enregistrement vidéo va stopper momentanément pour que la vidéo `.h264` soit convertie en `.mp4` puis reprendre. Il sera soit stoppé par l'opérateur soit s'achever 5 minutes plus tard. La nouvelle vidéo sera convertie puis le système s'arrêtera. Lors de sa récupération, il sera impossible de se connecter au Wifi la Raspberry étant éteinte. Il faudra donc dévisser le switch puis le revisser pour rédémarrer le système. c
+Autrement dit, si un système reste plus de 20 minutes dans l'eau, l'enregistrement vidéo va stopper momentanément pour que la vidéo `.h264` soit convertie en `.mp4` puis reprendre. Il sera soit stoppé par l'opérateur soit s'achever 10 minutes plus tard. La nouvelle vidéo sera convertie puis le système s'arrêtera. Lors de sa récupération, il sera en conséquent impossible de se connecter au Wifi puisque la Raspberry sera éteinte. Il faudra donc dévisser le switch puis le revisser pour rédémarrer le système.
 
+- **`00_STAVIRO_MICADO = 1`**
+- **`01_CAM_TIMELAPSE = 1`** 
+- **`02_TEMPS_ENRGISTREMENT = 1200`**
+- **`03_TPS_FONCTIONNEMENT = 1800`** 
+- `04_TPS_VEILLE = 600`  (paramètre non utilisé en mode STAVIRO)
 
 #### Vidéo continue
 Dans cette configuration, on pose le système sur une station fixe et on filme en continu le plus longtemps possible ou jusqu'à la récupération du système. On utilise encore les paramètres `02_tps_enregistrement` et `03_tps_fonctionnement` pour limiter la perte de données et éviter un déchargement complet des batteries. On fixe typiquement :
-- `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes (la vidéo sera découpée en morceaux de 10 minutes)
-- `03_tps_fonctionnement` à `64800` secondes, c'est-à-dire 18 heures (c'est l'autonomie estimée du système en mode Vidéo continue) 
+- `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes. La vidéo sera découpée en morceaux de 10 minutes
+- `03_tps_fonctionnement` à `64800` secondes, c'est-à-dire 18 heures. C'est l'autonomie estimée du système en mode Vidéo continue. 
+
+- **`00_STAVIRO_MICADO = 1`**
+- **`01_CAM_TIMELAPSE = 1`** 
+- **`02_TEMPS_ENRGISTREMENT = 600`**
+- **`03_TPS_FONCTIONNEMENT = 64800`** 
+- `04_TPS_VEILLE = 600`  (paramètre non utilisé en vidéo continue)
 
 #### Mode MICADO
 Une fois de plus, le système est installé à une station fixe. Cependant, au lieu de filmer en continu, le système alterne des phases d'enregistrement et de veilles profondes, et ce, en vue d'augmenter au maximum son autonomie. Pour utiliser ce mode MICADO, il faut changer le paramètre `00_staviro_micado` en lui donnant la valeur `2` (il valait `1` en mode STAVIRO). Les paramètres temporels sont :
-- `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes (la vidéo sera découpée en morceaux de 10 minutes)
-- `03_tps_fonctionnement` à `` secondes, c'est-à-dire 18 heures (c'est l'autonomie estimée du système en mode Vidéo continue) 
-- `04_tps_veille`
+- `03_tps_fonctionnement` à `900` secondes pour 15 minutes. Une séquence durera 15 minutes, comme dans le protocole STAVIRO.
+- `04_tps_veille` à `7200` secondes pour 2 heures si l'on souhaite des veilles profondes de cette durée.
+- `02_tps_enregistrement` n'est pas vraiment pertinent sauf si le temps de fonctionnement est vraiement long et qu'on veut sectionner les vidéos pour les sécuriser. Mais dans le cas classique, il faut juste s'assurer que `02_tps_enregistrement` > `03_tps_fonctionnement`. 
 
-| Paramètres |Valeurs permises| STAVIRO | Vidéo Continue | MICADO | Time LAPSE | 
-|-------|-------|------------|------------|------------|------------|
-|`00_staviro_micado`|`1` ou `2`|**`1`**|**`1`**|**`2`**|**`2`**|
-|`01_cam_timelapse`|`1` ou `2`|**`1`** |**`1`**|**`1`**||
-|`02_tps_enregistrement`|Temps en secondes|**`1500`**|**`600`** |**`600`**||
-|`03_tps_fonctionnement`|Temps en secondes|**`1800`**|**`64800`**|`?`||
-|`04_tps_veille`|Temps en secondes|`?`|`?`||**`3600`**||
+- **`00_STAVIRO_MICADO = 2`**
+- **`01_CAM_TIMELAPSE = 1`** 
+- `02_TEMPS_ENRGISTREMENT = 1200`
+- **`03_TPS_FONCTIONNEMENT = 900`** 
+- **`04_TPS_VEILLE = 7200`**  
 
 ## Structuration des données
 
@@ -306,9 +317,7 @@ Ce dossier contiendra la rafale de photos. Chaque image aura pour nom : `increme
 
 <img src="./pictures/04_Software/Capture986598.PNG" height="250">
 
-Comme pour les vidéos, le fichier `increment.txt` contient le timestamp de chaque image. 
-
-
+À noter qu'il n'y a pas (contrairement aux vidéos) de fichier `increment.txt`. Les timestamp des images capturées sont en effet directement dans `increment.csv` où chaque ligne correspond à une image.
 
 ## Procédure de mise au point de la caméra
 - Nettoyer toutes les surfaces avec un chiffon microfibre puis on remontera l'objectif Edmund sur le capteur. Ré-assembler enfin ce module optique sur le système.
