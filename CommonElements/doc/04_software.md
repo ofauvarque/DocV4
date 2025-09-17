@@ -226,39 +226,48 @@ Dans cette configuration, c'est l'opérateur qui déclenche la prise de vue (via
 - `02_tps_enregistrement` qui définit la durée maximale d'une vidéo avant de la convertir en `.mp4` (et ainsi de la sécuriser) et de recommencer à filmer.    
 - `03_tps_fonctionnement` qui définit la durée maximale de fonctionnement du système avant qu'il ne s'éteigne (pour ne pas vider la batterie).
 
-Dans le protocole STAVIRO, une vidéo *normale* dure en général 15 minutes. On a donc fixé :
-- `02_tps_enregistrement` à `1200` secondes, c'est-à-dire 20 minutes
-- `03_tps_fonctionnement` à `1800` secondes, c'est-à-dire 30 minutes
+Dans le protocole STAVIRO, une vidéo *normale* dure en général 15 minutes. On a donc fixé les paramètres de la façon suivante :
+| Paramètres | Valeurs | Commentaires | 
+|-------|-----------|-----------|
+|`00_STAVIRO_MICADO`|1|Mode STAVIRO|
+|`01_CAM_TIMELAPSE`**|1|Mode Vidéo|
+|`02_TEMPS_ENRGISTREMENT`|1200|20 minutes de prise de vue|
+|`03_TPS_FONCTIONNEMENT`|1800|30 minutes de fonctionnement|
+|`04_TPS_VEILLE `|600| non utilisé en mode STAVIRO|
+
 Autrement dit, si un système reste plus de 20 minutes dans l'eau, l'enregistrement vidéo va stopper momentanément pour que la vidéo `.h264` soit convertie en `.mp4` puis reprendre. Il sera soit stoppé par l'opérateur soit s'achever 10 minutes plus tard. La nouvelle vidéo sera convertie puis le système s'arrêtera. Lors de sa récupération, il sera en conséquent impossible de se connecter au Wifi puisque la Raspberry sera éteinte. Il faudra donc dévisser le switch puis le revisser pour rédémarrer le système.
 
-- **`00_STAVIRO_MICADO = 1`**
-- **`01_CAM_TIMELAPSE = 1`** 
-- **`02_TEMPS_ENRGISTREMENT = 1200`**
-- **`03_TPS_FONCTIONNEMENT = 1800`** 
-- `04_TPS_VEILLE = 600`  (paramètre non utilisé en mode STAVIRO)
-
 #### Vidéo continue
-Dans cette configuration, on pose le système sur une station fixe et on filme en continu le plus longtemps possible ou jusqu'à la récupération du système. On utilise encore les paramètres `02_tps_enregistrement` et `03_tps_fonctionnement` pour limiter la perte de données et éviter un déchargement complet des batteries. On fixe typiquement :
-- `02_tps_enregistrement` à `600` secondes, c'est-à-dire 10 minutes. La vidéo sera découpée en morceaux de 10 minutes
-- `03_tps_fonctionnement` à `64800` secondes, c'est-à-dire 18 heures. C'est l'autonomie estimée du système en mode Vidéo continue. 
+Dans cette configuration, on pose le système sur une station fixe et on filme en continu le plus longtemps possible ou jusqu'à la récupération du système. On utilise encore les paramètres `02_tps_enregistrement` et `03_tps_fonctionnement` pour limiter la perte de données et éviter un déchargement complet des batteries.
 
-- **`00_STAVIRO_MICADO = 1`**
-- **`01_CAM_TIMELAPSE = 1`** 
-- **`02_TEMPS_ENRGISTREMENT = 600`**
-- **`03_TPS_FONCTIONNEMENT = 64800`** 
-- `04_TPS_VEILLE = 600`  (paramètre non utilisé en vidéo continue)
+| Paramètres | Valeurs | Commentaires | 
+|-------|-----------|-----------|
+|`00_STAVIRO_MICADO`|1|Mode STAVIRO|
+|`01_CAM_TIMELAPSE`|1|Mode Vidéo|
+|`02_TEMPS_ENRGISTREMENT`|600| La vidéo sera coupée en séquences de 10 minutes|
+|`03_TPS_FONCTIONNEMENT`|64800|Le système s'arrêtera au bout de 18h, correspondant à l'autonomie de la batterie|
+|`04_TPS_VEILLE `|600| non utilisé en mode STAVIRO|
+
 
 #### Mode MICADO
 Une fois de plus, le système est installé à une station fixe. Cependant, au lieu de filmer en continu, le système alterne des phases d'enregistrement et de veilles profondes, et ce, en vue d'augmenter au maximum son autonomie. Pour utiliser ce mode MICADO, il faut changer le paramètre `00_staviro_micado` en lui donnant la valeur `2` (il valait `1` en mode STAVIRO). Les paramètres temporels sont :
-- `03_tps_fonctionnement` à `900` secondes pour 15 minutes. Une séquence durera 15 minutes, comme dans le protocole STAVIRO.
-- `04_tps_veille` à `7200` secondes pour 2 heures si l'on souhaite des veilles profondes de cette durée.
-- `02_tps_enregistrement` n'est pas vraiment pertinent sauf si le temps de fonctionnement est vraiement long et qu'on veut sectionner les vidéos pour les sécuriser. Mais dans le cas classique, il faut juste s'assurer que `02_tps_enregistrement` > `03_tps_fonctionnement`. 
+| Paramètres | Valeurs | Commentaires | 
+|-------|-----------|-----------|
+|`00_STAVIRO_MICADO`|2|Mode MICADO|
+|`01_CAM_TIMELAPSE`|1|Mode Vidéo|
+|`02_TEMPS_ENRGISTREMENT`|1000| Paramètre qui n'est pas vraiment pertinent sauf si le temps de fonctionnement est vraiment long et qu'on veut sectionner les vidéos pour les sécuriser. Mais dans le cas classique, il faut juste s'assurer que `02_tps_enregistrement` > `03_tps_fonctionnement`|
+|`03_TPS_FONCTIONNEMENT`|900|Pour 15 minutes, comme dans le protocole STAVIRO|
+|`04_TPS_VEILLE `|7200|2 heures de veilles profondes entre les vidéos|
 
-- **`00_STAVIRO_MICADO = 2`**
-- **`01_CAM_TIMELAPSE = 1`** 
-- `02_TEMPS_ENRGISTREMENT = 1200`
-- **`03_TPS_FONCTIONNEMENT = 900`** 
-- **`04_TPS_VEILLE = 7200`**  
+#### Un dernier exemple en timelapse
+On présente enfin une configuration permettant de capturer une rafale d'images à intervalles réguliers.
+| Paramètres | Valeurs | Commentaires | 
+|-------|-----------|-----------|
+|`00_STAVIRO_MICADO`|2|Mode MICADO|
+|`01_CAM_TIMELAPSE`|2|Mode Rafale|
+|`02_TEMPS_ENRGISTREMENT`|1000| Paramètre non utilisé en mode Rafale|
+|`03_TPS_FONCTIONNEMENT`|60|Les rafales durent une minute|
+|`04_TPS_VEILLE `|7200|2 heures de veilles profondes entre les vidéos|
 
 ## Structuration des données
 
