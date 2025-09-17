@@ -298,7 +298,16 @@ Le fichier `systemEvent.csv` contiendra les heures de démarrage et d'arrêt de 
 
 #### Rafale de photos
 
-Dans le cas d'une rafale de photos, au lieu de générer une vidéo `.mp4`, un dossier nommé `increment` est créé. Il contiendra la rafale de photos.  
+Dans le cas d'une rafale de photos, au lieu de générer une vidéo `.mp4`, un dossier nommé `increment` est créé (c'est le dossier `0016` dans l'image suivante). 
+
+<img src="./pictures/04_Software/Capture5599.PNG" height="300">
+
+Ce dossier contiendra la rafale de photos. Chaque image aura pour nom : `increment_numero2photo.jpg`  
+
+<img src="./pictures/04_Software/Capture986598.PNG" height="250">
+
+Comme pour les vidéos, le fichier `increment.txt` contient le timestamp de chaque image. 
+
 
 
 ## Procédure de mise au point de la caméra
