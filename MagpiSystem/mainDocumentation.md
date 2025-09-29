@@ -86,7 +86,7 @@ Fixer les entretoises sur le support 3D puis y visser la carte caméra. Brancher
 
 ## Installation du logiciel MagPi
 
-Suivre les instructions de la [page web](https://github.com/KonkArLab/kosmos_software/blob/dev_stereo_merge_imt/README.md)
+Suivre les instructions de la [page web](https://github.com/KonkArLab/kosmos_software/blob/main/README.md)
 
 Insérer enfin l'électronique dans le caisson étanche puis placer la flange hublot. Placer les brides et revisser la vis de purge.
 Le système est prêt à être utilisé.
