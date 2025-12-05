@@ -1313,6 +1313,116 @@
 			)
 		)
 	)
+	(footprint "Library_komsos:MountingHole_2.2mm_M2"
+		(layer "F.Cu")
+		(uuid "ae255d04-8de4-4624-a3a3-dac1e8cb6746")
+		(at 211.1 102)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "REF**"
+			(at 0 -3.2 0)
+			(layer "F.SilkS")
+			(uuid "4d13f3be-2edb-4fba-aa0e-feca8e625050")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2"
+			(at 0 3.2 0)
+			(layer "F.Fab")
+			(uuid "211c49e7-6c63-45ee-a102-4606fbcb8ab6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Library_komsos:MountingHole_2.2mm_M2"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1068f7e4-447d-43c7-9379-052a22323f63")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e84dcfd5-4712-4ba8-ab9d-e626753128a5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6d020549-abc4-411a-b657-d7fbd625099e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 2.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Cmts.User")
+			(uuid "99c3219d-0d00-41b6-a407-4ef186a637c4")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 2.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "9067be33-ac52-4b93-9e1f-9abba3f186cb")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "593852ef-607b-4187-a5f2-2145f2c3806b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 2.2 2.2)
+			(drill 2.2)
+			(layers "F&B.Cu" "*.Mask")
+			(clearance 0.5)
+			(uuid "ebb5b876-1ed2-497f-8467-56c23f8e5ca9")
+		)
+	)
 	(footprint "Library_komsos:TerminalBlock_bornier-2_P5.08mm_v3mm"
 		(layer "F.Cu")
 		(uuid "b22c8578-037f-4770-abe6-b91da90d0475")
