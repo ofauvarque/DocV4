@@ -1,32 +1,25 @@
 # Assemblage du caisson batterie
 
-### Cable de recharge 
+## Clé de charge
 
-<img src="pictures/V4_Batterie/Chargeur.jpeg" height=400>
+## Cable de recharge (partie 1)
 
-
-- A l'aide de la petite clé fournie avec le chargeur, régler le transformateur sur 13.5 V
-  
-<img src="pictures/V4_Batterie/20.jpeg" height=400>
-
-- Avec une pince coupante, raccourcir le cable COB-123P1 pour qu'il mesure 20 cm.
-- Avec un cutter, enlever 5 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
+- Avec une pince coupante, raccourcir le cable COB-1231 pour qu'il mesure 20 cm.
+- Avec l'outil Knipex, enlever 5 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas, glisser de la gaine thermoretractable au niveau de la coupure.)
 - Raccourcir de 1 cm le morceau de gaine noire et le fendre dans la longueur.
 - Enfiler 5 cm de gaine thermoretractable sur la gaine noire
 - Dénuder les fils rouge et noir sur 5 mm.
 - Enfiler un morceau de gaine thermoretractable de 2 cm sur chacun de ces deux fils en choississant leur diamètre afin qu'il puisse recouvrir la cosse du connecteur XT60 femelle.
 - Souder les fils rouge et noir sur le connecteur XT60 en respectant les polarités : + sur rouge et - sur noir.
 - Faire glisser les gaines thermoretractables et les chauffer.
-- Englober les trois fils noir rouge et blanc (non soudé) avec la gaine fendue. Remonter la gaine thermorétractable et la chauffer. 
+- Englober les trois fils noir rouge et jaune (non soudé) avec la gaine fendue. Remonter la gaine thermorétractable et la chauffer. 
 
 <img src="pictures/V4_Batterie/14.jpeg" height=200> 
 
+## Cable de recharge (partie 2)
+
 - Souder deux cables rouge et noir de 10 cm (récup', comme ceux des multimètres) sur un connecteur XT60 mâle en respectant la polarité.
 - De l'autre côté, dénuder ces cables sur 3mmn, les étamer et les souquer dans le connecteur femelle fourni avec le chargeur. 
-
-<img src="pictures/V4_Batterie/1.jpeg" height=200>
-
-<img src="pictures/V4_Batterie/13.jpeg" height=400>
 
 
 ### Vue générale de l'étanchéité
