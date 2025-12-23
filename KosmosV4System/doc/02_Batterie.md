@@ -1,8 +1,11 @@
 # Caisson batterie
 
-## Vue générale de l'étanchéité
+## Etanchéité
 
 <img src="pictures/V4_Batterie/VueGenerale.PNG" height=400>
+
+- Assembler la "flange" avec le "end cap" en alumium en suivant le [tutoriel dédié](../../CommonElements/doc/02_flanges.md).  
+- Fixer les deux connecteurs COB-1130, le connecteur COB-1140 et la Purge sur le "end cap" 4 trous sur suivant le tutoriel dédié (../../CommonElements/doc/03_etancheitedivers.md).
 
 ## Vue générale de l'électronique interne
 
@@ -12,7 +15,6 @@
 
 <img src="pictures/V4_Batterie/StructureMeca.PNG" height=400> 
 
-- Assembler la "flange" avec le "end cap" en alumium en suivant le [tutoriel](../../CommonElements/doc/02_flanges.md).  
 
 
 ## Clé de fonctionnement
