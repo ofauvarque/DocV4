@@ -1,19 +1,21 @@
 # Caisson batterie
 
-## Etanchéité
+## Vues générales
 
 <img src="pictures/V4_Batterie/VueGenerale.PNG" height=400>
 
-- Assembler la "flange" avec le "end cap" en alumium en suivant le [tutoriel dédié](../../CommonElements/doc/02_flanges.md).  
-- Fixer les deux connecteurs COB-1130, le connecteur COB-1140 et la purge sur le "end cap" 4 trous sur suivant le [tutoriel dédié](../../CommonElements/doc/03_etancheitedivers.md).
-
-## Vue générale de l'électronique interne
-
 <img src="pictures/V4_Batterie/CablageBatterie.PNG" height=400> 
 
-AVANT DE REALISER LES ETAPES SUIVANTES, S'ASSURER QUE LES CONNECTEURS SONT BIEN PASSES PAR LES TROUS DU "END CAP".
+## Assemblage
+
+### Flanges
+
+- Assembler la "flange" avec le "end cap" en alumium (sans trous) en suivant le [tutoriel dédié](../../CommonElements/doc/02_flanges.md).  
+- Fixer les deux connecteurs COB-1130, le connecteur COB-1140 et la purge sur le "end cap" 4 trous sur suivant le [tutoriel dédié](../../CommonElements/doc/03_etancheitedivers.md).
 
 ### Connectiques 5V
+AVANT DE REALISER LES ETAPES SUIVANTES, S'ASSURER QUE LES CONNECTEURS SONT BIEN PASSES PAR LES TROUS DU "END CAP".
+
 - Couper les fils jaunes des COB-1130 et le fil blanc du COB-1140 à 6 cm puis les dénuder sur 1 cm.
 - Sertir ces trois fils dans une cosse BV2. (On pourra tresser entre eux les deux fils qui rentreront du même côté de la cosse).
 - Plaquer la cosse et les fils au plus proche du "end cap".
@@ -72,75 +74,6 @@ ATTENTION, LES CABLES PROVENANT DE LA BATTERIE NE DOIVENT JAMAIS SE TOUCHER.
 ## Clé de fonctionnement
 
 <img src="pictures/V4_Batterie/ShuntFonctionnement.PNG" height=200>
-
-
-
-- Couper les connectiques originales de l'interrupeur pour les remplacer par des cosses à sertir.
-- Tordre les pattes de l'interrupteur à 90° (pour des raisons de compacité)
-
-<img src="pictures/V4_Batterie/SwitchOrigine.jpeg" height=150> <img src="pictures/V4_Batterie/SwitchCoupe.jpeg" height=150> 
-
-- Sur deux connecteurs 3 pin Power Bulkhead COB-113P0-SS et raccourcir les cables pour qu'ils mesurent 10 cm.
-- Sur l'un d'eux couper à ras le fil blanc, sur l'autre couper à ras le fil rouge. Le premier fournira du 5V pour le caisson vidéo, le second du 12V pour le caisson moteur.
-- AVANT DE SOUDER LES CONNECTEURS XT30, visser ces deux connecteurs sur le bouchon à 4 trous.  
-
-<img src="pictures/V4_Batterie/ConnectiqueCaisson.jpeg" height=400>  
-
-- Sur les fils issus des connecteurs 3 pin Power Bulkhead, souder des XT30 mâle en respectant la polarité. Distinguer le 5V (Noir&Blanc) et le 12V (Noir&Rouge) avec des gaines thermoretractables de couleurs différentes.
-
-<img src="pictures/V4_Batterie/5.jpeg" height=200>  
-
-- Réaliser un raccord "XT30 femelle vers cosses à sertir" de 10 cm pour des fils noir et blanc. (Les récupérer du raccoucissement des cables COB-123P1 et COB-1241.)
-
-<img src="pictures/V4_Batterie/6.jpeg" height=150>
-
-- Réaliser un second raccord "XT30 femelle vers cosses à sertir" pour les fils noir et rouge mais repartir de ces cosses vers d'autres cosses. On choisira pour cela des cosses suffisamment larges pour y insérer deux cables à la fois. 
-
-<img src="pictures/V4_Batterie/7.jpg" height=300>  <img src="pictures/V4_Batterie/8.jpeg" height=300>  
-
-- Réaliser un raccord "XT60 mâle vers cosses à sertir" avec des cables noir et rouge. 
-
-<img src="pictures/V4_Batterie/IMG_156.jpg" height=150>  
-
-### Réalisation de la batterie
-
-<img src="pictures/V4_Batterie/ElectroniqueBatterie.jpeg" height=200>
-
-#### Soudure des accumulateurs
-
-<img src="pictures/V4_Batterie/IMG_1709.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1710.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1711.jpg" height=200>  
-
-#### Soudure du BMS
-
-<img src="pictures/V4_Batterie/FilsBatterieOrigine.jpeg" height=100>
-
-<img src="pictures/V4_Batterie/FilsBatterieCoupe.jpeg" height=100>
-
-<img src="pictures/V4_Batterie/IMG_1712.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1713.jpg" height=200>  
-
-<img src="pictures/V4_Batterie/IMG_15.jpg" height=150>  
-
-<img src="pictures/V4_Batterie/IMG_1715.jpg" height=200>  
-
-#### Assemblage de la batterie
-
-<img src="pictures/V4_Batterie/IMG_1716.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1718.jpg" height=200>  <img src="pictures/V4_Batterie/IMG_1720.jpg" height=200>
-
-#### Insertion de la batterie
-
-<img src="pictures/V4_Batterie/IMG_1721.jpg" height=200> 
-
-### Réalisation de la carte électronique de la batterie
-
-<img src="pictures/V4_Batterie/IMG_1565.jpg" height=200> 
-
-<img src="pictures/V4_Batterie/IMG_1573.jpg" height=200> <img src="pictures/V4_Batterie/IMG_4648.jpg" height=200> 
-
-<img src="pictures/V4_Batterie/IMG_4653.jpg" height=200> <img src="pictures/V4_Batterie/IMG_5026.jpg" height=200>
-
-<img src="pictures/V4_Batterie/IMG_5129.jpg" height=200> <img src="pictures/V4_Batterie/IMG_E1631.JPG" height=200> 
-
- <img src="pictures/V4_Batterie/IMG_1740.jpg" height=200>
 
 ## Element pour la recharge
 
