@@ -1,14 +1,22 @@
-# Assemblage du caisson batterie et des éléments pour la recharge
+# Caisson batterie
 
-## Caisson batterie
-
-### Vue générale de l'étanchéité
+## Vue générale de l'étanchéité
 
 <img src="pictures/V4_Batterie/VueGenerale.PNG" height=400>
 
-### Vue générale de l'électronique interne
+## Vue générale de l'électronique interne
 
-<img src="pictures/V4_Batterie/CarteBatterie.jpeg" height=400> 
+<img src="pictures/V4_Batterie/CablageBatterie.PNG" height=400> 
+
+## Structure interne
+
+<img src="pictures/V4_Batterie/StructureMeca.PNG" height=400> 
+
+## Clé de fonctionnement
+
+<img src="pictures/V4_Batterie/ShuntFonctionnement.PNG" height=200>
+
+
 
 - Couper les connectiques originales de l'interrupeur pour les remplacer par des cosses à sertir.
 - Tordre les pattes de l'interrupteur à 90° (pour des raisons de compacité)
@@ -77,11 +85,13 @@
 
  <img src="pictures/V4_Batterie/IMG_1740.jpg" height=200>
 
- ## Recharge
+## Element pour la recharge
 
-### Clé de charge
+## Clé de charge
 
-### Cable de recharge (partie 1)
+ <img src="pictures/V4_Batterie/ShuntCharge.PNG" height=200>
+
+## Cable de recharge (partie 1)
 
 - Avec une pince coupante, raccourcir le cable COB-1231 pour qu'il mesure 20 cm.
 - Avec l'outil Knipex, enlever 5 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas, glisser de la gaine thermoretractable au niveau de la coupure.)
@@ -95,7 +105,7 @@
 
 <img src="pictures/V4_Batterie/14.jpeg" height=200> 
 
-### Cable de recharge (partie 2) 
+## Cable de recharge (partie 2) 
 
 - Souder deux cables rouge et noir de 10 cm (récup', comme ceux des multimètres) sur un connecteur XT60 mâle en respectant la polarité.
 - De l'autre côté, dénuder ces cables sur 3mmn, les étamer et les souquer dans le connecteur femelle fourni avec le chargeur. 
