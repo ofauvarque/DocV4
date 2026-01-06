@@ -1,9 +1,9 @@
 <details open>
   <summary> Sommaire </summary>
   
-  1. [Assemblage du caisson vidéo](doc/01_Video)
-  2. [Assemblage du caisson batterie](doc/02_Batterie)
-  3. [Assemblage du caisson moteur](doc/03_Moteur)
+  1. [Assemblage du caisson vidéo](doc/01_Video.md)
+  2. [Assemblage du caisson batterie](doc/02_Batterie.md)
+  3. [Assemblage du caisson moteur](doc/03_Moteur.md)
 </details>
 
 
