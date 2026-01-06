@@ -1,10 +1,9 @@
 <details open>
   <summary> Sommaire </summary>
   
-  1. [Assemblage du caisson vidéo](01_assemblage_KosmosV4.md#1-assemblage-du-caisson-vidéo)
-  2. [Assemblage du caisson batterie](01_assemblage_KosmosV4.md#assemblage-du-caisson-batterie)
-  3. [Assemblage du caisson moteur](01_assemblage_KosmosV4.md#caisson-moteur)
-      
+  1. [Assemblage du caisson vidéo](doc/01_Video)
+  2. [Assemblage du caisson batterie](doc/02_Batterie)
+  3. [Assemblage du caisson moteur](doc/03_Moteur)
 </details>
 
 
