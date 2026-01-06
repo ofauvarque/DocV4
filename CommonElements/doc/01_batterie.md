@@ -4,7 +4,7 @@ Voici le guide d'assemblage de la batterie typique des instruments KOSMOS. Elle 
 
 ## **Outils habituellement présents dans un Fablab**
 
-<img src="./pictures/01_Batterie/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./pictures/01_Batterie/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./pictures/01_Batterie/tin.jpg" alt="Bobine étain" height="300">
+<img src="./pictures/00_Outils/wire_stripper.jpg" alt="Wire Stripper" height="300"> <img src="./pictures/00_Outils/soldering_iron.jpg" alt="Fer à Souder" height="300"> <img src="./pictures/00_Outils/tin.jpg" alt="Bobine étain" height="300">
 
 - **Pince à dénuder :** Réglable, comme sur l'image, pour différents types de câbles.
 - **Fer à souder**
