@@ -48,6 +48,8 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 
 <img src="pictures/V4_Video/IMG_1332.JPG" height=400> <img src="pictures/V4_Video/IMG_1333.JPG" height=400>
 
+- Insérer la clé USB dans un des deux ports USB 3.0
+
 ## Réalisation de la carte électronique
 
 <img src="pictures/V4_Video/IMG_0625.JPG" height=200> <img src="pictures/V4_Video/IMG_0626.JPG" height=200>
@@ -73,7 +75,7 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 - Dénuder les fils jaune et noir sur 7 mm.
 - Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
 
-<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
+<img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=300> <img src="pictures/V4_Video/IMG_1495.jpg" height=300>
 
 - Suivre ensuite le tutoriel dont le lien est ci-dessous pour installer le presse étoupe
 
@@ -81,41 +83,40 @@ https://bluerobotics.com/learn/wetlink-penetrator-installation-guide/
 
 https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
-<img src="pictures/V4_Video/IMG_1769.jpg" height=300> <img src="pictures/V4_Video/IMG_1770.jpg" height=200>
+<img src="pictures/V4_Video/IMG_1769.jpg" height=200> <img src="pictures/V4_Video/IMG_1770.jpg" height=200>
 
-### Connectiques caisson
+### Assemblage de la tape connectique
 
-- Sur le connecteur 4 pin Power Bulkhead COB-1140-SS, raccourcir les cables pour qu'ils mesurent 10 cm.
+<img src="pictures/V4_Video/TapeArriere.PNG" height=400>
+
+- Graisser les joints de chaque éléments sur la bouchon 7 trous
+- Serrer les éléments M10 sur le bouchon en suivant l'ordre indiqué sur la figure.
+    
+<img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
+
+### Connectiques 
+
+- Sur le connecteur 4 pin Power Bulkhead COB-1140, raccourcir les cables pour qu'ils mesurent 10 cm.
 - Dénuder les fils sur 5 mm puis y sertir des cosses JST. Vérifier qu'elles tiennent fermement.
 
-<img src="pictures/V4_Video/1.jpeg" height=400> 
+<img src="pictures/V4_Video/1.jpeg" height=200> 
  
 - De la même façon, couper les cables du capteur Température Pression pour qu'ils mesurent 10 cm.
-- Dénuder les fils sur 3 mm puis y sertir les cosses. Les mords doivent prendre sur la gaine plastique des fils. 
-- Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.)
-- AVANT d'INSERER LES COSSES DANS LEUR CONNECTEUR JST, passer les cables des deux éléments dans le bouchon à 7 trous.
- 
+- Dénuder les fils sur 3 mm puis y sertir les cosses.
+- Re-écraser les mords à la pince plate pour que les cosses tiennent fermement. (Les fils du capteur TP sont un peu fins pour les cosses.) 
 - Insérer les cosses dans les connecteurs JST en suivant le plan de cablage.
 
 <img src="pictures/V4_Video/IMG_E1626.JPG" height=300> <img src="pictures/V4_Video/IMG_E1624.JPG" height=300>
 
-- Sur le connecteur 8 pin Power Bulkhead COB-1180-SS, raccourcir les cables pour qu'ils mesurent 7cm et sertir un connecteur ethernet
+- Sur le connecteur 8 pin Power Bulkhead COB-1180, raccourcir les cables pour qu'ils mesurent 7cm et sertir un connecteur ethernet en respectant le code couleur suivant.
 
-### Assemblage de la tape connectique
-
-- Graisser les joints de chaque éléments sur la bouchon 7 trous
-- Serrer les éléments M10 sur le bouchon
-    
-<img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
+<img src="pictures/V4_Video/Ethernet.PNG" height=200>
 
 ## Réalisation du cable de récupération des données
 
-<img src="pictures/V4_Video/RecupDonneesCable.PNG" height=200>  <img src="pictures/V4_Video/Ethernet.PNG" height=200>
+<img src="pictures/V4_Video/Ethernet.PNG" height=200> <img src="pictures/V4_Video/RecupDonneesCable.PNG" height=200>  
 
 # Assemblage final
-
-
-# Assemblage structure mécanique sur le flange arrière
 
 - 4 boulons (diamètre 3 mm, longueur 10 mm)
     
