@@ -1,4 +1,22 @@
 
+
+# Assemblage du capteur d'ambiance lumineuse RGB
+
+- Souder le connecteur JST 4 pin sur les bornes GND 3.3V SDA SCL de la carte électronique du capteur. (La borne INT est inutilisée.) ATTENTION, les soudures se font du côté du capteur lumineux.
+- Sur la structure mécanique, préformer les deux trous destinés à accueillir le capteur à l'aide d'un boulon de diamètre 2.5 mm.
+- Fixer le capteur sur la structure mécanique à l'aide de boulons de diamètres 2.5 mm et de longueur 6 mm. (Des boulons plus longs peuvent être utilisés mais ils ne doivent pas dépasser de la structure.)
+
+# Assemblage de la caméra
+
+- Oter le filtre IR et le support pour la vis caméra.
+- Fixer la capteur caméra sur la structure à l'aide de 4 boulons (diamètre 2.5 mm  et longueur 10 mm) et de 4 écrous. Attention à respecter l'orientation de la carte. 
+
+# Assemblage de la carte électronique
+
+- Fixer les radiateurs et le RTC sur la carte RPi.
+- Assembler 4 boulons (diamètre 2.5 mm et longueur 10 mm) et 4 écrous sur chacun des trous de la RPi de la structure mécanique. Les écrous permettront de surélever légèrement la carte. 
+- Positionner la carte RPi et la fixer avec deux écrous dans les coins avant droit et arrière gauche et avec deux entretoises  (diamètre 2.5 mm, hauteur 20 mm) dans les coins avant gauche et arrière droit.
+
 # Caisson vidéo
 <details>
   <summary> Outils </summary>
