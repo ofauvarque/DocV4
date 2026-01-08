@@ -106,6 +106,9 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
     
 <img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
 
+## Réalisation du cable de récupération des données
+
+<img src="pictures/V4_Video/RecupDonnees.PNG" height=200> <img src="pictures/V4_Video/Ethernet.PNG" height=200>
 
 # Assemblage final
 
