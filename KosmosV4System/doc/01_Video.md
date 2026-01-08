@@ -17,6 +17,10 @@
 - Assembler 4 boulons (diamètre 2.5 mm et longueur 10 mm) et 4 écrous sur chacun des trous de la RPi de la structure mécanique. Les écrous permettront de surélever légèrement la carte. 
 - Positionner la carte RPi et la fixer avec deux écrous dans les coins avant droit et arrière gauche et avec deux entretoises  (diamètre 2.5 mm, hauteur 20 mm) dans les coins avant gauche et arrière droit.
 
+# Assemblage structure mécanique sur le flange arrière
+
+- 4 boulons (diamètre 3 mm, longueur 10 mm)
+
 # Caisson vidéo
 <details>
   <summary> Outils </summary>
