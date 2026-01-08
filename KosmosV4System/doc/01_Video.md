@@ -50,6 +50,8 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 
 ## Réalisation de la carte électronique
 
+<img src="pictures/V4_Video/IMG_0625.JPG" height=200> <img src="pictures/V4_Video/IMG_0626.JPG" height=200>
+
 <img src="pictures/V4_Video/20250225_141010.jpg" height=300> <img src="pictures/V4_Video/IMG_1571.jpg" height=300> <img src="pictures/V4_Video/IMG_1572.jpg" height=300>
 
 <img src="pictures/V4_Video/IMG_1610.JPG" height=200> <img src="pictures/V4_Video/IMG_1611.JPG" height=200>
@@ -59,14 +61,14 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 
 <img src="pictures/V4_Video/VueGenerale.PNG" height=400>
 
-<img src="pictures/V4_Video/VueGenerale.jpeg" height=400>
+## Assemblage du hublot sphérique
 
-### Réalisation du cable d'alimentation
+## Réalisation du cable d'alimentation
 
 - Avec une pince coupante, raccourcir le cable COB-1231 pour qu'il mesure 40 cm. Garder les fils noir, jaune et rouge. 
 - Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
-- Couper le fil rouge à ras de la gaine pour ne conserver que le noir et le blanc. (On rappelle la convention : 5V Jaune et Noir. 12 V Rouge et Noir.)
-- Dénuder les fils blancs et noir sur 7 mm.
+- Couper le fil rouge à ras de la gaine pour ne conserver que le noir et le jaune. (On rappelle la convention : 5V jaune, masse noir, 12V rouge.)
+- Dénuder les fils jaune et noir sur 7 mm.
 - Y sertir des cosses dont on a vérifié qu'elles avaient le diamètre optimal.
 
 <img src="pictures/V4_Video/FlexibleAlimentation.jpeg" height=400> <img src="pictures/V4_Video/IMG_1495.jpg" height=400>
@@ -104,9 +106,6 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
     
 <img src="pictures/V4_Video/IMG44.jpg" height=400> <img src="pictures/V4_Video/IMG19.jpg" height=400>
 
-### Assemblage du hublot
-
-<img src="pictures/V4_Video/IMG30.jpg" height=400> 
 
 # Assemblage final
 
