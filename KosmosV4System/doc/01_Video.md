@@ -63,7 +63,9 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 
 ## Assemblage du hublot sphérique
 
-## Réalisation du cable d'alimentation
+## Tape arrière
+
+### Cable d'alimentation
 
 - Avec une pince coupante, raccourcir le cable COB-1231 pour qu'il mesure 40 cm. Garder les fils noir, jaune et rouge. 
 - Avec un cutter, enlever 10 cm de gaine noire. Attention à ne pas abimer les fils à l'intérieur. (Si c'était le cas glisser de la gaine thermoretractable au niveau de la coupure.)
@@ -108,7 +110,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ## Réalisation du cable de récupération des données
 
-<img src="pictures/V4_Video/RecupDonnees.PNG" height=200>  <img src="pictures/V4_Video/Ethernet.PNG" height=200>
+<img src="pictures/V4_Video/RecupDonneesCable.PNG" height=200>  <img src="pictures/V4_Video/Ethernet.PNG" height=200>
 
 # Assemblage final
 
