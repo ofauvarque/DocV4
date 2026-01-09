@@ -149,6 +149,9 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 <img src="pictures/V4_Video/IMG_1353.JPG" height=400>
 
+### Alimentation de la carte en 5V
 
-### Connexion l'
+### Connexion du capteur TP, de la commande moteur et du port ethernet
+
+### Fixation du bouchon sur la tape arrière
 
