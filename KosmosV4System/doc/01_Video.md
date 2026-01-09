@@ -114,11 +114,11 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 - Sur le connecteur 8 pin Power Bulkhead COB-1180, raccourcir les cables pour qu'ils mesurent 7cm et sertir un connecteur ethernet en respectant le code couleur suivant.
 
-<img src="pictures/V4_Video/Ethernet.PNG" height=200>
+<img src="pictures/V4_Video/Ethernet.PNG" height=300>  <img src="pictures/V4_Video/IMG_1356.JPG" height=300>
 
 ## Réalisation du cable de récupération des données
 
-<img src="pictures/V4_Video/Ethernet.PNG" height=200> <img src="pictures/V4_Video/RecupDonneesCable.PNG" height=200>  
+<img src="pictures/V4_Video/Ethernet.PNG" height=300> <img src="pictures/V4_Video/RecupDonneesCable.PNG" height=300> 
 
 # Assemblage final
 
@@ -144,6 +144,7 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 - Fixer la tape arrière sur la structure mécanique à l'aide de 4 boulons (diamètre 3 mm, longueur 10 mm). On placera le détrompeur de la tape du côté des ports USB 2.0 
 
+<img src="pictures/V4_Video/IMG_1353.JPG" height=400>
 
 
 ### Connexion l'
