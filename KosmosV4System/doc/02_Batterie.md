@@ -71,15 +71,33 @@ ATTENTION, LES CABLES PROVENANT DE LA BATTERIE NE DOIVENT JAMAIS SE TOUCHER.
 - Fixer l'ensembe "end cap + flange" sur la structure interne imprimée en 3D grâce à trois boulons 3 mm.
 - Connecter les deux cables 12V grâce à un Wago ou un domino et tasser ces éléments sur un côté du convertisseur.
 
-## Clé de fonctionnement
+## Shunt de fonctionnement
 
-<img src="pictures/V4_Batterie/ShuntFonctionnement.PNG" height=200>
+<img src="pictures/V4_Batterie/ShuntFonctionnement.PNG" height=100>
 
 ## Element pour la recharge
 
-## Clé de charge
+## Shunt de charge
 
- <img src="pictures/V4_Batterie/ShuntCharge.PNG" height=200>
+ <img src="pictures/V4_Batterie/ShuntCharge.PNG" height=100>
+
+- Raccourcir le cable COB-1241 pour qu'il mesure une vingtaine de centimètres.
+- A l'aide du knipex, enlever 3 cm de gaine noire.
+- Couper à ras de la gaine noire le fil noir. Couper également le fil blanc pour qu'il n'en reste que 1 cm.
+- Enfin, comme ce cable ne servira qu'à terre, ôter son joint à l'aide de l'O-ring pick.
+ 
+ <img src="pictures/V4_Batterie/IMG_1343.JPG" height=200>
+
+- Mettre une gaine thermo-rétractable sur le fil blanc, de sorte à isoler ce contact.
+- Dénuder les fils rouge et vert sur un demi-centimètre et les souder ensemble.
+
+<img src="pictures/V4_Batterie/IMG_1345.JPG" height=200> <img src="pictures/V4_Batterie/IMG_1347.JPG" height=200> <img src="pictures/V4_Batterie/IMG_1349.JPG" height=200>
+
+- Mettre une gaine thermo-rétractable sur tous les fils. On essaiera de la faire rentrer dans la gaine noire.
+- Glisser enfin un gaine thermo-rétractable sur laquelle on aura écrit "SHUNT CHARGE" sur la gaine noire.
+
+<img src="pictures/V4_Batterie/IMG_1350.JPG" height=200> <img src="pictures/V4_Batterie/IMG_1351.JPG" height=200>
+
 
 ## Cable de recharge (partie 1)
 
