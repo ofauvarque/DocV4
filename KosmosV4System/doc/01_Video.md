@@ -59,6 +59,10 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 <img src="pictures/V4_Video/IMG_1610.JPG" height=200> <img src="pictures/V4_Video/IMG_1611.JPG" height=200>
 
 
+
+
+
+
 # Réalisation du caisson étanche
 
 <img src="pictures/V4_Video/VueGenerale.PNG" height=400>
@@ -118,5 +122,16 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 # Assemblage final
 
+## Raccordement de la carte électronique sur la RPi
+
+### Fixation de l'antenne GPS
+
+### Connexion du capteur de luminosité
+
+- 6 cm 
+
+
 - 4 boulons (diamètre 3 mm, longueur 10 mm)
+- Nappe en bas, détrompeur en haut !
+- 
     
