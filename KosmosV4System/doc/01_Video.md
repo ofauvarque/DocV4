@@ -118,7 +118,10 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 ## Réalisation du cable de récupération des données
 
-<img src="pictures/V4_Video/Ethernet.PNG" height=300> <img src="pictures/V4_Video/RecupDonneesCable.PNG" height=300> 
+- Sur le connecteur COB-1281, ôter le joint grâce à l'outil O-ring Pick. (Ce cable ne servant qu'à terre, le joint est inutile. L'enlever permettra d'insérer plus facilement le connecteur sur le caisson)
+- Sertir ensuite un connecteur ethernet en respectant l'ordre de la figure qui suit.
+
+<img src="pictures/V4_Video/Ethernet.PNG" height=300> <img src="pictures/V4_Video/RecupDonneesCable.PNG" height=300> <img src="pictures/V4_Video/IMG_1357.JPG" height=300>
 
 # Assemblage final
 
