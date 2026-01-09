@@ -69,7 +69,7 @@ A l'issue de cette opération, on obtient un capteur Picam HQ sans filtre IR (qu
 
 ## Assemblage du hublot sphérique
 
-## Tape arrière
+## Assemble du bouchon arrière
 
 ### Cable d'alimentation
 
@@ -122,16 +122,29 @@ https://www.youtube.com/watch?v=vigY82tsfOI&t=2s&ab_channel=BlueRobotics
 
 # Assemblage final
 
-## Raccordement de la carte électronique sur la RPi
 
 ### Fixation de l'antenne GPS
 
+- A l'aide d'un pistolet à colle fixer l'antenne comme indiqué sur la photo suivante.
+- La brancher ensuite sur le capteur GPS présent sur la carte électronique.
+
+<img src="pictures/V4_Video/IMG_1339.JPG" height=300>
+
 ### Connexion du capteur de luminosité
 
-- 6 cm 
+- Couper 6 cm de fils rouge, noir, blanc et vert et sertir des connecteurs JST de chaque côté.
+  
+- Les insérer dans des connecteurs 4 pin en respectant l'ordre de couleurs de la photo suivante.
+
+<img src="pictures/V4_Video/IMG_1341.JPG" height=300>
+
+- Brancher ce connecteur entre la carte électronique et le capteur de luminosité.
+
+### Fixation de la tape arrière
+
+- Fixer la tape arrière sur la structure mécanique à l'aide de 4 boulons (diamètre 3 mm, longueur 10 mm). On placera le détrompeur de la tape du côté des ports USB 2.0 
 
 
-- 4 boulons (diamètre 3 mm, longueur 10 mm)
-- Nappe en bas, détrompeur en haut !
-- 
-    
+
+### Connexion l'
+
